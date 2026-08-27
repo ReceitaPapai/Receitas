@@ -1,0 +1,339 @@
+/* -------------------------
+   Layout geral da página
+   ------------------------- */
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex; /* corpo usa flex para sidebar + conteúdo */
+  background-color: #fafafa;
+  color: #333;
+}
+
+
+#listaReceitas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas */
+  gap: 20px;
+}
+
+
+/* -------------------------
+   Barra lateral (menu categorias)
+   ------------------------- */
+.sidebar, aside {
+  width: 220px;
+  background: #f4f4f4;
+  padding: 15px;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul,
+#menuCategorias {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar li,
+#menuCategorias li.categoria {
+  cursor: pointer;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.sidebar li:hover,
+#menuCategorias li.categoria:hover {
+  text-decoration: underline;
+}
+
+/* Subcategorias dentro do menu */
+#menuCategorias ul.subcategorias {
+  list-style: none;
+  padding-left: 15px;
+  display: none; /* começa escondido */
+}
+
+#menuCategorias ul.subcategorias li {
+  cursor: pointer;
+  margin: 3px 0;
+}
+
+#menuCategorias ul.subcategorias li.ativo {
+  background: #ddd;
+  font-weight: bold;
+  color: #d2691e;
+  text-decoration: underline;
+}
+
+/* -------------------------
+   Área principal (receitas)
+   ------------------------- */
+.container, main {
+  flex: 1;
+  padding: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* -------------------------
+   Barrinha de compartilhamento
+   ------------------------- */
+.share-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.share-bar button,
+.share-bar .share-link {
+  margin: 0;
+}
+
+/* .share-link é um <a>, estilizado para parecer um botão como os demais */
+.share-link {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #f0f0f0;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.share-link:hover {
+  background: #e0e0e0;
+}
+
+/* -------------------------
+   Grid de receitas
+   ------------------------- */
+.grid,
+#lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.receita {
+  border: 2px solid #444;   /* borda mais escura */
+  border-radius: 6px;       /* cantos arredondados */
+  background: #fff;         /* fundo branco */
+  padding: 10px;            /* espaço interno */
+  transition: all 0.3s ease;
+
+  /* garante que o grid controle a largura */
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.receita.expandido {
+  overflow: visible; /* libera conteúdo expandido */
+}
+
+.titulo {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.detalhes-receita {
+  display: none;
+  margin-top: 10px;
+}
+
+.detalhes-receita img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.legenda {
+  font-style: italic;
+  font-weight: bold;
+  color: #5d4037;
+  background: #fbe9e7;
+  border-left: 4px solid #d84315;
+  padding: 6px 10px;
+  margin: 10px 0;
+}
+
+/* -------------------------
+   Lightbox para imagens
+   ------------------------- */
+.lightbox {
+  display: none; /* começa invisível */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+}
+
+/* Container interno do lightbox que segura as imagens */
+.lightbox-content {
+  display: flex;          /* coloca lado a lado */
+  flex-direction: row;    /* garante alinhamento horizontal */
+  gap: 20px;              /* espaço entre imagens */
+}
+
+.lightbox-content img {
+  max-width: 40%;         /* cada imagem ocupa até 40% da largura */
+  max-height: 80%;
+  border: 2px solid #fff; /* borda branca opcional */
+}
+
+/* -------------------------
+   Temas visuais
+   ------------------------- */
+.dark-theme {
+  background-color: #222;
+  color: #eee;
+}
+
+.dark-theme .sidebar,
+.dark-theme aside {
+  background-color: #333;
+  color: #eee;
+}
+
+.dark-theme .receita {
+  background-color: #444;
+  border-color: #666;
+}
+
+.rustic-theme {
+  background-color: #f5f0e6;
+  color: #3e2c1c;
+}
+
+.rustic-theme .sidebar,
+.rustic-theme aside {
+  background-color: #d2b48c;
+}
+
+.rustic-theme .receita {
+  background-color: #f0e0c6;
+  border-color: #a1887f;
+}
+
+.rustic-alt-theme {
+  background-color: #fbe9e7;
+  color: #5d4037;
+}
+
+.rustic-alt-theme .sidebar,
+.rustic-alt-theme aside {
+  background-color: #ffccbc;
+}
+
+.rustic-alt-theme .receita {
+  background-color: #ffe0b2;
+  border-color: #d84315;
+}
+
+/* -------------------------
+   Separadores e ações
+   ------------------------- */
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.actions-separator {
+  border-top: 2px solid #ccc;
+  margin: 20px 0;
+  padding-top: 10px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* -------------------------
+   Barra de busca
+   ------------------------- */
+.search-bar {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+/* -------------------------
+   Formulário de adicionar receita
+   ------------------------- */
+.add-recipe,
+#formularioReceita {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  border-radius: 8px;
+}
+
+.add-recipe input,
+.add-recipe textarea,
+.add-recipe button,
+#formularioReceita input,
+#formularioReceita textarea,
+#formularioReceita button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+#formularioReceita {
+  display: none; /* começa invisível */
+}
+
+.add-recipe button,
+#formularioReceita button {
+  width: auto;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* -------------------------
+   Layout principal (sidebar + main)
+   ------------------------- */
+#layout {
+  display: flex;
+}
+
+aside {
+  width: 200px;
+  background: #f4f4f4;
+  padding: 10px;
+}
+
+main {
+  flex: 1;
+  padding: 10px;
+}

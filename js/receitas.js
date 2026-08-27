@@ -1,0 +1,7835 @@
+// receitas.js
+// Banco de receitas já estruturado
+
+let receitas = [
+  {
+    "titulo": "Pizza Napolitana",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Tomate em rodelas",
+      "Orégano"
+    ],
+    "preparo": "Espalhe molho de tomate sobre a massa. Cubra com queijo, rodelas de tomate e orégano. Asse por 10 minutos.",
+    "categoria": "1.1",
+    "imagem": "napolitana.jpg",
+    "legenda": "A clássica pizza napolitana, simples e saborosa."
+  },
+  {
+    "titulo": "Pizza Portuguesa",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Presunto",
+      "Ovos cozidos",
+      "Cebola",
+      "Azeitonas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Adicione presunto, ovos, cebola e azeitonas. Cubra com queijo e asse por 12 minutos.",
+    "categoria": "1.1",
+    "imagem": "portuguesa.jpg",
+    "legenda": "Tradicional e completa, a favorita das famílias."
+  },
+
+  {
+    "titulo": "Granola Salgada",
+    "ingredientes": [
+    "1 xic (chá) de aveia em flocos grosso",
+    "1 xic (chá) de flocos de milho",
+    "1/2 xic (chá) de semente de abóbora",
+    "1/2 xic (chá) de semente de girassol",
+    "1/2 xic (chá) de gergelim",
+    "1/2 xic (chá) de linhaça",
+    "1/2 xic (chá) de amendoim",
+    "1/2 xic (chá) de castanha de caju",
+    "1/2 xic (chá) de amêndoas",
+    "2 colheres (sopa) de azeite",
+    "1 colher (chá) de orégano",
+    "1 colher (chá) de açafrão da terra",
+    "1 colher (chá) de páprica defumada",
+    "Sal e pimenta do reino a gosto ou setembro"
+    ],
+    "preparo": "Passe a Linhaça no triturador, apos colocar castanhas e amêndoas junto com o gergelim e triture levemente tudo junto, para que seja mais suave. Asse por 8 minutos.",
+    "categoria": "4.1",
+    "imagem": "granola-salgada.jpg",
+    "legenda": "Delicia com saladas e até pura"
+  },
+
+
+  {
+    "titulo": "Pizza Quatro Queijos",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Queijo gorgonzola",
+      "Queijo parmesão",
+      "Queijo provolone"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com os quatro queijos. Asse por 8 minutos.",
+    "categoria": "1.1",
+    "imagem": "quatro-queijos.jpg",
+    "legenda": "Cremosa e irresistível, para os amantes de queijo."
+  },
+  {
+    "titulo": "Pizza de Pepperoni",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Pepperoni fatiado"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e fatias de pepperoni. Asse por 10 minutos.",
+    "categoria": "1.1",
+    "imagem": "pepperoni.jpg",
+    "legenda": "A clássica americana, picante e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Muçarela",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Orégano"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com bastante queijo e orégano. Asse por 8 minutos.",
+    "categoria": "1.1",
+    "imagem": "mussarela.jpg",
+    "legenda": "A mais simples e popular, sempre uma boa escolha."
+  },
+  {
+    "titulo": "Pizza de Aliche",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Aliche",
+      "Azeitonas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo, aliche e azeitonas. Asse por 9 minutos.",
+    "categoria": "1.1",
+    "imagem": "aliche.jpg",
+    "legenda": "Sabor marcante e tradicional."
+  },
+  {
+    "titulo": "Pizza de Palmito",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Palmito fatiado",
+      "Orégano"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e palmito. Asse por 10 minutos.",
+    "categoria": "1.1",
+    "imagem": "palmito.jpg",
+    "legenda": "Delicada e saborosa, com palmito fresco."
+  },
+  {
+    "titulo": "Pizza de Milho",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Milho verde"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e milho. Asse por 8 minutos.",
+    "categoria": "1.1",
+    "imagem": "milho.jpg",
+    "legenda": "Simples e deliciosa, com sabor brasileiro."
+  },
+  {
+    "titulo": "Pizza de Bacon",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Bacon crocante"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e bacon. Asse por 10 minutos.",
+    "categoria": "1.1",
+    "imagem": "bacon.jpg",
+    "legenda": "Crocante e irresistível."
+  },
+  {
+    "titulo": "Pizza de Rúcula com Tomate Seco",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Rúcula fresca",
+      "Tomate seco"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo, rúcula e tomate seco. Asse por 8 minutos.",
+    "categoria": "1.1",
+    "imagem": "rucula-tomate-seco.jpg",
+    "legenda": "Refrescante e sofisticada."
+  },
+  {
+    "titulo": "Pizza de Cebola",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Cebola em rodelas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e cebola. Asse por 9 minutos.",
+    "categoria": "1.1",
+    "imagem": "cebola.jpg",
+    "legenda": "Simples e aromática."
+  },
+  {
+    "titulo": "Pizza de Presunto",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Presunto fatiado"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e presunto. Asse por 10 minutos.",
+    "categoria": "1.1",
+    "imagem": "presunto.jpg",
+    "legenda": "Tradicional e saborosa."
+  },
+  {
+    "titulo": "Pizza de Ovo",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Ovos cozidos"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e ovos. Asse por 10 minutos.",
+    "categoria": "1.1",
+    "imagem": "ovo.jpg",
+    "legenda": "Completa e nutritiva."
+  },
+  {
+    "titulo": "Pizza de Tomate",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Tomate em rodelas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e tomate. Asse por 8 minutos.",
+    "categoria": "1.1",
+    "imagem": "tomate.jpg",
+    "legenda": "Fresca e leve."
+  },
+  {
+    "titulo": "Pizza de Abobrinha",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Abobrinha fatiada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e abobrinha. Asse por 9 minutos.",
+    "categoria": "1.1",
+    "imagem": "abobrinha.jpg",
+    "legenda": "Saudável e saborosa."
+  },
+  {
+    "titulo": "Pizza de Brócolis",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Brócolis cozido"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e brócolis. Asse por 9 minutos.",
+    "categoria": "1.1",
+    "imagem": "brocolis.jpg",
+    "legenda": "Verde e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Escarola",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Escarola refogada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e escarola. Asse por 10 minutos.",
+    "categoria": "1.1",
+    "imagem": "escarola.jpg",
+    "legenda": "Tradicional e nutritiva."
+  },
+  {
+    "titulo": "Pizza de Alho",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Alho fatiado"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e alho. Asse por 8 minutos.",
+    "categoria": "1.1",
+    "imagem": "alho.jpg",
+    "legenda": "Aromática e intensa."
+  },
+  {
+    "titulo": "Pizza de Manjericão",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Folhas de manjericão"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e manjericão. Asse por 8 minutos.",
+    "categoria": "1.1",
+    "imagem": "manjericao.jpg",
+    "legenda": "Fresca e perfumada."
+  },
+  {
+    "titulo": "Pizza de Orégano",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Orégano"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e bastante orégano. Asse por 8 minutos.",
+    "categoria": "1.1",
+    "imagem": "oregano.jpg",
+    "legenda": "Simples e aromática."
+  },
+  {
+    "titulo": "Pizza de Calabresa com Queijo",
+    "ingredientes": [
+      "Molho de tomate",
+      "Calabresa fatiada",
+      "Queijo mussarela",
+      "Cebola em rodelas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com calabresa, cebola e queijo. Asse por 10 minutos.",
+    "categoria": "1.2",
+    "imagem": "calabresa-queijo.jpg",
+    "legenda": "A clássica combinação de calabresa e queijo."
+  },
+  {
+    "titulo": "Pizza de Frango com Catupiry",
+    "ingredientes": [
+      "Molho de tomate",
+      "Frango desfiado",
+      "Catupiry",
+      "Milho"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com frango, catupiry, milho e queijo. Asse por 12 minutos.",
+    "categoria": "1.2",
+    "imagem": "frango-catupiry.jpg",
+    "legenda": "Cremosa e irresistível, com toque brasileiro."
+  },
+  {
+    "titulo": "Pizza de Carne Moída",
+    "ingredientes": [
+      "Molho de tomate",
+      "Carne moída refogada",
+      "Queijo mussarela",
+      "Cebola"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com carne moída, cebola e queijo. Asse por 10 minutos.",
+    "categoria": "1.2",
+    "imagem": "carne-moida.jpg",
+    "legenda": "Sabor caseiro e reconfortante."
+  },
+  {
+    "titulo": "Pizza de Lombinho",
+    "ingredientes": [
+      "Molho de tomate",
+      "Lombinho fatiado",
+      "Queijo mussarela",
+      "Orégano"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com lombinho e queijo. Asse por 9 minutos.",
+    "categoria": "1.2",
+    "imagem": "lombinho.jpg",
+    "legenda": "Suave e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Pernil",
+    "ingredientes": [
+      "Molho de tomate",
+      "Pernil desfiado",
+      "Queijo mussarela",
+      "Cebola"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com pernil, cebola e queijo. Asse por 11 minutos.",
+    "categoria": "1.2",
+    "imagem": "pernil.jpg",
+    "legenda": "Sabor marcante e tradicional."
+  },
+  {
+    "titulo": "Pizza de Carne Seca",
+    "ingredientes": [
+      "Molho de tomate",
+      "Carne seca desfiada",
+      "Queijo coalho",
+      "Cebola roxa"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com carne seca, queijo e cebola. Asse por 12 minutos.",
+    "categoria": "1.2",
+    "imagem": "carne-seca.jpg",
+    "legenda": "Um toque nordestino irresistível."
+  },
+  {
+    "titulo": "Pizza de Pepperoni com Bacon",
+    "ingredientes": [
+      "Molho de tomate",
+      "Pepperoni",
+      "Bacon crocante",
+      "Queijo mussarela"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com pepperoni, bacon e queijo. Asse por 10 minutos.",
+    "categoria": "1.2",
+    "imagem": "pepperoni-bacon.jpg",
+    "legenda": "Intensa e cheia de sabor."
+  },
+  {
+    "titulo": "Pizza de Linguiça Toscana",
+    "ingredientes": [
+      "Molho de tomate",
+      "Linguiça toscana fatiada",
+      "Queijo mussarela",
+      "Pimentão"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com linguiça, pimentão e queijo. Asse por 12 minutos.",
+    "categoria": "1.2",
+    "imagem": "linguica-toscana.jpg",
+    "legenda": "Rústica e saborosa."
+  },
+  {
+    "titulo": "Pizza de Roast Beef",
+    "ingredientes": [
+      "Molho de tomate",
+      "Roast beef fatiado",
+      "Queijo cheddar",
+      "Rúcula"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com roast beef, cheddar e rúcula. Asse por 9 minutos.",
+    "categoria": "1.2",
+    "imagem": "roast-beef.jpg",
+    "legenda": "Sofisticada e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Hambúrguer",
+    "ingredientes": [
+      "Molho de tomate",
+      "Carne de hambúrguer",
+      "Queijo cheddar",
+      "Tomate"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com hambúrguer fatiado, queijo e tomate. Asse por 10 minutos.",
+    "categoria": "1.2",
+    "imagem": "hamburguer.jpg",
+    "legenda": "A fusão perfeita entre pizza e burger."
+  },
+  {
+    "titulo": "Pizza de Costela",
+    "ingredientes": [
+      "Molho de tomate",
+      "Costela desfiada",
+      "Queijo mussarela",
+      "Cebola caramelizada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com costela, cebola e queijo. Asse por 12 minutos.",
+    "categoria": "1.2",
+    "imagem": "costela.jpg",
+    "legenda": "Intensa e suculenta."
+  },
+  {
+    "titulo": "Pizza de Churrasco",
+    "ingredientes": [
+      "Molho de tomate",
+      "Carne assada em tiras",
+      "Queijo mussarela",
+      "Molho barbecue"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com carne, queijo e molho barbecue. Asse por 10 minutos.",
+    "categoria": "1.2",
+    "imagem": "churrasco.jpg",
+    "legenda": "O sabor da churrasqueira na pizza."
+  },
+  {
+    "titulo": "Pizza de Mortadela",
+    "ingredientes": [
+      "Molho de tomate",
+      "Mortadela fatiada",
+      "Queijo mussarela",
+      "Azeitonas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com mortadela, queijo e azeitonas. Asse por 9 minutos.",
+    "categoria": "1.2",
+    "imagem": "mortadela.jpg",
+    "legenda": "Simples e saborosa."
+  },
+  {
+    "titulo": "Pizza de Presunto com Bacon",
+    "ingredientes": [
+      "Molho de tomate",
+      "Presunto fatiado",
+      "Bacon crocante",
+      "Queijo mussarela"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com presunto, bacon e queijo. Asse por 10 minutos.",
+    "categoria": "1.2",
+    "imagem": "presunto-bacon.jpg",
+    "legenda": "Combinação clássica e irresistível."
+  },
+  {
+    "titulo": "Pizza de Salame",
+    "ingredientes": [
+      "Molho de tomate",
+      "Salame fatiado",
+      "Queijo mussarela",
+      "Orégano"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com salame e queijo. Asse por 9 minutos.",
+    "categoria": "1.2",
+    "imagem": "salame.jpg",
+    "legenda": "Picante e saborosa."
+  },
+  {
+    "titulo": "Pizza de Carne de Sol",
+    "ingredientes": [
+      "Molho de tomate",
+      "Carne de sol desfiada",
+      "Queijo coalho",
+      "Cebola roxa"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com carne de sol, queijo e cebola. Asse por 12 minutos.",
+    "categoria": "1.2",
+    "imagem": "carne-de-sol.jpg",
+    "legenda": "Um clássico nordestino na pizza."
+  },
+  {
+    "titulo": "Pizza de Cupim",
+    "ingredientes": [
+      "Molho de tomate",
+      "Cupim desfiado",
+      "Queijo mussarela",
+      "Pimentão"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com cupim, pimentão e queijo. Asse por 11 minutos.",
+    "categoria": "1.2",
+    "imagem": "cupim.jpg",
+    "legenda": "Suculenta e cheia de sabor."
+  },
+  {
+    "titulo": "Pizza de Charque",
+    "ingredientes": [
+      "Molho de tomate",
+      "Charque desfiado",
+      "Queijo coalho",
+      "Cebola"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com charque, queijo e cebola. Asse por 12 minutos.",
+    "categoria": "1.2",
+    "imagem": "charque.jpg",
+    "legenda": "Tradicional e marcante."
+  },
+  {
+    "titulo": "Pizza de Carne Bovina",
+    "ingredientes": [
+      "Molho de tomate",
+      "Carne bovina em tiras",
+      "Queijo mussarela",
+      "Cebola"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com carne bovina, cebola e queijo. Asse por 10 minutos.",
+    "categoria": "1.2",
+    "imagem": "carne-bovina.jpg",
+    "legenda": "Simples e saborosa."
+  },
+  {
+    "titulo": "Pizza de Picanha",
+    "ingredientes": [
+      "Molho de tomate",
+      "Picanha fatiada",
+      "Queijo mussarela",
+      "Alho dourado"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com picanha, alho e queijo. Asse por 12 minutos.",
+    "categoria": "1.2",
+    "imagem": "picanha.jpg",
+    "legenda": "Sofisticada e irresistível."
+  },
+  {
+    "titulo": "Pizza de Legumes",
+    "ingredientes": [
+      "Molho de tomate",
+      "Abobrinha",
+      "Berinjela",
+      "Pimentão",
+      "Cebola"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com legumes variados. Asse por 10 minutos.",
+    "categoria": "1.3",
+    "imagem": "legumes.jpg",
+    "legenda": "Colorida e saudável."
+  },
+  {
+    "titulo": "Pizza de Rúcula com Tomate Seco",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Rúcula fresca",
+      "Tomate seco"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo, rúcula e tomate seco. Asse por 8 minutos.",
+    "categoria": "1.3",
+    "imagem": "rucula-tomate-seco.jpg",
+    "legenda": "Refrescante e sofisticada."
+  },
+  {
+    "titulo": "Pizza de Brócolis",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Brócolis cozido"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e brócolis. Asse por 9 minutos.",
+    "categoria": "1.3",
+    "imagem": "brocolis.jpg",
+    "legenda": "Verde e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Escarola",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Escarola refogada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e escarola. Asse por 10 minutos.",
+    "categoria": "1.3",
+    "imagem": "escarola.jpg",
+    "legenda": "Tradicional e nutritiva."
+  },
+  {
+    "titulo": "Pizza de Abobrinha",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Abobrinha fatiada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e abobrinha. Asse por 9 minutos.",
+    "categoria": "1.3",
+    "imagem": "abobrinha.jpg",
+    "legenda": "Saudável e saborosa."
+  },
+  {
+    "titulo": "Pizza de Cogumelos",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Cogumelos frescos"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e cogumelos. Asse por 9 minutos.",
+    "categoria": "1.3",
+    "imagem": "cogumelos.jpg",
+    "legenda": "Aromática e sofisticada."
+  },
+  {
+    "titulo": "Pizza de Milho",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Milho verde"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e milho. Asse por 8 minutos.",
+    "categoria": "1.3",
+    "imagem": "milho.jpg",
+    "legenda": "Simples e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Palmito",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Palmito fatiado"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e palmito. Asse por 10 minutos.",
+    "categoria": "1.3",
+    "imagem": "palmito.jpg",
+    "legenda": "Delicada e saborosa."
+  },
+  {
+    "titulo": "Pizza de Cebola",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Cebola em rodelas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e cebola. Asse por 9 minutos.",
+    "categoria": "1.3",
+    "imagem": "cebola.jpg",
+    "legenda": "Simples e aromática."
+  },
+  {
+    "titulo": "Pizza de Tomate",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Tomate em rodelas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e tomate. Asse por 8 minutos.",
+    "categoria": "1.3",
+    "imagem": "tomate.jpg",
+    "legenda": "Fresca e leve."
+  },
+  {
+    "titulo": "Pizza de Espinafre",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Espinafre refogado"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e espinafre. Asse por 9 minutos.",
+    "categoria": "1.3",
+    "imagem": "espinafre.jpg",
+    "legenda": "Nutritiva e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Pimentão",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Pimentão colorido"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e pimentão. Asse por 9 minutos.",
+    "categoria": "1.3",
+    "imagem": "pimentao.jpg",
+    "legenda": "Colorida e saborosa."
+  },
+  {
+    "titulo": "Pizza de Alcachofra",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Corações de alcachofra"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e alcachofra. Asse por 10 minutos.",
+    "categoria": "1.3",
+    "imagem": "alcachofra.jpg",
+    "legenda": "Sofisticada e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Batata",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Batata fatiada",
+      "Alecrim"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com batata, queijo e alecrim. Asse por 12 minutos.",
+    "categoria": "1.3",
+    "imagem": "batata.jpg",
+    "legenda": "Diferente e saborosa."
+  },
+  {
+    "titulo": "Pizza de Abóbora",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Abóbora assada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e abóbora. Asse por 12 minutos.",
+    "categoria": "1.3",
+    "imagem": "abobora.jpg",
+    "legenda": "Doce e salgada na medida."
+  },
+  {
+    "titulo": "Pizza de Ervilha",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Ervilhas"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e ervilhas. Asse por 8 minutos.",
+    "categoria": "1.3",
+    "imagem": "ervilha.jpg",
+    "legenda": "Simples e nutritiva."
+  },
+  {
+    "titulo": "Pizza de Cenoura",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Cenoura ralada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e cenoura. Asse por 9 minutos.",
+    "categoria": "1.3",
+    "imagem": "cenoura.jpg",
+    "legenda": "Colorida e saudável."
+  },
+  {
+    "titulo": "Pizza de Beterraba",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Beterraba fatiada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e beterraba. Asse por 10 minutos.",
+    "categoria": "1.3",
+    "imagem": "beterraba.jpg",
+    "legenda": "Vibrante e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Couve",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Couve refogada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e couve. Asse por 9 minutos.",
+    "categoria": "1.3",
+    "imagem": "couve.jpg",
+    "legenda": "Tradicional e nutritiva."
+  },
+  {
+    "titulo": "Pizza de Mix Vegetariano",
+    "ingredientes": [
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Legumes variados"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com queijo e legumes. Asse por 10 minutos.",
+    "categoria": "1.3",
+    "imagem": "mix-vegetariano.jpg",
+    "legenda": "Completa e deliciosa."
+  },
+  {
+    "titulo": "Pizza Gourmet de Brie com Damasco",
+    "ingredientes": [
+      "Molho branco",
+      "Queijo brie",
+      "Damasco seco",
+      "Nozes"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com brie, damasco e nozes. Asse por 8 minutos.",
+    "categoria": "1.4",
+    "imagem": "brie-damasco.jpg",
+    "legenda": "Sofisticada e irresistível."
+  },
+  {
+    "titulo": "Pizza de Camarão com Catupiry",
+    "ingredientes": [
+      "Molho de tomate",
+      "Camarão",
+      "Catupiry",
+      "Queijo mussarela"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com camarão, catupiry e queijo. Asse por 12 minutos.",
+    "categoria": "1.4",
+    "imagem": "camarao-catupiry.jpg",
+    "legenda": "Cremosa e saborosa."
+  },
+  {
+    "titulo": "Pizza de Salmão Defumado",
+    "ingredientes": [
+      "Molho branco",
+      "Salmão defumado",
+      "Cream cheese",
+      "Alcaparras"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com salmão, cream cheese e alcaparras. Asse por 9 minutos.",
+    "categoria": "1.4",
+    "imagem": "salmao.jpg",
+    "legenda": "Elegante e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Parma com Rúcula",
+    "ingredientes": [
+      "Molho de tomate",
+      "Presunto de Parma",
+      "Queijo mussarela",
+      "Rúcula fresca"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com Parma, queijo e rúcula. Asse por 8 minutos.",
+    "categoria": "1.4",
+    "imagem": "parma-rucula.jpg",
+    "legenda": "Clássica e requintada."
+  },
+  {
+    "titulo": "Pizza de Trufas",
+    "ingredientes": [
+      "Molho branco",
+      "Queijo mussarela",
+      "Cogumelos trufados",
+      "Azeite de trufas"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com queijo e cogumelos. Finalize com azeite de trufas. Asse por 9 minutos.",
+    "categoria": "1.4",
+    "imagem": "trufas.jpg",
+    "legenda": "Luxuosa e aromática."
+  },
+  {
+    "titulo": "Pizza de Lagosta",
+    "ingredientes": [
+      "Molho branco",
+      "Lagosta desfiada",
+      "Queijo parmesão",
+      "Salsa"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com lagosta e queijo. Asse por 10 minutos.",
+    "categoria": "1.4",
+    "imagem": "lagosta.jpg",
+    "legenda": "Refinada e especial."
+  },
+  {
+    "titulo": "Pizza de Gorgonzola com Pera",
+    "ingredientes": [
+      "Molho branco",
+      "Queijo gorgonzola",
+      "Pera fatiada",
+      "Nozes"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com gorgonzola, pera e nozes. Asse por 8 minutos.",
+    "categoria": "1.4",
+    "imagem": "gorgonzola-pera.jpg",
+    "legenda": "Doce e salgada na medida."
+  },
+  {
+    "titulo": "Pizza de Carpaccio",
+    "ingredientes": [
+      "Molho branco",
+      "Carpaccio bovino",
+      "Queijo parmesão",
+      "Rúcula"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com carpaccio, parmesão e rúcula. Asse por 7 minutos.",
+    "categoria": "1.4",
+    "imagem": "carpaccio.jpg",
+    "legenda": "Sofisticada e leve."
+  },
+  {
+    "titulo": "Pizza de Queijo de Cabra com Mel",
+    "ingredientes": [
+      "Molho branco",
+      "Queijo de cabra",
+      "Mel",
+      "Nozes"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com queijo, mel e nozes. Asse por 8 minutos.",
+    "categoria": "1.4",
+    "imagem": "cabra-mel.jpg",
+    "legenda": "Delicada e irresistível."
+  },
+  {
+    "titulo": "Pizza de Pato com Laranja",
+    "ingredientes": [
+      "Molho de tomate",
+      "Carne de pato desfiada",
+      "Queijo mussarela",
+      "Rodelas de laranja"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com pato, queijo e laranja. Asse por 12 minutos.",
+    "categoria": "1.4",
+    "imagem": "pato-laranja.jpg",
+    "legenda": "Exótica e saborosa."
+  },
+  {
+    "titulo": "Pizza de Filé Mignon com Catupiry",
+    "ingredientes": [
+      "Molho de tomate",
+      "Filé mignon em tiras",
+      "Catupiry",
+      "Queijo mussarela"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com filé, catupiry e queijo. Asse por 12 minutos.",
+    "categoria": "1.4",
+    "imagem": "file-catupiry.jpg",
+    "legenda": "Cremosa e sofisticada."
+  },
+  {
+    "titulo": "Pizza de Bacalhau",
+    "ingredientes": [
+      "Molho de tomate",
+      "Bacalhau desfiado",
+      "Azeitonas pretas",
+      "Cebola"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com bacalhau, cebola e azeitonas. Asse por 12 minutos.",
+    "categoria": "1.4",
+    "imagem": "bacalhau.jpg",
+    "legenda": "Tradicional e refinada."
+  },
+  {
+    "titulo": "Pizza de Foie Gras",
+    "ingredientes": [
+      "Molho branco",
+      "Foie gras",
+      "Queijo brie",
+      "Figos frescos"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com foie gras, brie e figos. Asse por 8 minutos.",
+    "categoria": "1.4",
+    "imagem": "foie-gras.jpg",
+    "legenda": "Luxuosa e exclusiva."
+  },
+  {
+    "titulo": "Pizza de Cogumelos Selvagens",
+    "ingredientes": [
+      "Molho branco",
+      "Queijo mussarela",
+      "Cogumelos selvagens",
+      "Alecrim"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com cogumelos e queijo. Asse por 9 minutos.",
+    "categoria": "1.4",
+    "imagem": "cogumelos-selvagens.jpg",
+    "legenda": "Aromática e especial."
+  },
+  {
+    "titulo": "Pizza de Queijo Azul com Figo",
+    "ingredientes": [
+      "Molho branco",
+      "Queijo azul",
+      "Figos frescos",
+      "Mel"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com queijo, figos e mel. Asse por 8 minutos.",
+    "categoria": "1.4",
+    "imagem": "queijo-azul-figo.jpg",
+    "legenda": "Doce e salgada."
+  },
+  {
+    "titulo": "Pizza de Lagarto Defumado",
+    "ingredientes": [
+      "Molho de tomate",
+      "Lagarto defumado",
+      "Queijo mussarela",
+      "Cebola caramelizada"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com lagarto, cebola e queijo. Asse por 11 minutos.",
+    "categoria": "1.4",
+    "imagem": "lagarto.jpg",
+    "legenda": "Intensa e sofisticada."
+  },
+  {
+    "titulo": "Pizza de Parma com Burrata",
+    "ingredientes": [
+      "Molho de tomate",
+      "Presunto de Parma",
+      "Burrata",
+      "Manjericão"
+    ],
+    "preparo": "Espalhe molho sobre a massa. Cubra com Parma, burrata e manjericão. Asse por 8 minutos.",
+    "categoria": "1.4",
+    "imagem": "parma-burrata.jpg",
+    "legenda": "Cremosa e elegante."
+  },
+  {
+    "titulo": "Pizza de Três Cogumelos",
+    "ingredientes": [
+      "Molho branco",
+      "Queijo mussarela",
+      "Shiitake",
+      "Shimeji",
+      "Champignon"
+    ],
+    "preparo": "Espalhe molho branco sobre a massa. Cubra com os cogumelos e queijo. Asse por 9 minutos.",
+    "categoria": "1.4",
+    "imagem": "tres-cogumelos.jpg",
+    "legenda": "Rica em sabores"
+  },
+  {
+    "titulo": "Pizza de Chocolate",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Chocolate derretido",
+      "Granulado"
+    ],
+    "preparo": "Espalhe chocolate sobre a massa. Finalize com granulado. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "chocolate.jpg",
+    "legenda": "A favorita dos chocólatras."
+  },
+  {
+    "titulo": "Pizza de Banana com Canela",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Banana fatiada",
+      "Açúcar",
+      "Canela"
+    ],
+    "preparo": "Espalhe banana sobre a massa. Polvilhe açúcar e canela. Asse por 10 minutos.",
+    "categoria": "1.5",
+    "imagem": "banana-canela.jpg",
+    "legenda": "Simples e irresistível."
+  },
+  {
+    "titulo": "Pizza de Morango com Chocolate",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Chocolate derretido",
+      "Morangos frescos"
+    ],
+    "preparo": "Espalhe chocolate sobre a massa. Cubra com morangos. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "morango-chocolate.jpg",
+    "legenda": "Fresca e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Nutella",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Nutella",
+      "Frutas variadas"
+    ],
+    "preparo": "Espalhe Nutella sobre a massa. Cubra com frutas. Asse por 7 minutos.",
+    "categoria": "1.5",
+    "imagem": "nutella.jpg",
+    "legenda": "Cremosa e irresistível."
+  },
+  {
+    "titulo": "Pizza de Doce de Leite",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Doce de leite",
+      "Coco ralado"
+    ],
+    "preparo": "Espalhe doce de leite sobre a massa. Finalize com coco ralado. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "doce-leite.jpg",
+    "legenda": "Cremosa e tropical."
+  },
+  {
+    "titulo": "Pizza de Brigadeiro",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Brigadeiro",
+      "Granulado"
+    ],
+    "preparo": "Espalhe brigadeiro sobre a massa. Cubra com granulado. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "brigadeiro.jpg",
+    "legenda": "O clássico brasileiro em versão pizza."
+  },
+  {
+    "titulo": "Pizza de Goiabada com Queijo",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Goiabada",
+      "Queijo minas"
+    ],
+    "preparo": "Espalhe goiabada sobre a massa. Cubra com queijo. Asse por 9 minutos.",
+    "categoria": "1.5",
+    "imagem": "goiabada-queijo.jpg",
+    "legenda": "Romeu e Julieta em formato pizza."
+  },
+  {
+    "titulo": "Pizza de Maçã com Caramelo",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Maçã fatiada",
+      "Caramelo",
+      "Canela"
+    ],
+    "preparo": "Espalhe maçã sobre a massa. Cubra com caramelo e canela. Asse por 10 minutos.",
+    "categoria": "1.5",
+    "imagem": "maca-caramelo.jpg",
+    "legenda": "Doce e aromática."
+  },
+  {
+    "titulo": "Pizza de Coco com Leite Condensado",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Leite condensado",
+      "Coco ralado"
+    ],
+    "preparo": "Espalhe leite condensado sobre a massa. Cubra com coco. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "coco.jpg",
+    "legenda": "Tropical e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Abacaxi com Mel",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Abacaxi em cubos",
+      "Mel"
+    ],
+    "preparo": "Espalhe abacaxi sobre a massa. Regue com mel. Asse por 9 minutos.",
+    "categoria": "1.5",
+    "imagem": "abacaxi-mel.jpg",
+    "legenda": "Refrescante e doce."
+  },
+  {
+    "titulo": "Pizza de Frutas Vermelhas",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Morangos",
+      "Framboesas",
+      "Amoras"
+    ],
+    "preparo": "Espalhe frutas vermelhas sobre a massa. Finalize com açúcar de confeiteiro. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "frutas-vermelhas.jpg",
+    "legenda": "Colorida e saborosa."
+  },
+  {
+    "titulo": "Pizza de Pêssego com Creme",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Pêssego em calda",
+      "Creme de confeiteiro"
+    ],
+    "preparo": "Espalhe creme sobre a massa. Cubra com pêssegos. Asse por 9 minutos.",
+    "categoria": "1.5",
+    "imagem": "pessego-creme.jpg",
+    "legenda": "Delicada e irresistível."
+  },
+  {
+    "titulo": "Pizza de Uva com Chocolate Branco",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Chocolate branco",
+      "Uvas frescas"
+    ],
+    "preparo": "Espalhe chocolate branco sobre a massa. Cubra com uvas. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "uva-chocolate.jpg",
+    "legenda": "Fresca e sofisticada."
+  },
+  {
+    "titulo": "Pizza de Ameixa com Chantilly",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Ameixa em calda",
+      "Chantilly"
+    ],
+    "preparo": "Espalhe ameixa sobre a massa. Finalize com chantilly. Asse por 7 minutos.",
+    "categoria": "1.5",
+    "imagem": "ameixa.jpg",
+    "legenda": "Cremosa e doce."
+  },
+  {
+    "titulo": "Pizza de Mel com Nozes",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Mel",
+      "Nozes picadas"
+    ],
+    "preparo": "Espalhe mel sobre a massa. Cubra com nozes. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "mel-nozes.jpg",
+    "legenda": "Crocante e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Chocolate com Marshmallow",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Chocolate derretido",
+      "Marshmallows"
+    ],
+    "preparo": "Espalhe chocolate sobre a massa. Cubra com marshmallows. Asse por 7 minutos.",
+    "categoria": "1.5",
+    "imagem": "marshmallow.jpg",
+    "legenda": "Divertida e irresistível."
+  },
+  {
+    "titulo": "Pizza de Limão com Merengue",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Creme de limão",
+      "Merengue"
+    ],
+    "preparo": "Espalhe creme sobre a massa. Cubra com merengue. Asse por 9 minutos.",
+    "categoria": "1.5",
+    "imagem": "limao-merengue.jpg",
+    "legenda": "Refrescante e sofisticada."
+  },
+  {
+    "titulo": "Pizza de Chocolate com Morango e Chantilly",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Chocolate derretido",
+      "Morangos frescos",
+      "Chantilly"
+    ],
+    "preparo": "Espalhe chocolate sobre a massa. Cubra com morangos e chantilly. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "morango-chantilly.jpg",
+    "legenda": "Romântica e deliciosa."
+  },
+  {
+    "titulo": "Pizza de Banana com Doce de Leite",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Banana fatiada",
+      "Doce de leite"
+    ],
+    "preparo": "Espalhe banana sobre a massa. Cubra com doce de leite. Asse por 9 minutos.",
+    "categoria": "1.5",
+    "imagem": "banana-doce-leite.jpg",
+    "legenda": "Cremosa e irresistível."
+  },
+  {
+    "titulo": "Pizza de Chocolate com Castanhas",
+    "ingredientes": [
+      "Massa de pizza doce",
+      "Chocolate derretido",
+      "Castanhas picadas"
+    ],
+    "preparo": "Espalhe chocolate sobre a massa. Cubra com castanhas. Asse por 8 minutos.",
+    "categoria": "1.5",
+    "imagem": "chocolate-castanhas.jpg",
+    "legenda": "Crocante e deliciosa."
+  },
+  {
+    "titulo": "Bolo de Chocolate",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Açúcar",
+      "Ovos",
+      "Chocolate em pó"
+    ],
+    "preparo": "Misture os ingredientes. Asse em forno médio por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-chocolate.jpg",
+    "legenda": "Clássico e irresistível."
+  },
+  {
+    "titulo": "Bolo de Cenoura com Cobertura",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Cenoura ralada",
+      "Ovos",
+      "Açúcar",
+      "Chocolate para cobertura"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Asse por 40 minutos e cubra com chocolate.",
+    "categoria": "2.1",
+    "imagem": "bolo-cenoura.jpg",
+    "legenda": "O favorito das crianças."
+  },
+  {
+    "titulo": "Bolo de Fubá",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Fubá",
+      "Ovos",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 35 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-fuba.jpg",
+    "legenda": "Tradicional e saboroso."
+  },
+  {
+    "titulo": "Bolo de Laranja",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Suco de laranja",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-laranja.jpg",
+    "legenda": "Aromático e leve."
+  },
+  {
+    "titulo": "Bolo de Coco",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Coco ralado",
+      "Leite",
+      "Ovos"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-coco.jpg",
+    "legenda": "Tropical e delicioso."
+  },
+  {
+    "titulo": "Bolo de Milho",
+    "ingredientes": [
+      "Farinha de milho",
+      "Leite",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 35 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-milho.jpg",
+    "legenda": "Caseiro e saboroso."
+  },
+  {
+    "titulo": "Bolo de Banana",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Banana amassada",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-banana.jpg",
+    "legenda": "Doce e nutritivo."
+  },
+  {
+    "titulo": "Bolo de Maçã",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Maçã ralada",
+      "Ovos",
+      "Açúcar",
+      "Canela"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-maca.jpg",
+    "legenda": "Aromático e delicioso."
+  },
+  {
+    "titulo": "Bolo de Limão",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Suco de limão",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 35 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-limao.jpg",
+    "legenda": "Refrescante e leve."
+  },
+  {
+    "titulo": "Bolo de Nozes",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Nozes picadas",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-nozes.jpg",
+    "legenda": "Crocante e sofisticado."
+  },
+  {
+    "titulo": "Bolo de Maracujá",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Suco de maracujá",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-maracuja.jpg",
+    "legenda": "Tropical e aromático."
+  },
+  {
+    "titulo": "Bolo de Morango",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Morangos picados",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-morango.jpg",
+    "legenda": "Colorido e delicioso."
+  },
+  {
+    "titulo": "Bolo de Ameixa",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Ameixa seca",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-ameixa.jpg",
+    "legenda": "Rico em sabor."
+  },
+  {
+    "titulo": "Bolo de Café",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Café forte",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 35 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-cafe.jpg",
+    "legenda": "Energizante e saboroso."
+  },
+  {
+    "titulo": "Bolo de Mel",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Mel",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-mel.jpg",
+    "legenda": "Doce e aromático."
+  },
+  {
+    "titulo": "Bolo de Tapioca",
+    "ingredientes": [
+      "Farinha de tapioca",
+      "Leite",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-tapioca.jpg",
+    "legenda": "Diferente e delicioso."
+  },
+  {
+    "titulo": "Bolo de Pêssego",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Pêssego em calda",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-pessego.jpg",
+    "legenda": "Frutado e leve."
+  },
+  {
+    "titulo": "Bolo de Uva",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Uvas frescas",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-uva.jpg",
+    "legenda": "Fresco e delicioso."
+  },
+  {
+    "titulo": "Bolo de Castanha",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Castanhas picadas",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-castanha.jpg",
+    "legenda": "Crocante e nutritivo."
+  },
+  {
+    "titulo": "Bolo de Abacaxi",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Abacaxi em cubos",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.1",
+    "imagem": "bolo-abacaxi.jpg",
+    "legenda": "Tropical e refrescante."
+  },
+  {
+    "titulo": "Pudim de Leite Condensado",
+    "ingredientes": [
+      "Leite condensado",
+      "Leite",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-leite.jpg",
+    "legenda": "O clássico brasileiro."
+  },
+  {
+    "titulo": "Pudim de Coco",
+    "ingredientes": [
+      "Leite condensado",
+      "Leite de coco",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-coco.jpg",
+    "legenda": "Tropical e cremoso."
+  },
+  {
+    "titulo": "Pudim de Chocolate",
+    "ingredientes": [
+      "Leite condensado",
+      "Leite",
+      "Ovos",
+      "Chocolate em pó"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-chocolate.jpg",
+    "legenda": "Rico e irresistível."
+  },
+  {
+    "titulo": "Pudim de Pão",
+    "ingredientes": [
+      "Pão amanhecido",
+      "Leite",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 45 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-pao.jpg",
+    "legenda": "Aproveitamento delicioso."
+  },
+  {
+    "titulo": "Pudim de Tapioca",
+    "ingredientes": [
+      "Leite condensado",
+      "Leite",
+      "Tapioca granulada",
+      "Ovos"
+    ],
+    "preparo": "Misture os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-tapioca.jpg",
+    "legenda": "Diferente e saboroso."
+  },
+  {
+    "titulo": "Pudim de Maracujá",
+    "ingredientes": [
+      "Leite condensado",
+      "Suco de maracujá",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-maracuja.jpg",
+    "legenda": "Tropical e aromático."
+  },
+  {
+    "titulo": "Pudim de Doce de Leite",
+    "ingredientes": [
+      "Doce de leite",
+      "Leite",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-doce-leite.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Pudim de Café",
+    "ingredientes": [
+      "Leite condensado",
+      "Café forte",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-cafe.jpg",
+    "legenda": "Energizante e saboroso."
+  },
+  {
+    "titulo": "Pudim de Laranja",
+    "ingredientes": [
+      "Leite condensado",
+      "Suco de laranja",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-laranja.jpg",
+    "legenda": "Refrescante e leve."
+  },
+  {
+    "titulo": "Pudim de Limão",
+    "ingredientes": [
+      "Leite condensado",
+      "Suco de limão",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-limao.jpg",
+    "legenda": "Azedinho e delicioso."
+  },
+  {
+    "titulo": "Pudim de Ameixa",
+    "ingredientes": [
+      "Leite condensado",
+      "Ameixa seca",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-ameixa.jpg",
+    "legenda": "Rico em sabor."
+  },
+  {
+    "titulo": "Pudim de Morango",
+    "ingredientes": [
+      "Leite condensado",
+      "Morangos",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-morango.jpg",
+    "legenda": "Colorido e delicioso."
+  },
+  {
+    "titulo": "Pudim de Uva",
+    "ingredientes": [
+      "Leite condensado",
+      "Suco de uva",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-uva.jpg",
+    "legenda": "Fresco e aromático."
+  },
+  {
+    "titulo": "Pudim de Pêssego",
+    "ingredientes": [
+      "Leite condensado",
+      "Pêssego em calda",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-pessego.jpg",
+    "legenda": "Frutado e leve."
+  },
+  {
+    "titulo": "Pudim de Castanha",
+    "ingredientes": [
+      "Leite condensado",
+      "Castanhas picadas",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-castanha.jpg",
+    "legenda": "Crocante e delicioso."
+  },
+  {
+    "titulo": "Pudim de Mel",
+    "ingredientes": [
+      "Leite condensado",
+      "Mel",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-mel.jpg",
+    "legenda": "Doce e aromático."
+  },
+  {
+    "titulo": "Pudim de Abacaxi",
+    "ingredientes": [
+      "Leite condensado",
+      "Suco de abacaxi",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-abacaxi.jpg",
+    "legenda": "Tropical e refrescante."
+  },
+  {
+    "titulo": "Pudim de Nozes",
+    "ingredientes": [
+      "Leite condensado",
+      "Nozes picadas",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-nozes.jpg",
+    "legenda": "Sofisticado e delicioso."
+  },
+  {
+    "titulo": "Pudim de Manga",
+    "ingredientes": [
+      "Leite condensado",
+      "Suco de manga",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-manga.jpg",
+    "legenda": "Tropical e doce."
+  },
+  {
+    "titulo": "Pudim de Goiaba",
+    "ingredientes": [
+      "Leite condensado",
+      "Suco de goiaba",
+      "Ovos",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.2",
+    "imagem": "pudim-goiaba.jpg",
+    "legenda": "Diferente e saboroso."
+  },
+  {
+    "titulo": "Creme de Baunilha",
+    "ingredientes": [
+      "Leite",
+      "Açúcar",
+      "Amido de milho",
+      "Essência de baunilha"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-baunilha.jpg",
+    "legenda": "Suave e aromático."
+  },
+  {
+    "titulo": "Creme de Chocolate",
+    "ingredientes": [
+      "Leite",
+      "Chocolate em pó",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-chocolate.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Creme de Morango",
+    "ingredientes": [
+      "Leite",
+      "Morangos",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Bata os morangos e misture ao leite. Leve ao fogo até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-morango.jpg",
+    "legenda": "Colorido e delicioso."
+  },
+  {
+    "titulo": "Creme de Limão",
+    "ingredientes": [
+      "Leite",
+      "Suco de limão",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-limao.jpg",
+    "legenda": "Refrescante e leve."
+  },
+  {
+    "titulo": "Creme de Coco",
+    "ingredientes": [
+      "Leite",
+      "Leite de coco",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-coco.jpg",
+    "legenda": "Tropical e saboroso."
+  },
+  {
+    "titulo": "Creme de Café",
+    "ingredientes": [
+      "Leite",
+      "Café forte",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-cafe.jpg",
+    "legenda": "Energizante e aromático."
+  },
+  {
+    "titulo": "Creme de Maracujá",
+    "ingredientes": [
+      "Leite",
+      "Suco de maracujá",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-maracuja.jpg",
+    "legenda": "Tropical e delicioso."
+  },
+  {
+    "titulo": "Creme de Pêssego",
+    "ingredientes": [
+      "Leite",
+      "Pêssego em calda",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Bata o pêssego e misture ao leite. Leve ao fogo até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-pessego.jpg",
+    "legenda": "Frutado e leve."
+  },
+  {
+    "titulo": "Creme de Uva",
+    "ingredientes": [
+      "Leite",
+      "Suco de uva",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-uva.jpg",
+    "legenda": "Fresco e aromático."
+  },
+  {
+    "titulo": "Creme de Manga",
+    "ingredientes": [
+      "Leite",
+      "Suco de manga",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-manga.jpg",
+    "legenda": "Tropical e doce."
+  },
+  {
+    "titulo": "Creme de Ameixa",
+    "ingredientes": [
+      "Leite",
+      "Ameixa seca",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Bata a ameixa e misture ao leite. Leve ao fogo até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-ameixa.jpg",
+    "legenda": "Rico em sabor."
+  },
+  {
+    "titulo": "Creme de Abacaxi",
+    "ingredientes": [
+      "Leite",
+      "Suco de abacaxi",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-abacaxi.jpg",
+    "legenda": "Tropical e refrescante."
+  },
+  {
+    "titulo": "Creme de Castanha",
+    "ingredientes": [
+      "Leite",
+      "Castanhas picadas",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-castanha.jpg",
+    "legenda": "Crocante e delicioso."
+  },
+  {
+    "titulo": "Creme de Mel",
+    "ingredientes": [
+      "Leite",
+      "Mel",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-mel.jpg",
+    "legenda": "Doce e aromático."
+  },
+  {
+    "titulo": "Creme de Nozes",
+    "ingredientes": [
+      "Leite",
+      "Nozes picadas",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-nozes.jpg",
+    "legenda": "Sofisticado e delicioso."
+  },
+  {
+    "titulo": "Creme de Goiaba",
+    "ingredientes": [
+      "Leite",
+      "Suco de goiaba",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-goiaba.jpg",
+    "legenda": "Diferente e saboroso."
+  },
+  {
+    "titulo": "Creme de Framboesa",
+    "ingredientes": [
+      "Leite",
+      "Framboesas",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Bata as framboesas e misture ao leite. Leve ao fogo até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-framboesa.jpg",
+    "legenda": "Colorido e aromático."
+  },
+  {
+    "titulo": "Creme de Kiwi",
+    "ingredientes": [
+      "Leite",
+      "Kiwi",
+      "Açúcar",
+      "Amido de milho"
+    ],
+    "preparo": "Bata o kiwi e misture ao leite. Leve ao fogo até engrossar.",
+    "categoria": "2.3",
+    "imagem": "creme-kiwi.jpg",
+    "legenda": "Refrescante e diferente."
+  },
+  {
+    "titulo": "Creme de Morango com Chantilly",
+    "ingredientes": [
+      "Leite",
+      "Morangos",
+      "Açúcar",
+      "Amido de milho",
+      "Chantilly"
+    ],
+    "preparo": "Bata os morangos e misture ao leite. Leve ao fogo até engrossar e finalize com chantilly.",
+    "categoria": "2.3",
+    "imagem": "creme-morango-chantilly.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Pudim Diet de Chocolate",
+    "ingredientes": [
+      "Leite desnatado",
+      "Adoçante culinário",
+      "Ovos",
+      "Chocolate diet"
+    ],
+    "preparo": "Misture os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.4",
+    "imagem": "pudim-diet-chocolate.jpg",
+    "legenda": "Leve e saboroso."
+  },
+  {
+    "titulo": "Bolo Diet de Laranja",
+    "ingredientes": [
+      "Farinha integral",
+      "Suco de laranja",
+      "Adoçante culinário",
+      "Ovos"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.4",
+    "imagem": "bolo-diet-laranja.jpg",
+    "legenda": "Saudável e delicioso."
+  },
+  {
+    "titulo": "Creme Diet de Morango",
+    "ingredientes": [
+      "Leite desnatado",
+      "Morangos",
+      "Adoçante culinário",
+      "Amido de milho"
+    ],
+    "preparo": "Bata os morangos e misture ao leite. Leve ao fogo até engrossar.",
+    "categoria": "2.4",
+    "imagem": "creme-diet-morango.jpg",
+    "legenda": "Colorido e leve."
+  },
+  {
+    "titulo": "Pudim Diet de Coco",
+    "ingredientes": [
+      "Leite desnatado",
+      "Leite de coco light",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.4",
+    "imagem": "pudim-diet-coco.jpg",
+    "legenda": "Tropical e saudável."
+  },
+  {
+    "titulo": "Bolo Diet de Banana",
+    "ingredientes": [
+      "Farinha integral",
+      "Banana amassada",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.4",
+    "imagem": "bolo-diet-banana.jpg",
+    "legenda": "Nutritivo e leve."
+  },
+  {
+    "titulo": "Creme Diet de Limão",
+    "ingredientes": [
+      "Leite desnatado",
+      "Suco de limão",
+      "Adoçante culinário",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.4",
+    "imagem": "creme-diet-limao.jpg",
+    "legenda": "Refrescante e leve."
+  },
+  {
+    "titulo": "Pudim Diet de Maracujá",
+    "ingredientes": [
+      "Leite desnatado",
+      "Suco de maracujá",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.4",
+    "imagem": "pudim-diet-maracuja.jpg",
+    "legenda": "Tropical e aromático."
+  },
+  {
+    "titulo": "Bolo Diet de Maçã",
+    "ingredientes": [
+      "Farinha integral",
+      "Maçã ralada",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.4",
+    "imagem": "bolo-diet-maca.jpg",
+    "legenda": "Aromático e saudável."
+  },
+  {
+    "titulo": "Creme Diet de Café",
+    "ingredientes": [
+      "Leite desnatado",
+      "Café forte",
+      "Adoçante culinário",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.4",
+    "imagem": "creme-diet-cafe.jpg",
+    "legenda": "Energizante e leve."
+  },
+  {
+    "titulo": "Pudim Diet de Ameixa",
+    "ingredientes": [
+      "Leite desnatado",
+      "Ameixa seca",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.4",
+    "imagem": "pudim-diet-ameixa.jpg",
+    "legenda": "Rico em sabor."
+  },
+  {
+    "titulo": "Bolo Diet de Cenoura",
+    "ingredientes": [
+      "Farinha integral",
+      "Cenoura ralada",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Asse por 40 minutos.",
+    "categoria": "2.4",
+    "imagem": "bolo-diet-cenoura.jpg",
+    "legenda": "Leve e delicioso."
+  },
+  {
+    "titulo": "Creme Diet de Coco",
+    "ingredientes": [
+      "Leite desnatado",
+      "Leite de coco light",
+      "Adoçante culinário",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.4",
+    "imagem": "creme-diet-coco.jpg",
+    "legenda": "Tropical e saudável."
+  },
+  {
+    "titulo": "Pudim Diet de Limão",
+    "ingredientes": [
+      "Leite desnatado",
+      "Suco de limão",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.4",
+    "imagem": "pudim-diet-limao.jpg",
+    "legenda": "Azedinho e leve."
+  },
+  {
+    "titulo": "Bolo Diet de Chocolate",
+    "ingredientes": [
+      "Farinha integral",
+      "Chocolate diet",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.4",
+    "imagem": "bolo-diet-chocolate.jpg",
+    "legenda": "Rico e saudável."
+  },
+  {
+    "titulo": "Creme Diet de Pêssego",
+    "ingredientes": [
+      "Leite desnatado",
+      "Pêssego em calda diet",
+      "Adoçante culinário",
+      "Amido de milho"
+    ],
+    "preparo": "Bata o pêssego e misture ao leite. Leve ao fogo até engrossar.",
+    "categoria": "2.4",
+    "imagem": "creme-diet-pessego.jpg",
+    "legenda": "Frutado e leve."
+  },
+  {
+    "titulo": "Pudim Diet de Manga",
+    "ingredientes": [
+      "Leite desnatado",
+      "Suco de manga",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.4",
+    "imagem": "pudim-diet-manga.jpg",
+    "legenda": "Tropical e doce."
+  },
+  {
+    "titulo": "Bolo Diet de Abacaxi",
+    "ingredientes": [
+      "Farinha integral",
+      "Abacaxi em cubos",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse por 40 minutos.",
+    "categoria": "2.4",
+    "imagem": "bolo-diet-abacaxi.jpg",
+    "legenda": "Tropical e refrescante."
+  },
+  {
+    "titulo": "Creme Diet de Uva",
+    "ingredientes": [
+      "Leite desnatado",
+      "Suco de uva",
+      "Adoçante culinário",
+      "Amido de milho"
+    ],
+    "preparo": "Misture os ingredientes e leve ao fogo. Mexa até engrossar.",
+    "categoria": "2.4",
+    "imagem": "creme-diet-uva.jpg",
+    "legenda": "Fresco e aromático."
+  },
+  {
+    "titulo": "Pudim Diet de Goiaba",
+    "ingredientes": [
+      "Leite desnatado",
+      "Suco de goiaba",
+      "Ovos",
+      "Adoçante culinário"
+    ],
+    "preparo": "Misture os ingredientes. Asse em banho-maria por 50 minutos.",
+    "categoria": "2.4",
+    "imagem": "pudim-diet-goiaba.jpg",
+    "legenda": "Diferente e saboroso."
+  },
+  {
+    "titulo": "Espaguete à Bolonhesa",
+    "ingredientes": [
+      "Espaguete",
+      "Carne moída",
+      "Molho de tomate",
+      "Cebola",
+      "Alho"
+    ],
+    "preparo": "Cozinhe o espaguete. Prepare o molho com carne e tomate. Misture e sirva.",
+    "categoria": "3.1",
+    "imagem": "espaguete-bolonhesa.jpg",
+    "legenda": "Clássico italiano, rico em sabor."
+  },
+  {
+    "titulo": "Lasanha de Frango",
+    "ingredientes": [
+      "Massa de lasanha",
+      "Frango desfiado",
+      "Molho branco",
+      "Molho de tomate",
+      "Queijo mussarela"
+    ],
+    "preparo": "Monte camadas de massa, frango e molhos. Cubra com queijo. Asse por 40 minutos.",
+    "categoria": "3.1",
+    "imagem": "lasanha-frango.jpg",
+    "legenda": "Cremosa e irresistível."
+  },
+  {
+    "titulo": "Penne ao Pesto",
+    "ingredientes": [
+      "Penne",
+      "Molho pesto",
+      "Queijo parmesão"
+    ],
+    "preparo": "Cozinhe o penne. Misture com molho pesto. Finalize com parmesão.",
+    "categoria": "3.1",
+    "imagem": "penne-pesto.jpg",
+    "legenda": "Aromático e fresco."
+  },
+  {
+    "titulo": "Nhoque de Batata",
+    "ingredientes": [
+      "Batata",
+      "Farinha de trigo",
+      "Ovos",
+      "Molho de tomate"
+    ],
+    "preparo": "Prepare o nhoque com batata e farinha. Cozinhe e sirva com molho.",
+    "categoria": "3.1",
+    "imagem": "nhoque.jpg",
+    "legenda": "Caseiro e delicioso."
+  },
+  {
+    "titulo": "Ravioli de Ricota",
+    "ingredientes": [
+      "Ravioli",
+      "Ricota",
+      "Molho de tomate",
+      "Manjericão"
+    ],
+    "preparo": "Cozinhe o ravioli. Sirva com molho e manjericão.",
+    "categoria": "3.1",
+    "imagem": "ravioli.jpg",
+    "legenda": "Recheado e saboroso."
+  },
+  {
+    "titulo": "Fettuccine Alfredo",
+    "ingredientes": [
+      "Fettuccine",
+      "Molho branco",
+      "Queijo parmesão",
+      "Manteiga"
+    ],
+    "preparo": "Cozinhe o fettuccine. Misture com molho branco e parmesão.",
+    "categoria": "3.1",
+    "imagem": "fettuccine-alfredo.jpg",
+    "legenda": "Cremoso e clássico."
+  },
+  {
+    "titulo": "Talharim ao Funghi",
+    "ingredientes": [
+      "Talharim",
+      "Cogumelos",
+      "Molho branco",
+      "Queijo parmesão"
+    ],
+    "preparo": "Cozinhe o talharim. Prepare molho com cogumelos. Sirva com parmesão.",
+    "categoria": "3.1",
+    "imagem": "talharim-funghi.jpg",
+    "legenda": "Aromático e sofisticado."
+  },
+  {
+    "titulo": "Espaguete ao Alho e Óleo",
+    "ingredientes": [
+      "Espaguete",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Cozinhe o espaguete. Refogue alho no azeite. Misture e sirva.",
+    "categoria": "3.1",
+    "imagem": "espaguete-alho-oleo.jpg",
+    "legenda": "Simples e delicioso."
+  },
+  {
+    "titulo": "Lasanha Vegetariana",
+    "ingredientes": [
+      "Massa de lasanha",
+      "Legumes variados",
+      "Molho branco",
+      "Molho de tomate",
+      "Queijo mussarela"
+    ],
+    "preparo": "Monte camadas de massa, legumes e molhos. Cubra com queijo. Asse por 40 minutos.",
+    "categoria": "3.1",
+    "imagem": "lasanha-vegetariana.jpg",
+    "legenda": "Saudável e saborosa."
+  },
+  {
+    "titulo": "Canelone de Presunto e Queijo",
+    "ingredientes": [
+      "Massa de canelone",
+      "Presunto",
+      "Queijo mussarela",
+      "Molho de tomate"
+    ],
+    "preparo": "Recheie o canelone com presunto e queijo. Cubra com molho. Asse por 30 minutos.",
+    "categoria": "3.1",
+    "imagem": "canelone.jpg",
+    "legenda": "Recheado e irresistível."
+  },
+  {
+    "titulo": "Espaguete Carbonara",
+    "ingredientes": [
+      "Espaguete",
+      "Ovos",
+      "Bacon",
+      "Queijo parmesão"
+    ],
+    "preparo": "Cozinhe o espaguete. Misture com ovos, bacon e queijo.",
+    "categoria": "3.1",
+    "imagem": "carbonara.jpg",
+    "legenda": "Cremoso e saboroso."
+  },
+  {
+    "titulo": "Lasanha de Carne",
+    "ingredientes": [
+      "Massa de lasanha",
+      "Carne moída",
+      "Molho de tomate",
+      "Molho branco",
+      "Queijo mussarela"
+    ],
+    "preparo": "Monte camadas de massa, carne e molhos. Cubra com queijo. Asse por 40 minutos.",
+    "categoria": "3.1",
+    "imagem": "lasanha-carne.jpg",
+    "legenda": "Tradicional e deliciosa."
+  },
+  {
+    "titulo": "Espaguete ao Frutos do Mar",
+    "ingredientes": [
+      "Espaguete",
+      "Camarão",
+      "Lula",
+      "Molho de tomate"
+    ],
+    "preparo": "Cozinhe o espaguete. Prepare molho com frutos do mar. Misture e sirva.",
+    "categoria": "3.1",
+    "imagem": "espaguete-frutos-mar.jpg",
+    "legenda": "Rico e sofisticado."
+  },
+  {
+    "titulo": "Nhoque de Mandioquinha",
+    "ingredientes": [
+      "Mandioquinha",
+      "Farinha de trigo",
+      "Ovos",
+      "Molho de tomate"
+    ],
+    "preparo": "Prepare o nhoque com mandioquinha. Cozinhe e sirva com molho.",
+    "categoria": "3.1",
+    "imagem": "nhoque-mandioquinha.jpg",
+    "legenda": "Diferente e saboroso."
+  },
+  {
+    "titulo": "Penne ao Molho de Queijo",
+    "ingredientes": [
+      "Penne",
+      "Molho quatro queijos"
+    ],
+    "preparo": "Cozinhe o penne. Misture com molho de queijos.",
+    "categoria": "3.1",
+    "imagem": "penne-queijo.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Espaguete à Putanesca",
+    "ingredientes": [
+      "Espaguete",
+      "Molho de tomate",
+      "Azeitonas",
+      "Alcaparras",
+      "Anchovas"
+    ],
+    "preparo": "Cozinhe o espaguete. Prepare molho com tomate e temperos. Misture e sirva.",
+    "categoria": "3.1",
+    "imagem": "putanesca.jpg",
+    "legenda": "Intenso e aromático."
+  },
+  {
+    "titulo": "Lasanha de Bacalhau",
+    "ingredientes": [
+      "Massa de lasanha",
+      "Bacalhau desfiado",
+      "Molho branco",
+      "Queijo mussarela"
+    ],
+    "preparo": "Monte camadas de massa e bacalhau. Cubra com molho e queijo. Asse por 40 minutos.",
+    "categoria": "3.1",
+    "imagem": "lasanha-bacalhau.jpg",
+    "legenda": "Sofisticada e deliciosa."
+  },
+  {
+    "titulo": "Espaguete ao Limão",
+    "ingredientes": [
+      "Espaguete",
+      "Suco de limão",
+      "Queijo parmesão",
+      "Azeite"
+    ],
+    "preparo": "Cozinhe o espaguete. Misture com limão, azeite e queijo.",
+    "categoria": "3.1",
+    "imagem": "espaguete-limao.jpg",
+    "legenda": "Refrescante e leve."
+  },
+  {
+    "titulo": "Nhoque de Abóbora",
+    "ingredientes": [
+      "Abóbora",
+      "Farinha de trigo",
+      "Ovos",
+      "Molho de tomate"
+    ],
+    "preparo": "Prepare o nhoque com abóbora. Cozinhe e sirva com molho.",
+    "categoria": "3.1",
+    "imagem": "nhoque-abobora.jpg",
+    "legenda": "Colorido e saboroso."
+  },
+  {
+    "titulo": "Fettuccine ao Molho de Camarão",
+    "ingredientes": [
+      "Fettuccine",
+      "Camarão",
+      "Molho branco",
+      "Queijo parmesão"
+    ],
+    "preparo": "Cozinhe o fettuccine. Prepare molho com camarão. Sirva com parmesão.",
+    "categoria": "3.1",
+    "imagem": "fettuccine-camarao.jpg",
+    "legenda": "Rico e sofisticado."
+  },
+  {
+    "titulo": "Molho de Tomate Tradicional",
+    "ingredientes": [
+      "Tomate",
+      "Cebola",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue cebola e alho. Adicione tomate e cozinhe até engrossar.",
+    "categoria": "3.2",
+    "imagem": "molho-tomate.jpg",
+    "legenda": "Base clássica para massas."
+  },
+  {
+    "titulo": "Molho Branco",
+    "ingredientes": [
+      "Leite",
+      "Manteiga",
+      "Farinha de trigo",
+      "Noz-moscada"
+    ],
+    "preparo": "Derreta manteiga, adicione farinha. Acrescente leite e mexa até engrossar.",
+    "categoria": "3.2",
+    "imagem": "molho-branco.jpg",
+    "legenda": "Cremoso e versátil."
+  },
+  {
+    "titulo": "Molho Pesto",
+    "ingredientes": [
+      "Manjericão",
+      "Azeite",
+      "Alho",
+      "Queijo parmesão",
+      "Nozes"
+    ],
+    "preparo": "Bata os ingredientes até formar um creme.",
+    "categoria": "3.2",
+    "imagem": "molho-pesto.jpg",
+    "legenda": "Fresco e aromático."
+  },
+  {
+    "titulo": "Molho Quatro Queijos",
+    "ingredientes": [
+      "Queijo mussarela",
+      "Queijo gorgonzola",
+      "Queijo parmesão",
+      "Queijo provolone",
+      "Leite"
+    ],
+    "preparo": "Derreta os queijos no leite. Mexa até formar creme.",
+    "categoria": "3.2",
+    "imagem": "molho-quatro-queijos.jpg",
+    "legenda": "Rico e irresistível."
+  },
+  {
+    "titulo": "Molho Funghi",
+    "ingredientes": [
+      "Cogumelos secos",
+      "Leite",
+      "Manteiga",
+      "Farinha"
+    ],
+    "preparo": "Hidrate os cogumelos. Prepare molho branco e adicione cogumelos.",
+    "categoria": "3.2",
+    "imagem": "molho-funghi.jpg",
+    "legenda": "Aromático e sofisticado."
+  },
+  {
+    "titulo": "Molho Carbonara",
+    "ingredientes": [
+      "Ovos",
+      "Bacon",
+      "Queijo parmesão",
+      "Pimenta"
+    ],
+    "preparo": "Misture ovos e queijo. Adicione bacon e finalize com pimenta.",
+    "categoria": "3.2",
+    "imagem": "molho-carbonara.jpg",
+    "legenda": "Cremoso e saboroso."
+  },
+  {
+    "titulo": "Molho Alfredo",
+    "ingredientes": [
+      "Leite",
+      "Manteiga",
+      "Queijo parmesão"
+    ],
+    "preparo": "Derreta manteiga. Adicione leite e queijo.",
+    "categoria": "3.2",
+    "imagem": "molho-alfredo.jpg",
+    "legenda": "Clássico e cremoso."
+  },
+  {
+    "titulo": "Molho Bechamel",
+    "ingredientes": [
+      "Leite",
+      "Manteiga",
+      "Farinha",
+      "Noz-moscada"
+    ],
+    "preparo": "Prepare roux com manteiga e farinha. Adicione leite e mexa até engrossar.",
+    "categoria": "3.2",
+    "imagem": "molho-bechamel.jpg",
+    "legenda": "Base francesa tradicional."
+  },
+  {
+    "titulo": "Molho de Tomate com Manjericão",
+    "ingredientes": [
+      "Tomate",
+      "Manjericão",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue alho. Adicione tomate e manjericão.",
+    "categoria": "3.2",
+    "imagem": "molho-tomate-manjericao.jpg",
+    "legenda": "Fresco e aromático."
+  },
+  {
+    "titulo": "Molho de Tomate Picante",
+    "ingredientes": [
+      "Tomate",
+      "Pimenta",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue alho e pimenta. Adicione tomate e cozinhe.",
+    "categoria": "3.2",
+    "imagem": "molho-picante.jpg",
+    "legenda": "Intenso e saboroso."
+  },
+  {
+    "titulo": "Molho de Tomate com Azeitonas",
+    "ingredientes": [
+      "Tomate",
+      "Azeitonas",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue alho. Adicione tomate e azeitonas.",
+    "categoria": "3.2",
+    "imagem": "molho-azeitonas.jpg",
+    "legenda": "Mediterrâneo e delicioso."
+  },
+  {
+    "titulo": "Molho de Tomate com Alcaparras",
+    "ingredientes": [
+      "Tomate",
+      "Alcaparras",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue alho. Adicione tomate e alcaparras.",
+    "categoria": "3.2",
+    "imagem": "molho-alcaparras.jpg",
+    "legenda": "Aromático e sofisticado."
+  },
+  {
+    "titulo": "Molho de Tomate com Anchovas",
+    "ingredientes": [
+      "Tomate",
+      "Anchovas",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue alho e anchovas. Adicione tomate e cozinhe.",
+    "categoria": "3.2",
+    "imagem": "molho-anchovas.jpg",
+    "legenda": "Intenso e marcante."
+  },
+  {
+    "titulo": "Molho de Tomate com Vinho",
+    "ingredientes": [
+      "Tomate",
+      "Vinho tinto",
+      "Alho",
+      "Cebola"
+    ],
+    "preparo": "Refogue cebola e alho. Adicione tomate e vinho.",
+    "categoria": "3.2",
+    "imagem": "molho-vinho.jpg",
+    "legenda": "Rico e sofisticado."
+  },
+  {
+    "titulo": "Molho de Tomate com Creme",
+    "ingredientes": [
+      "Tomate",
+      "Creme de leite",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue alho. Adicione tomate e creme.",
+    "categoria": "3.2",
+    "imagem": "molho-creme.jpg",
+    "legenda": "Suave e delicioso."
+  },
+  {
+    "titulo": "Molho de Tomate com Cogumelos",
+    "ingredientes": [
+      "Tomate",
+      "Cogumelos",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue cogumelos e alho. Adicione tomate e cozinhe.",
+    "categoria": "3.2",
+    "imagem": "molho-cogumelos.jpg",
+    "legenda": "Rico e aromático."
+  },
+  {
+    "titulo": "Molho de Tomate com Pimentão",
+    "ingredientes": [
+      "Tomate",
+      "Pimentão",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue pimentão e alho. Adicione tomate e cozinhe.",
+    "categoria": "3.2",
+    "imagem": "molho-pimentao.jpg",
+    "legenda": "Colorido e saboroso."
+  },
+  {
+    "titulo": "Molho de Tomate com Ervas",
+    "ingredientes": [
+      "Tomate",
+      "Ervas frescas",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue alho. Adicione tomate e ervas.",
+    "categoria": "3.2",
+    "imagem": "molho-ervas.jpg",
+    "legenda": "Aromático e fresco."
+  },
+  {
+    "titulo": "Molho de Tomate com Queijo",
+    "ingredientes": [
+      "Tomate",
+      "Queijo parmesão",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue alho. Adicione tomate e queijo.",
+    "categoria": "3.2",
+    "imagem": "molho-queijo.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Molho de Tomate com Bacon",
+    "ingredientes": [
+      "Tomate",
+      "Bacon",
+      "Alho",
+      "Azeite"
+    ],
+    "preparo": "Refogue bacon e alho. Adicione tomate e cozinhe.",
+    "categoria": "3.2",
+    "imagem": "molho-bacon.jpg",
+    "legenda": "Intenso e saboroso."
+  },
+  {
+    "titulo": "Filé Mignon ao Molho Madeira",
+    "ingredientes": [
+      "Filé mignon",
+      "Molho madeira",
+      "Cebola",
+      "Manteiga"
+    ],
+    "preparo": "Grelhe o filé. Prepare molho madeira e cubra a carne.",
+    "categoria": "3.3",
+    "imagem": "file-madeira.jpg",
+    "legenda": "Sofisticado e delicioso."
+  },
+  {
+    "titulo": "Frango Assado",
+    "ingredientes": [
+      "Frango inteiro",
+      "Alho",
+      "Limão",
+      "Sal"
+    ],
+    "preparo": "Tempere o frango. Asse por 1 hora.",
+    "categoria": "3.3",
+    "imagem": "frango-assado.jpg",
+    "legenda": "Tradicional e saboroso."
+  },
+  {
+    "titulo": "Picanha na Brasa",
+    "ingredientes": [
+      "Picanha",
+      "Sal grosso"
+    ],
+    "preparo": "Tempere a picanha. Asse na brasa até o ponto desejado.",
+    "categoria": "3.3",
+    "imagem": "picanha.jpg",
+    "legenda": "O sabor do churrasco brasileiro."
+  },
+  {
+    "titulo": "Costela Assada",
+    "ingredientes": [
+      "Costela bovina",
+      "Alho",
+      "Sal",
+      "Cebola"
+    ],
+    "preparo": "Tempere a costela. Asse lentamente por 2 horas.",
+    "categoria": "3.3",
+    "imagem": "costela.jpg",
+    "legenda": "Suculenta e irresistível."
+  },
+  {
+    "titulo": "Carne de Panela",
+    "ingredientes": [
+      "Carne bovina em cubos",
+      "Batata",
+      "Cenoura",
+      "Cebola"
+    ],
+    "preparo": "Refogue a carne. Adicione legumes e cozinhe até ficar macio.",
+    "categoria": "3.3",
+    "imagem": "carne-panela.jpg",
+    "legenda": "Caseira e reconfortante."
+  },
+  {
+    "titulo": "Frango à Parmegiana",
+    "ingredientes": [
+      "Peito de frango",
+      "Molho de tomate",
+      "Queijo mussarela",
+      "Farinha de rosca"
+    ],
+    "preparo": "Empane o frango. Cubra com molho e queijo. Asse por 30 minutos.",
+    "categoria": "3.3",
+    "imagem": "frango-parmegiana.jpg",
+    "legenda": "Cremoso e delicioso."
+  },
+  {
+    "titulo": "Bife Acebolado",
+    "ingredientes": [
+      "Bife bovino",
+      "Cebola",
+      "Alho",
+      "Sal"
+    ],
+    "preparo": "Grelhe os bifes. Cubra com cebola refogada.",
+    "categoria": "3.3",
+    "imagem": "bife-acebolado.jpg",
+    "legenda": "Simples e saboroso."
+  },
+  {
+    "titulo": "Cordeiro Assado",
+    "ingredientes": [
+      "Pernil de cordeiro",
+      "Alho",
+      "Alecrim",
+      "Sal"
+    ],
+    "preparo": "Tempere o cordeiro. Asse por 2 horas.",
+    "categoria": "3.3",
+    "imagem": "cordeiro.jpg",
+    "legenda": "Aromático e sofisticado."
+  },
+  {
+    "titulo": "Frango Grelhado",
+    "ingredientes": [
+      "Peito de frango",
+      "Alho",
+      "Sal",
+      "Limão"
+    ],
+    "preparo": "Tempere o frango. Grelhe até dourar.",
+    "categoria": "3.3",
+    "imagem": "frango-grelhado.jpg",
+    "legenda": "Leve e saudável."
+  },
+  {
+    "titulo": "Carne de Sol com Nata",
+    "ingredientes": [
+      "Carne de sol",
+      "Nata",
+      "Cebola"
+    ],
+    "preparo": "Grelhe a carne de sol. Cubra com nata e cebola refogada.",
+    "categoria": "3.3",
+    "imagem": "carne-sol.jpg",
+    "legenda": "Nordestina e deliciosa."
+  },
+  {
+    "titulo": "Cupim Assado",
+    "ingredientes": [
+      "Cupim bovino",
+      "Alho",
+      "Sal",
+      "Cebola"
+    ],
+    "preparo": "Tempere o cupim. Asse lentamente até ficar macio.",
+    "categoria": "3.3",
+    "imagem": "cupim.jpg",
+    "legenda": "Suculento e saboroso."
+  },
+  {
+    "titulo": "Hambúrguer Caseiro",
+    "ingredientes": [
+      "Carne moída",
+      "Cebola",
+      "Alho",
+      "Sal"
+    ],
+    "preparo": "Modele os hambúrgueres. Grelhe até dourar.",
+    "categoria": "3.3",
+    "imagem": "hamburguer.jpg",
+    "legenda": "Caseiro e delicioso."
+  },
+  {
+    "titulo": "Frango ao Curry",
+    "ingredientes": [
+      "Peito de frango",
+      "Curry",
+      "Leite de coco",
+      "Cebola"
+    ],
+    "preparo": "Refogue o frango com curry. Adicione leite de coco e cozinhe.",
+    "categoria": "3.3",
+    "imagem": "frango-curry.jpg",
+    "legenda": "Exótico e aromático."
+  },
+  {
+    "titulo": "Carne de Porco Assada",
+    "ingredientes": [
+      "Carne de porco",
+      "Alho",
+      "Sal",
+      "Alecrim"
+    ],
+    "preparo": "Tempere a carne. Asse por 1 hora.",
+    "categoria": "3.3",
+    "imagem": "porco-assado.jpg",
+    "legenda": "Tradicional e saborosa."
+  },
+  {
+    "titulo": "Almôndegas ao Molho",
+    "ingredientes": [
+      "Carne moída",
+      "Farinha de rosca",
+      "Molho de tomate",
+      "Ovos"
+    ],
+    "preparo": "Modele as almôndegas. Cozinhe no molho de tomate.",
+    "categoria": "3.3",
+    "imagem": "almondegas.jpg",
+    "legenda": "Caseiras e deliciosas."
+  },
+  {
+    "titulo": "Frango Xadrez",
+    "ingredientes": [
+      "Peito de frango",
+      "Pimentão",
+      "Cebola",
+      "Molho shoyu"
+    ],
+    "preparo": "Refogue frango e legumes. Adicione molho shoyu.",
+    "categoria": "3.3",
+    "imagem": "frango-xadrez.jpg",
+    "legenda": "Oriental e saboroso."
+  },
+  {
+    "titulo": "Carne de Panela com Vinho",
+    "ingredientes": [
+      "Carne bovina",
+      "Vinho tinto",
+      "Cebola",
+      "Alho"
+    ],
+    "preparo": "Refogue a carne. Adicione vinho e cozinhe lentamente.",
+    "categoria": "3.3",
+    "imagem": "carne-vinho.jpg",
+    "legenda": "Rico e sofisticado."
+  },
+  {
+    "titulo": "Frango Empanado",
+    "ingredientes": [
+      "Peito de frango",
+      "Farinha de rosca",
+      "Ovos",
+      "Sal"
+    ],
+    "preparo": "Empane o frango. Frite até dourar.",
+    "categoria": "3.3",
+    "imagem": "frango-empanado.jpg",
+    "legenda": "Crocante e delicioso."
+  },
+  {
+    "titulo": "Costelinha Barbecue",
+    "ingredientes": [
+      "Costelinha de porco",
+      "Molho barbecue",
+      "Alho",
+      "Sal"
+    ],
+    "preparo": "Tempere a costelinha. Cubra com molho barbecue e asse.",
+    "categoria": "3.3",
+    "imagem": "costelinha-barbecue.jpg",
+    "legenda": "Americana e saborosa."
+  },
+  {
+    "titulo": "Carne de Panela com Batata",
+    "ingredientes": [
+      "Carne bovina",
+      "Batata",
+      "Cenoura",
+      "Cebola"
+    ],
+    "preparo": "Refogue a carne. Adicione batata e cenoura. Cozinhe até ficar macio.",
+    "categoria": "3.3",
+    "imagem": "carne-batata.jpg",
+    "legenda": "Caseira e nutritiva."
+  },
+  {
+    "titulo": "Sopa de Legumes",
+    "ingredientes": [
+      "Batata",
+      "Cenoura",
+      "Abobrinha",
+      "Cebola",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe os legumes no caldo. Sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-legumes.jpg",
+    "legenda": "Leve e nutritiva."
+  },
+  {
+    "titulo": "Sopa de Cebola",
+    "ingredientes": [
+      "Cebola",
+      "Caldo de carne",
+      "Queijo",
+      "Pão"
+    ],
+    "preparo": "Cozinhe cebolas no caldo. Sirva com pão e queijo gratinado.",
+    "categoria": "3.4",
+    "imagem": "sopa-cebola.jpg",
+    "legenda": "Aromática e reconfortante."
+  },
+  {
+    "titulo": "Canja de Galinha",
+    "ingredientes": [
+      "Arroz",
+      "Frango",
+      "Cenoura",
+      "Caldo de frango"
+    ],
+    "preparo": "Cozinhe o frango com arroz e legumes. Sirva quente.",
+    "categoria": "3.4",
+    "imagem": "canja.jpg",
+    "legenda": "Caseira e nutritiva."
+  },
+  {
+    "titulo": "Creme de Ervilha",
+    "ingredientes": [
+      "Ervilha seca",
+      "Caldo de legumes",
+      "Cebola",
+      "Alho"
+    ],
+    "preparo": "Cozinhe as ervilhas até desmanchar. Bata e sirva quente.",
+    "categoria": "3.4",
+    "imagem": "creme-ervilha.jpg",
+    "legenda": "Cremoso e saboroso."
+  },
+  {
+    "titulo": "Caldo Verde",
+    "ingredientes": [
+      "Batata",
+      "Couve",
+      "Linguiça",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe batata e couve. Adicione linguiça e sirva.",
+    "categoria": "3.4",
+    "imagem": "caldo-verde.jpg",
+    "legenda": "Tradicional português."
+  },
+  {
+    "titulo": "Sopa de Tomate",
+    "ingredientes": [
+      "Tomate",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe tomates com cebola e alho. Bata e sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-tomate.jpg",
+    "legenda": "Refrescante e aromática."
+  },
+  {
+    "titulo": "Sopa de Abóbora",
+    "ingredientes": [
+      "Abóbora",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe abóbora até desmanchar. Bata e sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-abobora.jpg",
+    "legenda": "Cremosa e nutritiva."
+  },
+  {
+    "titulo": "Sopa de Lentilha",
+    "ingredientes": [
+      "Lentilha",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe lentilhas até ficarem macias. Sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-lentilha.jpg",
+    "legenda": "Rica em proteínas."
+  },
+  {
+    "titulo": "Sopa de Batata",
+    "ingredientes": [
+      "Batata",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe batatas até desmanchar. Bata e sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-batata.jpg",
+    "legenda": "Simples e deliciosa."
+  },
+  {
+    "titulo": "Sopa de Mandioquinha",
+    "ingredientes": [
+      "Mandioquinha",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe mandioquinha até desmanchar. Bata e sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-mandioquinha.jpg",
+    "legenda": "Cremosa e saborosa."
+  },
+  {
+    "titulo": "Sopa de Couve-flor",
+    "ingredientes": [
+      "Couve-flor",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe couve-flor até macia. Bata e sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-couveflor.jpg",
+    "legenda": "Leve e nutritiva."
+  },
+  {
+    "titulo": "Sopa de Espinafre",
+    "ingredientes": [
+      "Espinafre",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe espinafre rapidamente. Bata e sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-espinafre.jpg",
+    "legenda": "Verde e saudável."
+  },
+  {
+    "titulo": "Sopa de Peixe",
+    "ingredientes": [
+      "Peixe branco",
+      "Cebola",
+      "Tomate",
+      "Caldo de peixe"
+    ],
+    "preparo": "Cozinhe peixe com legumes. Sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-peixe.jpg",
+    "legenda": "Leve e saborosa."
+  },
+  {
+    "titulo": "Sopa de Camarão",
+    "ingredientes": [
+      "Camarão",
+      "Cebola",
+      "Alho",
+      "Caldo de peixe"
+    ],
+    "preparo": "Refogue camarão com cebola e alho. Adicione caldo e sirva.",
+    "categoria": "3.4",
+    "imagem": "sopa-camarao.jpg",
+    "legenda": "Rica e sofisticada."
+  },
+  {
+    "titulo": "Sopa de Carne",
+    "ingredientes": [
+      "Carne bovina",
+      "Batata",
+      "Cenoura",
+      "Caldo de carne"
+    ],
+    "preparo": "Cozinhe carne com legumes. Sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-carne.jpg",
+    "legenda": "Caseira e nutritiva."
+  },
+  {
+    "titulo": "Sopa de Frango com Milho",
+    "ingredientes": [
+      "Frango",
+      "Milho",
+      "Cebola",
+      "Caldo de frango"
+    ],
+    "preparo": "Cozinhe frango com milho e cebola. Sirva quente.",
+    "categoria": "3.4",
+    "imagem": "sopa-frango-milho.jpg",
+    "legenda": "Cremosa e deliciosa."
+  },
+  {
+    "titulo": "Sopa de Cogumelos",
+    "ingredientes": [
+      "Cogumelos",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Refogue cogumelos. Adicione caldo e sirva.",
+    "categoria": "3.4",
+    "imagem": "sopa-cogumelos.jpg",
+    "legenda": "Aromática e sofisticada."
+  },
+  {
+    "titulo": "Sopa de Queijo",
+    "ingredientes": [
+      "Queijo cheddar",
+      "Leite",
+      "Cebola",
+      "Caldo de legumes"
+    ],
+    "preparo": "Derreta queijo no leite. Adicione caldo e sirva.",
+    "categoria": "3.4",
+    "imagem": "sopa-queijo.jpg",
+    "legenda": "Cremosa e irresistível."
+  },
+  {
+    "titulo": "Sopa de Ervas",
+    "ingredientes": [
+      "Ervas frescas",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Refogue cebola e alho. Adicione ervas e caldo.",
+    "categoria": "3.4",
+    "imagem": "sopa-ervas.jpg",
+    "legenda": "Aromática e leve."
+  },
+  {
+    "titulo": "Sopa Minestrone",
+    "ingredientes": [
+      "Macarrão",
+      "Legumes variados",
+      "Feijão",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe legumes e feijão. Adicione macarrão e sirva.",
+    "categoria": "3.4",
+    "imagem": "minestrone.jpg",
+    "legenda": "Italiana e completa."
+  },
+  {
+    "titulo": "Risoto de Camarão",
+    "ingredientes": [
+      "Arroz arbóreo",
+      "Camarão",
+      "Caldo de legumes",
+      "Queijo parmesão"
+    ],
+    "preparo": "Refogue arroz e camarão. Adicione caldo aos poucos até cozinhar. Finalize com parmesão.",
+    "categoria": "4.1",
+    "imagem": "risoto-camarao.jpg",
+    "legenda": "Cremoso e sofisticado."
+  },
+  {
+    "titulo": "Feijoada",
+    "ingredientes": [
+      "Feijão preto",
+      "Carne seca",
+      "Linguiça",
+      "Costelinha"
+    ],
+    "preparo": "Cozinhe o feijão com carnes. Sirva com arroz e couve.",
+    "categoria": "4.1",
+    "imagem": "feijoada.jpg",
+    "legenda": "Tradicional e brasileira."
+  },
+  {
+    "titulo": "Paella",
+    "ingredientes": [
+      "Arroz",
+      "Frutos do mar",
+      "Frango",
+      "Pimentão"
+    ],
+    "preparo": "Refogue arroz com carnes e frutos do mar. Cozinhe até ficar macio.",
+    "categoria": "4.1",
+    "imagem": "paella.jpg",
+    "legenda": "Espanhola e completa."
+  },
+  {
+    "titulo": "Moqueca de Peixe",
+    "ingredientes": [
+      "Peixe branco",
+      "Leite de coco",
+      "Pimentão",
+      "Tomate"
+    ],
+    "preparo": "Cozinhe peixe com leite de coco e legumes. Sirva quente.",
+    "categoria": "4.1",
+    "imagem": "moqueca.jpg",
+    "legenda": "Aromática e tropical."
+  },
+  {
+    "titulo": "Bobó de Camarão",
+    "ingredientes": [
+      "Camarão",
+      "Mandioca",
+      "Leite de coco",
+      "Azeite de dendê"
+    ],
+    "preparo": "Cozinhe mandioca e bata com leite de coco. Adicione camarão e dendê.",
+    "categoria": "4.1",
+    "imagem": "bobo-camarao.jpg",
+    "legenda": "Cremoso e baiano."
+  },
+  {
+    "titulo": "Arroz de Pato",
+    "ingredientes": [
+      "Arroz",
+      "Pato desfiado",
+      "Linguiça",
+      "Caldo de carne"
+    ],
+    "preparo": "Refogue arroz com pato e linguiça. Cozinhe até ficar macio.",
+    "categoria": "4.1",
+    "imagem": "arroz-pato.jpg",
+    "legenda": "Português e saboroso."
+  },
+  {
+    "titulo": "Bacalhau à Gomes de Sá",
+    "ingredientes": [
+      "Bacalhau",
+      "Batata",
+      "Cebola",
+      "Azeitonas"
+    ],
+    "preparo": "Cozinhe bacalhau com batatas e cebolas. Finalize com azeitonas.",
+    "categoria": "4.1",
+    "imagem": "bacalhau-gomes.jpg",
+    "legenda": "Tradicional português."
+  },
+  {
+    "titulo": "Cassoulet",
+    "ingredientes": [
+      "Feijão branco",
+      "Linguiça",
+      "Carne de porco",
+      "Tomate"
+    ],
+    "preparo": "Cozinhe feijão com carnes e tomate. Sirva quente.",
+    "categoria": "4.1",
+    "imagem": "cassoulet.jpg",
+    "legenda": "Francês e reconfortante."
+  },
+  {
+    "titulo": "Coq au Vin",
+    "ingredientes": [
+      "Frango",
+      "Vinho tinto",
+      "Cebola",
+      "Cogumelos"
+    ],
+    "preparo": "Cozinhe frango com vinho e legumes. Sirva quente.",
+    "categoria": "4.1",
+    "imagem": "coq-au-vin.jpg",
+    "legenda": "Francês e sofisticado."
+  },
+  {
+    "titulo": "Ratatouille",
+    "ingredientes": [
+      "Berinjela",
+      "Abobrinha",
+      "Tomate",
+      "Pimentão"
+    ],
+    "preparo": "Refogue legumes em azeite. Sirva quente.",
+    "categoria": "4.1",
+    "imagem": "ratatouille.jpg",
+    "legenda": "Vegetariano e aromático."
+  },
+  {
+    "titulo": "Churrasco Gaúcho",
+    "ingredientes": [
+      "Carne bovina",
+      "Linguiça",
+      "Sal grosso"
+    ],
+    "preparo": "Tempere carnes com sal grosso. Asse na brasa.",
+    "categoria": "4.1",
+    "imagem": "churrasco-gaucho.jpg",
+    "legenda": "Tradicional do sul do Brasil."
+  },
+  {
+    "titulo": "Arroz de Mariscos",
+    "ingredientes": [
+      "Arroz",
+      "Camarão",
+      "Lula",
+      "Mexilhão"
+    ],
+    "preparo": "Cozinhe arroz com frutos do mar. Sirva quente.",
+    "categoria": "4.1",
+    "imagem": "arroz-mariscos.jpg",
+    "legenda": "Rico e saboroso."
+  },
+  {
+    "titulo": "Polenta com Ragu",
+    "ingredientes": [
+      "Polenta",
+      "Carne bovina",
+      "Molho de tomate",
+      "Queijo parmesão"
+    ],
+    "preparo": "Prepare polenta cremosa. Cubra com ragu de carne.",
+    "categoria": "4.1",
+    "imagem": "polenta-ragu.jpg",
+    "legenda": "Italiana e reconfortante."
+  },
+  {
+    "titulo": "Escondidinho de Carne Seca",
+    "ingredientes": [
+      "Carne seca",
+      "Mandioca",
+      "Queijo"
+    ],
+    "preparo": "Prepare purê de mandioca. Monte camadas com carne seca e queijo.",
+    "categoria": "4.1",
+    "imagem": "escondidinho.jpg",
+    "legenda": "Nordestino e delicioso."
+  },
+  {
+    "titulo": "Sushi Variado",
+    "ingredientes": [
+      "Arroz japonês",
+      "Peixe cru",
+      "Alga nori"
+    ],
+    "preparo": "Prepare arroz temperado. Monte sushis variados.",
+    "categoria": "4.1",
+    "imagem": "sushi.jpg",
+    "legenda": "Japonês e sofisticado."
+  },
+  {
+    "titulo": "Yakisoba",
+    "ingredientes": [
+      "Macarrão",
+      "Carne bovina",
+      "Legumes",
+      "Molho shoyu"
+    ],
+    "preparo": "Cozinhe macarrão. Refogue carne e legumes com molho.",
+    "categoria": "4.1",
+    "imagem": "yakisoba.jpg",
+    "legenda": "Oriental e saboroso."
+  },
+  {
+    "titulo": "Ceviche",
+    "ingredientes": [
+      "Peixe branco",
+      "Limão",
+      "Cebola roxa",
+      "Coentro"
+    ],
+    "preparo": "Marine peixe no limão. Adicione cebola e coentro.",
+    "categoria": "4.1",
+    "imagem": "ceviche.jpg",
+    "legenda": "Peruano e refrescante."
+  },
+  {
+    "titulo": "Tacos Mexicanos",
+    "ingredientes": [
+      "Tortilla",
+      "Carne bovina",
+      "Alface",
+      "Tomate"
+    ],
+    "preparo": "Recheie tortillas com carne e legumes. Sirva quente.",
+    "categoria": "4.1",
+    "imagem": "tacos.jpg",
+    "legenda": "Mexicano e delicioso."
+  },
+  {
+    "titulo": "Chili com Carne",
+    "ingredientes": [
+      "Feijão vermelho",
+      "Carne moída",
+      "Tomate",
+      "Pimenta"
+    ],
+    "preparo": "Cozinhe feijão com carne e tomate. Adicione pimenta e sirva.",
+    "categoria": "4.1",
+    "imagem": "chili.jpg",
+    "legenda": "Picante e reconfortante."
+  },
+  {
+    "titulo": "Stroganoff de Carne",
+    "ingredientes": [
+      "Carne bovina",
+      "Creme de leite",
+      "Cogumelos",
+      "Molho de tomate"
+    ],
+    "preparo": "Refogue carne com cogumelos. Adicione creme e molho.",
+    "categoria": "4.1",
+    "imagem": "stroganoff.jpg",
+    "legenda": "Russo e saboroso."
+  },
+  {
+    "titulo": "Massa Tradicional de Pizza",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra a massa e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-tradicional.jpg",
+    "legenda": "Clássica e versátil."
+  },
+  {
+    "titulo": "Massa de Pizza Rápida",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Fermento químico",
+      "Água",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Abra a massa sem descanso. Asse imediatamente.",
+    "categoria": "5.1",
+    "imagem": "massa-rapida.jpg",
+    "legenda": "Prática e rápida."
+  },
+  {
+    "titulo": "Massa de Pizza Integral",
+    "ingredientes": [
+      "Farinha integral",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-integral.jpg",
+    "legenda": "Saudável e nutritiva."
+  },
+  {
+    "titulo": "Massa de Pizza Napolitana",
+    "ingredientes": [
+      "Farinha tipo 00",
+      "Água",
+      "Fermento natural",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Fermente por 24 horas. Abra e asse em forno bem quente.",
+    "categoria": "5.1",
+    "imagem": "massa-napolitana.jpg",
+    "legenda": "Autêntica e italiana."
+  },
+  {
+    "titulo": "Massa de Pizza Fina",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Abra bem fina. Asse rapidamente.",
+    "categoria": "5.1",
+    "imagem": "massa-fina.jpg",
+    "legenda": "Crocante e leve."
+  },
+  {
+    "titulo": "Massa de Pizza Pan",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer em forma funda. Asse até dourar.",
+    "categoria": "5.1",
+    "imagem": "massa-pan.jpg",
+    "legenda": "Alta e macia."
+  },
+  {
+    "titulo": "Massa de Pizza com Cerveja",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Cerveja",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-cerveja.jpg",
+    "legenda": "Aromática e diferente."
+  },
+  {
+    "titulo": "Massa de Pizza com Batata",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Batata cozida",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture batata amassada à massa. Deixe crescer e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-batata.jpg",
+    "legenda": "Macia e saborosa."
+  },
+  {
+    "titulo": "Massa de Pizza com Iogurte",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Iogurte natural",
+      "Fermento químico",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Abra a massa sem descanso. Asse imediatamente.",
+    "categoria": "5.1",
+    "imagem": "massa-iogurte.jpg",
+    "legenda": "Leve e prática."
+  },
+  {
+    "titulo": "Massa de Pizza com Azeite Extra",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite extra virgem"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-azeite.jpg",
+    "legenda": "Aromática e saborosa."
+  },
+  {
+    "titulo": "Massa de Pizza Sem Glúten",
+    "ingredientes": [
+      "Farinha sem glúten",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-sem-gluten.jpg",
+    "legenda": "Leve e inclusiva."
+  },
+  {
+    "titulo": "Massa de Pizza Vegana",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Óleo vegetal"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-vegana.jpg",
+    "legenda": "Sem ingredientes de origem animal."
+  },
+  {
+    "titulo": "Massa de Pizza de Arroz",
+    "ingredientes": [
+      "Farinha de arroz",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-arroz.jpg",
+    "legenda": "Sem glúten e leve."
+  },
+  {
+    "titulo": "Massa de Pizza de Grão-de-Bico",
+    "ingredientes": [
+      "Farinha de grão-de-bico",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-grao-bico.jpg",
+    "legenda": "Proteica e saudável."
+  },
+  {
+    "titulo": "Massa de Pizza de Aveia",
+    "ingredientes": [
+      "Farinha de aveia",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-aveia.jpg",
+    "legenda": "Nutritiva e diferente."
+  },
+  {
+    "titulo": "Massa de Pizza de Quinoa",
+    "ingredientes": [
+      "Farinha de quinoa",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Abra e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-quinoa.jpg",
+    "legenda": "Rica em proteínas."
+  },
+  {
+    "titulo": "Massa de Pizza de Mandioquinha",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Mandioquinha cozida",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture mandioquinha amassada à massa. Deixe crescer e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-mandioquinha.jpg",
+    "legenda": "Macia e saborosa."
+  },
+  {
+    "titulo": "Massa de Pizza de Abóbora",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Abóbora cozida",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture abóbora amassada à massa. Deixe crescer e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-abobora.jpg",
+    "legenda": "Colorida e nutritiva."
+  },
+  {
+    "titulo": "Massa de Pizza de Espinafre",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Espinafre cozido",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture espinafre triturado à massa. Deixe crescer e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-espinafre.jpg",
+    "legenda": "Verde e saudável."
+  },
+  {
+    "titulo": "Massa de Pizza de Beterraba",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Beterraba cozida",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture beterraba triturada à massa. Deixe crescer e asse.",
+    "categoria": "5.1",
+    "imagem": "massa-beterraba.jpg",
+    "legenda": "Vibrante e nutritiva."
+  },
+  {
+    "titulo": "Massa de Pão Caseiro",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-caseiro.jpg",
+    "legenda": "Simples e delicioso."
+  },
+  {
+    "titulo": "Massa de Pão Integral",
+    "ingredientes": [
+      "Farinha integral",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Açúcar mascavo"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-integral.jpg",
+    "legenda": "Saudável e nutritivo."
+  },
+  {
+    "titulo": "Massa de Pão de Leite",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Leite",
+      "Fermento biológico",
+      "Sal",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-leite.jpg",
+    "legenda": "Macio e saboroso."
+  },
+  {
+    "titulo": "Massa de Pão Francês",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 2 horas. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-frances.jpg",
+    "legenda": "Crocante e tradicional."
+  },
+  {
+    "titulo": "Massa de Pão de Forma",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Leite",
+      "Fermento biológico",
+      "Sal",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer em forma. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-forma.jpg",
+    "legenda": "Ideal para sanduíches."
+  },
+  {
+    "titulo": "Massa de Pão de Centeio",
+    "ingredientes": [
+      "Farinha de centeio",
+      "Água",
+      "Fermento biológico",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-centeio.jpg",
+    "legenda": "Aromático e nutritivo."
+  },
+  {
+    "titulo": "Massa de Pão de Batata",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Batata cozida",
+      "Fermento biológico",
+      "Sal",
+      "Açúcar"
+    ],
+    "preparo": "Misture batata amassada à massa. Deixe crescer e asse.",
+    "categoria": "5.2",
+    "imagem": "pao-batata.jpg",
+    "legenda": "Macio e saboroso."
+  },
+  {
+    "titulo": "Massa de Pão de Milho",
+    "ingredientes": [
+      "Farinha de milho",
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-milho.jpg",
+    "legenda": "Diferente e delicioso."
+  },
+  {
+    "titulo": "Massa de Pão de Queijo",
+    "ingredientes": [
+      "Polvilho doce",
+      "Polvilho azedo",
+      "Queijo minas",
+      "Leite",
+      "Ovos"
+    ],
+    "preparo": "Misture os ingredientes. Modele bolinhas. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-queijo.jpg",
+    "legenda": "Mineiro e irresistível."
+  },
+  {
+    "titulo": "Massa de Pão Sírio",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse em forno bem quente.",
+    "categoria": "5.2",
+    "imagem": "pao-sirio.jpg",
+    "legenda": "Leve e versátil."
+  },
+  {
+    "titulo": "Massa de Pão Italiano",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento natural",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Fermente por 24 horas. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-italiano.jpg",
+    "legenda": "Rústico e aromático."
+  },
+  {
+    "titulo": "Massa de Pão Alemão",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Farinha de centeio",
+      "Água",
+      "Fermento biológico",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-alemao.jpg",
+    "legenda": "Denso e nutritivo."
+  },
+  {
+    "titulo": "Massa de Pão Brioche",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Leite",
+      "Ovos",
+      "Manteiga",
+      "Fermento biológico"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 2 horas. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "brioche.jpg",
+    "legenda": "Macio e amanteigado."
+  },
+  {
+    "titulo": "Massa de Pão Baguete",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Modele baguetes. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "baguete.jpg",
+    "legenda": "Crocante e francês."
+  },
+  {
+    "titulo": "Massa de Pão Focaccia",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeite"
+    ],
+    "preparo": "Misture os ingredientes. Cubra com azeite e ervas. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "focaccia.jpg",
+    "legenda": "Italiana e aromática."
+  },
+  {
+    "titulo": "Massa de Pão Ciabatta",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 2 horas. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "ciabatta.jpg",
+    "legenda": "Rústica e deliciosa."
+  },
+  {
+    "titulo": "Massa de Pão de Ervas",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Ervas frescas"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-ervas.jpg",
+    "legenda": "Aromático e saboroso."
+  },
+  {
+    "titulo": "Massa de Pão de Alho",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Alho picado"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-alho.jpg",
+    "legenda": "Intenso e delicioso."
+  },
+  {
+    "titulo": "Massa de Pão de Nozes",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Nozes picadas"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-nozes.jpg",
+    "legenda": "Crocante e sofisticado."
+  },
+  {
+    "titulo": "Massa de Pão de Azeitonas",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Fermento biológico",
+      "Sal",
+      "Azeitonas picadas"
+    ],
+    "preparo": "Misture os ingredientes. Deixe crescer por 1 hora. Asse até dourar.",
+    "categoria": "5.2",
+    "imagem": "pao-azeitonas.jpg",
+    "legenda": "Mediterrâneo e saboroso."
+  },
+  {
+    "titulo": "Brigadeiro",
+    "ingredientes": [
+      "Leite condensado",
+      "Chocolate em pó",
+      "Manteiga"
+    ],
+    "preparo": "Misture os ingredientes. Cozinhe até desgrudar da panela. Modele bolinhas.",
+    "categoria": "5.3",
+    "imagem": "brigadeiro.jpg",
+    "legenda": "Clássico brasileiro."
+  },
+  {
+    "titulo": "Brigadeiro de Colher",
+    "ingredientes": [
+      "Leite condensado",
+      "Chocolate em pó",
+      "Manteiga"
+    ],
+    "preparo": "Misture os ingredientes. Cozinhe até engrossar. Sirva em copinhos.",
+    "categoria": "5.3",
+    "imagem": "brigadeiro-colher.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Beijinho",
+    "ingredientes": [
+      "Leite condensado",
+      "Coco ralado",
+      "Manteiga"
+    ],
+    "preparo": "Misture os ingredientes. Cozinhe até desgrudar da panela. Modele bolinhas e passe no coco.",
+    "categoria": "5.3",
+    "imagem": "beijinho.jpg",
+    "legenda": "Doce e tropical."
+  },
+  {
+    "titulo": "Cajuzinho",
+    "ingredientes": [
+      "Leite condensado",
+      "Amendoim torrado",
+      "Chocolate em pó"
+    ],
+    "preparo": "Misture os ingredientes. Modele em formato de caju. Passe no açúcar.",
+    "categoria": "5.3",
+    "imagem": "cajuzinho.jpg",
+    "legenda": "Tradicional e saboroso."
+  },
+  {
+    "titulo": "Cocada Branca",
+    "ingredientes": [
+      "Coco ralado",
+      "Açúcar",
+      "Água"
+    ],
+    "preparo": "Misture os ingredientes. Cozinhe até engrossar. Coloque em pedaços.",
+    "categoria": "5.3",
+    "imagem": "cocada-branca.jpg",
+    "legenda": "Caseira e deliciosa."
+  },
+  {
+    "titulo": "Cocada Queimada",
+    "ingredientes": [
+      "Coco ralado",
+      "Açúcar",
+      "Água"
+    ],
+    "preparo": "Caramelize o açúcar. Adicione coco e água. Cozinhe até engrossar.",
+    "categoria": "5.3",
+    "imagem": "cocada-queimada.jpg",
+    "legenda": "Intensa e saborosa."
+  },
+  {
+    "titulo": "Pé de Moleque",
+    "ingredientes": [
+      "Amendoim torrado",
+      "Açúcar"
+    ],
+    "preparo": "Caramelize o açúcar. Adicione amendoim. Espalhe e deixe esfriar.",
+    "categoria": "5.3",
+    "imagem": "pe-moleque.jpg",
+    "legenda": "Crocante e tradicional."
+  },
+  {
+    "titulo": "Paçoca",
+    "ingredientes": [
+      "Amendoim torrado",
+      "Açúcar",
+      "Farinha de mandioca"
+    ],
+    "preparo": "Triture os ingredientes. Modele em pedaços.",
+    "categoria": "5.3",
+    "imagem": "pacoca.jpg",
+    "legenda": "Mineira e deliciosa."
+  },
+  {
+    "titulo": "Doce de Leite",
+    "ingredientes": [
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Cozinhe leite e açúcar. Mexa até engrossar.",
+    "categoria": "5.3",
+    "imagem": "doce-leite.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Doce de Abóbora",
+    "ingredientes": [
+      "Abóbora",
+      "Açúcar",
+      "Canela",
+      "Cravo"
+    ],
+    "preparo": "Cozinhe abóbora com açúcar e especiarias. Sirva frio.",
+    "categoria": "5.3",
+    "imagem": "doce-abobora.jpg",
+    "legenda": "Caseiro e aromático."
+  },
+  {
+    "titulo": "Doce de Banana",
+    "ingredientes": [
+      "Banana",
+      "Açúcar",
+      "Canela"
+    ],
+    "preparo": "Cozinhe banana com açúcar e canela. Sirva frio.",
+    "categoria": "5.3",
+    "imagem": "doce-banana.jpg",
+    "legenda": "Simples e delicioso."
+  },
+  {
+    "titulo": "Doce de Goiaba",
+    "ingredientes": [
+      "Goiaba",
+      "Açúcar"
+    ],
+    "preparo": "Cozinhe goiaba com açúcar. Mexa até engrossar.",
+    "categoria": "5.3",
+    "imagem": "doce-goiaba.jpg",
+    "legenda": "Tradicional e saboroso."
+  },
+  {
+    "titulo": "Doce de Mamão",
+    "ingredientes": [
+      "Mamão verde",
+      "Açúcar",
+      "Cravo"
+    ],
+    "preparo": "Cozinhe mamão com açúcar e cravo. Sirva frio.",
+    "categoria": "5.3",
+    "imagem": "doce-mamao.jpg",
+    "legenda": "Caseiro e aromático."
+  },
+  {
+    "titulo": "Bala de Coco",
+    "ingredientes": [
+      "Coco ralado",
+      "Açúcar",
+      "Água"
+    ],
+    "preparo": "Misture os ingredientes. Cozinhe até ponto de bala. Modele pedaços.",
+    "categoria": "5.3",
+    "imagem": "bala-coco.jpg",
+    "legenda": "Crocante e doce."
+  },
+  {
+    "titulo": "Bala de Goma",
+    "ingredientes": [
+      "Gelatina",
+      "Açúcar",
+      "Água"
+    ],
+    "preparo": "Misture os ingredientes. Deixe firmar em formas. Passe no açúcar.",
+    "categoria": "5.3",
+    "imagem": "bala-goma.jpg",
+    "legenda": "Colorida e divertida."
+  },
+  {
+    "titulo": "Quindim",
+    "ingredientes": [
+      "Coco ralado",
+      "Ovos",
+      "Açúcar",
+      "Manteiga"
+    ],
+    "preparo": "Misture os ingredientes. Asse em banho-maria.",
+    "categoria": "5.3",
+    "imagem": "quindim.jpg",
+    "legenda": "Brasileiro e irresistível."
+  },
+  {
+    "titulo": "Pudim de Pão Caseiro",
+    "ingredientes": [
+      "Pão amanhecido",
+      "Leite",
+      "Ovos",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes. Asse em banho-maria.",
+    "categoria": "5.3",
+    "imagem": "pudim-pao-caseiro.jpg",
+    "legenda": "Aproveitamento delicioso."
+  },
+  {
+    "titulo": "Arroz Doce",
+    "ingredientes": [
+      "Arroz",
+      "Leite",
+      "Açúcar",
+      "Canela"
+    ],
+    "preparo": "Cozinhe arroz com leite e açúcar. Finalize com canela.",
+    "categoria": "5.3",
+    "imagem": "arroz-doce.jpg",
+    "legenda": "Cremoso e tradicional."
+  },
+  {
+    "titulo": "Curau de Milho",
+    "ingredientes": [
+      "Milho verde",
+      "Leite",
+      "Açúcar",
+      "Canela"
+    ],
+    "preparo": "Bata milho com leite. Cozinhe até engrossar.",
+    "categoria": "5.3",
+    "imagem": "curau.jpg",
+    "legenda": "Caseiro e saboroso."
+  },
+  {
+    "titulo": "Rapadura",
+    "ingredientes": [
+      "Caldo de cana"
+    ],
+    "preparo": "Cozinhe caldo de cana até engrossar. Modele em pedaços.",
+    "categoria": "5.3",
+    "imagem": "rapadura.jpg",
+    "legenda": "Tradicional e nordestina."
+  },
+  {
+    "titulo": "Suco de Laranja Natural",
+    "ingredientes": [
+      "Laranja",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Esprema as laranjas. Misture com água e açúcar.",
+    "categoria": "6.1",
+    "imagem": "suco-laranja.jpg",
+    "legenda": "Refrescante e tradicional."
+  },
+  {
+    "titulo": "Suco de Limão",
+    "ingredientes": [
+      "Limão",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Esprema os limões. Misture com água e açúcar.",
+    "categoria": "6.1",
+    "imagem": "suco-limao.jpg",
+    "legenda": "Azedinho e delicioso."
+  },
+  {
+    "titulo": "Suco de Abacaxi com Hortelã",
+    "ingredientes": [
+      "Abacaxi",
+      "Água",
+      "Hortelã",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-abacaxi-hortela.jpg",
+    "legenda": "Tropical e refrescante."
+  },
+  {
+    "titulo": "Suco de Melancia",
+    "ingredientes": [
+      "Melancia",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata melancia com água. Coe e sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-melancia.jpg",
+    "legenda": "Doce e hidratante."
+  },
+  {
+    "titulo": "Suco de Manga",
+    "ingredientes": [
+      "Manga",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata manga com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-manga.jpg",
+    "legenda": "Cremoso e tropical."
+  },
+  {
+    "titulo": "Suco de Goiaba",
+    "ingredientes": [
+      "Goiaba",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata goiaba com água. Coe e sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-goiaba.jpg",
+    "legenda": "Frutado e nutritivo."
+  },
+  {
+    "titulo": "Suco de Maracujá",
+    "ingredientes": [
+      "Maracujá",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata polpa de maracujá com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-maracuja.jpg",
+    "legenda": "Tropical e aromático."
+  },
+  {
+    "titulo": "Suco de Morango",
+    "ingredientes": [
+      "Morangos",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata morangos com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-morango.jpg",
+    "legenda": "Colorido e delicioso."
+  },
+  {
+    "titulo": "Suco de Uva",
+    "ingredientes": [
+      "Uvas",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata uvas com água. Coe e sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-uva.jpg",
+    "legenda": "Fresco e aromático."
+  },
+  {
+    "titulo": "Suco de Kiwi",
+    "ingredientes": [
+      "Kiwi",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata kiwi com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-kiwi.jpg",
+    "legenda": "Diferente e refrescante."
+  },
+  {
+    "titulo": "Suco de Pêssego",
+    "ingredientes": [
+      "Pêssego",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata pêssego com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-pessego.jpg",
+    "legenda": "Frutado e leve."
+  },
+  {
+    "titulo": "Suco de Acerola",
+    "ingredientes": [
+      "Acerola",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata acerola com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-acerola.jpg",
+    "legenda": "Rico em vitamina C."
+  },
+  {
+    "titulo": "Suco de Caju",
+    "ingredientes": [
+      "Caju",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata caju com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-caju.jpg",
+    "legenda": "Tropical e nutritivo."
+  },
+  {
+    "titulo": "Suco de Graviola",
+    "ingredientes": [
+      "Graviola",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata graviola com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-graviola.jpg",
+    "legenda": "Cremoso e diferente."
+  },
+  {
+    "titulo": "Suco de Pitanga",
+    "ingredientes": [
+      "Pitanga",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata pitanga com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-pitanga.jpg",
+    "legenda": "Refrescante e aromático."
+  },
+  {
+    "titulo": "Suco de Jabuticaba",
+    "ingredientes": [
+      "Jabuticaba",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata jabuticaba com água. Coe e sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-jabuticaba.jpg",
+    "legenda": "Brasileiro e delicioso."
+  },
+  {
+    "titulo": "Suco de Tamarindo",
+    "ingredientes": [
+      "Tamarindo",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata polpa de tamarindo com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-tamarindo.jpg",
+    "legenda": "Exótico e refrescante."
+  },
+  {
+    "titulo": "Suco de Melão",
+    "ingredientes": [
+      "Melão",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata melão com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-melao.jpg",
+    "legenda": "Leve e hidratante."
+  },
+  {
+    "titulo": "Suco de Pera",
+    "ingredientes": [
+      "Pera",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata pera com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-pera.jpg",
+    "legenda": "Suave e delicioso."
+  },
+  {
+    "titulo": "Suco de Frutas Tropicais",
+    "ingredientes": [
+      "Abacaxi",
+      "Manga",
+      "Maracujá",
+      "Água",
+      "Açúcar"
+    ],
+    "preparo": "Bata todas as frutas com água. Sirva gelado.",
+    "categoria": "6.1",
+    "imagem": "suco-tropicais.jpg",
+    "legenda": "Mistura tropical e irresistível."
+  },
+  {
+    "titulo": "Vitamina de Banana",
+    "ingredientes": [
+      "Banana",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-banana.jpg",
+    "legenda": "Nutritiva e deliciosa."
+  },
+  {
+    "titulo": "Vitamina de Mamão",
+    "ingredientes": [
+      "Mamão",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-mamao.jpg",
+    "legenda": "Cremosa e saudável."
+  },
+  {
+    "titulo": "Vitamina de Morango",
+    "ingredientes": [
+      "Morangos",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-morango.jpg",
+    "legenda": "Colorida e irresistível."
+  },
+  {
+    "titulo": "Vitamina de Abacate",
+    "ingredientes": [
+      "Abacate",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-abacate.jpg",
+    "legenda": "Cremosa e energética."
+  },
+  {
+    "titulo": "Vitamina de Pêssego",
+    "ingredientes": [
+      "Pêssego",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-pessego.jpg",
+    "legenda": "Frutada e leve."
+  },
+  {
+    "titulo": "Vitamina de Manga",
+    "ingredientes": [
+      "Manga",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-manga.jpg",
+    "legenda": "Tropical e deliciosa."
+  },
+  {
+    "titulo": "Vitamina de Uva",
+    "ingredientes": [
+      "Uvas",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-uva.jpg",
+    "legenda": "Fresca e nutritiva."
+  },
+  {
+    "titulo": "Vitamina de Ameixa",
+    "ingredientes": [
+      "Ameixa seca",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-ameixa.jpg",
+    "legenda": "Diferente e saborosa."
+  },
+  {
+    "titulo": "Vitamina de Coco",
+    "ingredientes": [
+      "Leite de coco",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-coco.jpg",
+    "legenda": "Tropical e cremosa."
+  },
+  {
+    "titulo": "Vitamina de Goiaba",
+    "ingredientes": [
+      "Goiaba",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-goiaba.jpg",
+    "legenda": "Frutada e nutritiva."
+  },
+  {
+    "titulo": "Vitamina de Abacaxi",
+    "ingredientes": [
+      "Abacaxi",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-abacaxi.jpg",
+    "legenda": "Refrescante e tropical."
+  },
+  {
+    "titulo": "Vitamina de Melancia",
+    "ingredientes": [
+      "Melancia",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-melancia.jpg",
+    "legenda": "Hidratante e doce."
+  },
+  {
+    "titulo": "Vitamina de Kiwi",
+    "ingredientes": [
+      "Kiwi",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-kiwi.jpg",
+    "legenda": "Exótica e refrescante."
+  },
+  {
+    "titulo": "Vitamina de Pera",
+    "ingredientes": [
+      "Pera",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-pera.jpg",
+    "legenda": "Suave e deliciosa."
+  },
+  {
+    "titulo": "Vitamina de Maçã",
+    "ingredientes": [
+      "Maçã",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-maca.jpg",
+    "legenda": "Aromática e leve."
+  },
+  {
+    "titulo": "Vitamina de Graviola",
+    "ingredientes": [
+      "Graviola",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-graviola.jpg",
+    "legenda": "Cremosa e diferente."
+  },
+  {
+    "titulo": "Vitamina de Caju",
+    "ingredientes": [
+      "Caju",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-caju.jpg",
+    "legenda": "Tropical e nutritiva."
+  },
+  {
+    "titulo": "Vitamina de Pitanga",
+    "ingredientes": [
+      "Pitanga",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-pitanga.jpg",
+    "legenda": "Refrescante e aromática."
+  },
+  {
+    "titulo": "Vitamina de Jabuticaba",
+    "ingredientes": [
+      "Jabuticaba",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-jabuticaba.jpg",
+    "legenda": "Brasileira e deliciosa."
+  },
+  {
+    "titulo": "Vitamina Mista de Frutas",
+    "ingredientes": [
+      "Banana",
+      "Mamão",
+      "Morangos",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata todas as frutas com leite. Sirva gelado.",
+    "categoria": "6.2",
+    "imagem": "vitamina-mista.jpg",
+    "legenda": "Completa e nutritiva."
+  },
+  {
+    "titulo": "Drink de Limão com Hortelã",
+    "ingredientes": [
+      "Limão",
+      "Água com gás",
+      "Hortelã",
+      "Açúcar"
+    ],
+    "preparo": "Amasse hortelã com limão e açúcar. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-limao-hortela.jpg",
+    "legenda": "Refrescante e aromático."
+  },
+  {
+    "titulo": "Drink Tropical de Abacaxi",
+    "ingredientes": [
+      "Abacaxi",
+      "Suco de laranja",
+      "Água com gás"
+    ],
+    "preparo": "Bata abacaxi com suco de laranja. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-abacaxi.jpg",
+    "legenda": "Tropical e leve."
+  },
+  {
+    "titulo": "Drink de Melancia",
+    "ingredientes": [
+      "Melancia",
+      "Suco de limão",
+      "Água com gás"
+    ],
+    "preparo": "Bata melancia e limão. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-melancia.jpg",
+    "legenda": "Hidratante e refrescante."
+  },
+  {
+    "titulo": "Drink de Morango",
+    "ingredientes": [
+      "Morangos",
+      "Suco de laranja",
+      "Água com gás"
+    ],
+    "preparo": "Bata morangos com suco de laranja. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-morango.jpg",
+    "legenda": "Colorido e delicioso."
+  },
+  {
+    "titulo": "Drink de Manga",
+    "ingredientes": [
+      "Manga",
+      "Suco de limão",
+      "Água com gás"
+    ],
+    "preparo": "Bata manga com limão. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-manga.jpg",
+    "legenda": "Cremoso e tropical."
+  },
+  {
+    "titulo": "Drink de Kiwi",
+    "ingredientes": [
+      "Kiwi",
+      "Suco de maçã",
+      "Água com gás"
+    ],
+    "preparo": "Bata kiwi com suco de maçã. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-kiwi.jpg",
+    "legenda": "Exótico e refrescante."
+  },
+  {
+    "titulo": "Drink de Uva",
+    "ingredientes": [
+      "Suco de uva",
+      "Água com gás",
+      "Limão"
+    ],
+    "preparo": "Misture suco de uva com limão. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-uva.jpg",
+    "legenda": "Aromático e leve."
+  },
+  {
+    "titulo": "Drink de Pêssego",
+    "ingredientes": [
+      "Pêssego",
+      "Suco de laranja",
+      "Água com gás"
+    ],
+    "preparo": "Bata pêssego com suco de laranja. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-pessego.jpg",
+    "legenda": "Frutado e suave."
+  },
+  {
+    "titulo": "Drink de Goiaba",
+    "ingredientes": [
+      "Goiaba",
+      "Suco de limão",
+      "Água com gás"
+    ],
+    "preparo": "Bata goiaba com limão. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-goiaba.jpg",
+    "legenda": "Diferente e delicioso."
+  },
+  {
+    "titulo": "Drink de Abacate",
+    "ingredientes": [
+      "Abacate",
+      "Leite",
+      "Mel"
+    ],
+    "preparo": "Bata abacate com leite e mel. Sirva gelado.",
+    "categoria": "6.3",
+    "imagem": "drink-abacate.jpg",
+    "legenda": "Cremoso e nutritivo."
+  },
+  {
+    "titulo": "Drink de Coco",
+    "ingredientes": [
+      "Leite de coco",
+      "Suco de abacaxi",
+      "Água com gás"
+    ],
+    "preparo": "Misture leite de coco com abacaxi. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-coco.jpg",
+    "legenda": "Tropical e aromático."
+  },
+  {
+    "titulo": "Drink de Pitanga",
+    "ingredientes": [
+      "Pitanga",
+      "Suco de limão",
+      "Água com gás"
+    ],
+    "preparo": "Bata pitanga com limão. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-pitanga.jpg",
+    "legenda": "Refrescante e brasileiro."
+  },
+  {
+    "titulo": "Drink de Jabuticaba",
+    "ingredientes": [
+      "Jabuticaba",
+      "Suco de maçã",
+      "Água com gás"
+    ],
+    "preparo": "Bata jabuticaba com maçã. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-jabuticaba.jpg",
+    "legenda": "Tradicional e delicioso."
+  },
+  {
+    "titulo": "Drink de Tamarindo",
+    "ingredientes": [
+      "Tamarindo",
+      "Suco de laranja",
+      "Água com gás"
+    ],
+    "preparo": "Bata tamarindo com suco de laranja. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-tamarindo.jpg",
+    "legenda": "Exótico e refrescante."
+  },
+  {
+    "titulo": "Drink de Graviola",
+    "ingredientes": [
+      "Graviola",
+      "Suco de limão",
+      "Água com gás"
+    ],
+    "preparo": "Bata graviola com limão. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-graviola.jpg",
+    "legenda": "Cremoso e tropical."
+  },
+  {
+    "titulo": "Drink de Acerola",
+    "ingredientes": [
+      "Acerola",
+      "Suco de laranja",
+      "Água com gás"
+    ],
+    "preparo": "Bata acerola com suco de laranja. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-acerola.jpg",
+    "legenda": "Rico em vitamina C."
+  },
+  {
+    "titulo": "Drink de Melão",
+    "ingredientes": [
+      "Melão",
+      "Suco de limão",
+      "Água com gás"
+    ],
+    "preparo": "Bata melão com limão. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-melao.jpg",
+    "legenda": "Leve e hidratante."
+  },
+  {
+    "titulo": "Drink de Pera",
+    "ingredientes": [
+      "Pera",
+      "Suco de maçã",
+      "Água com gás"
+    ],
+    "preparo": "Bata pera com suco de maçã. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-pera.jpg",
+    "legenda": "Suave e delicioso."
+  },
+  {
+    "titulo": "Drink de Maçã com Canela",
+    "ingredientes": [
+      "Suco de maçã",
+      "Canela em pó",
+      "Água com gás"
+    ],
+    "preparo": "Misture suco de maçã com canela. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-maca-canela.jpg",
+    "legenda": "Aromático e diferente."
+  },
+  {
+    "titulo": "Drink Misto de Frutas",
+    "ingredientes": [
+      "Manga",
+      "Morango",
+      "Abacaxi",
+      "Água com gás"
+    ],
+    "preparo": "Bata todas as frutas. Complete com água com gás.",
+    "categoria": "6.3",
+    "imagem": "drink-misto.jpg",
+    "legenda": "Colorido e irresistível."
+  },
+  {
+    "titulo": "Chimarrão",
+    "ingredientes": [
+      "Erva-mate",
+      "Água quente",
+      "Cuia",
+      "Bomba"
+    ],
+    "preparo": "Coloque erva-mate na cuia. Adicione água quente. Sirva com bomba.",
+    "categoria": "6.4",
+    "imagem": "chimarrao.jpg",
+    "legenda": "Tradicional do sul do Brasil."
+  },
+  {
+    "titulo": "Tereré",
+    "ingredientes": [
+      "Erva-mate",
+      "Água gelada",
+      "Cuia",
+      "Bomba"
+    ],
+    "preparo": "Coloque erva-mate na cuia. Adicione água gelada. Sirva com bomba.",
+    "categoria": "6.4",
+    "imagem": "terere.jpg",
+    "legenda": "Refrescante e paraguaio."
+  },
+  {
+    "titulo": "Leite com Chocolate",
+    "ingredientes": [
+      "Leite",
+      "Chocolate em pó",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Sirva quente ou frio.",
+    "categoria": "6.4",
+    "imagem": "leite-chocolate.jpg",
+    "legenda": "Simples e delicioso."
+  },
+  {
+    "titulo": "Suco Verde Detox",
+    "ingredientes": [
+      "Couve",
+      "Limão",
+      "Maçã",
+      "Água"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "suco-verde.jpg",
+    "legenda": "Saudável e refrescante."
+  },
+  {
+    "titulo": "Smoothie de Frutas",
+    "ingredientes": [
+      "Banana",
+      "Morangos",
+      "Iogurte",
+      "Mel"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "smoothie.jpg",
+    "legenda": "Cremoso e nutritivo."
+  },
+  {
+    "titulo": "Chá Gelado de Hibisco",
+    "ingredientes": [
+      "Hibisco seco",
+      "Água",
+      "Açúcar",
+      "Gelo"
+    ],
+    "preparo": "Prepare chá de hibisco. Adicione gelo e açúcar.",
+    "categoria": "6.4",
+    "imagem": "cha-hibisco.jpg",
+    "legenda": "Refrescante e aromático."
+  },
+  {
+    "titulo": "Chá Gelado de Limão",
+    "ingredientes": [
+      "Chá preto",
+      "Suco de limão",
+      "Açúcar",
+      "Gelo"
+    ],
+    "preparo": "Prepare chá preto. Adicione limão, açúcar e gelo.",
+    "categoria": "6.4",
+    "imagem": "cha-limao.jpg",
+    "legenda": "Refrescante e leve."
+  },
+  {
+    "titulo": "Chá Gelado de Pêssego",
+    "ingredientes": [
+      "Chá preto",
+      "Suco de pêssego",
+      "Açúcar",
+      "Gelo"
+    ],
+    "preparo": "Prepare chá preto. Adicione suco de pêssego e gelo.",
+    "categoria": "6.4",
+    "imagem": "cha-pessego.jpg",
+    "legenda": "Aromático e doce."
+  },
+  {
+    "titulo": "Lassi de Manga",
+    "ingredientes": [
+      "Manga",
+      "Iogurte",
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Bata manga com iogurte e leite. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "lassi-manga.jpg",
+    "legenda": "Indiano e refrescante."
+  },
+  {
+    "titulo": "Leite com Morango",
+    "ingredientes": [
+      "Leite",
+      "Morangos",
+      "Açúcar"
+    ],
+    "preparo": "Bata morangos com leite e açúcar. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "leite-morango.jpg",
+    "legenda": "Cremoso e colorido."
+  },
+  {
+    "titulo": "Kombucha de Frutas",
+    "ingredientes": [
+      "Chá verde fermentado",
+      "Frutas variadas"
+    ],
+    "preparo": "Misture kombucha com frutas. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "kombucha.jpg",
+    "legenda": "Probiótico e saudável."
+  },
+  {
+    "titulo": "Água Saborizada de Limão e Hortelã",
+    "ingredientes": [
+      "Água",
+      "Limão",
+      "Hortelã",
+      "Gelo"
+    ],
+    "preparo": "Misture todos os ingredientes. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "agua-limao-hortela.jpg",
+    "legenda": "Leve e refrescante."
+  },
+  {
+    "titulo": "Água Saborizada de Laranja e Gengibre",
+    "ingredientes": [
+      "Água",
+      "Laranja",
+      "Gengibre",
+      "Gelo"
+    ],
+    "preparo": "Misture todos os ingredientes. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "agua-laranja-gengibre.jpg",
+    "legenda": "Aromática e energética."
+  },
+  {
+    "titulo": "Água Saborizada de Melancia",
+    "ingredientes": [
+      "Água",
+      "Melancia",
+      "Hortelã",
+      "Gelo"
+    ],
+    "preparo": "Misture todos os ingredientes. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "agua-melancia.jpg",
+    "legenda": "Hidratante e deliciosa."
+  },
+  {
+    "titulo": "Batida de Coco sem álcool",
+    "ingredientes": [
+      "Leite de coco",
+      "Leite condensado",
+      "Gelo"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "batida-coco.jpg",
+    "legenda": "Cremosa e tropical."
+  },
+  {
+    "titulo": "Batida de Abacaxi sem álcool",
+    "ingredientes": [
+      "Abacaxi",
+      "Leite condensado",
+      "Gelo"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "batida-abacaxi.jpg",
+    "legenda": "Tropical e doce."
+  },
+  {
+    "titulo": "Milkshake de Chocolate",
+    "ingredientes": [
+      "Leite",
+      "Sorvete de chocolate",
+      "Calda de chocolate"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "milkshake-chocolate.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Milkshake de Morango",
+    "ingredientes": [
+      "Leite",
+      "Sorvete de morango",
+      "Calda de morango"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "milkshake-morango.jpg",
+    "legenda": "Colorido e delicioso."
+  },
+  {
+    "titulo": "Milkshake de Baunilha",
+    "ingredientes": [
+      "Leite",
+      "Sorvete de baunilha",
+      "Essência de baunilha"
+    ],
+    "preparo": "Bata os ingredientes no liquidificador. Sirva gelado.",
+    "categoria": "6.4",
+    "imagem": "milkshake-baunilha.jpg",
+    "legenda": "Clássico e cremoso."
+  },
+  {
+    "titulo": "Golden Milk",
+    "ingredientes": [
+      "Leite",
+      "Cúrcuma",
+      "Mel",
+      "Canela"
+    ],
+    "preparo": "Misture os ingredientes e aqueça. Sirva quente.",
+    "categoria": "6.4",
+    "imagem": "golden-milk.jpg",
+    "legenda": "Aromático e saudável."
+  },
+  {
+    "titulo": "Pastel de Carne",
+    "ingredientes": [
+      "Massa de pastel",
+      "Carne moída",
+      "Cebola",
+      "Alho"
+    ],
+    "preparo": "Refogue carne com cebola e alho. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-carne.jpg",
+    "legenda": "Tradicional e saboroso."
+  },
+  {
+    "titulo": "Pastel de Queijo",
+    "ingredientes": [
+      "Massa de pastel",
+      "Queijo mussarela"
+    ],
+    "preparo": "Recheie a massa com queijo. Frite até dourar.",
+    "categoria": "7.1",
+    "imagem": "pastel-queijo.jpg",
+    "legenda": "Simples e irresistível."
+  },
+  {
+    "titulo": "Pastel de Frango",
+    "ingredientes": [
+      "Massa de pastel",
+      "Frango desfiado",
+      "Requeijão"
+    ],
+    "preparo": "Misture frango com requeijão. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-frango.jpg",
+    "legenda": "Cremoso e delicioso."
+  },
+  {
+    "titulo": "Pastel de Pizza",
+    "ingredientes": [
+      "Massa de pastel",
+      "Queijo",
+      "Presunto",
+      "Molho de tomate"
+    ],
+    "preparo": "Monte recheio de pizza. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-pizza.jpg",
+    "legenda": "Inspirado na pizzaria."
+  },
+  {
+    "titulo": "Pastel de Palmito",
+    "ingredientes": [
+      "Massa de pastel",
+      "Palmito",
+      "Requeijão"
+    ],
+    "preparo": "Misture palmito com requeijão. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-palmito.jpg",
+    "legenda": "Cremoso e leve."
+  },
+  {
+    "titulo": "Pastel de Bacalhau",
+    "ingredientes": [
+      "Massa de pastel",
+      "Bacalhau desfiado",
+      "Cebola",
+      "Azeitonas"
+    ],
+    "preparo": "Refogue bacalhau com cebola e azeitonas. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-bacalhau.jpg",
+    "legenda": "Português e saboroso."
+  },
+  {
+    "titulo": "Pastel de Camarão",
+    "ingredientes": [
+      "Massa de pastel",
+      "Camarão",
+      "Requeijão"
+    ],
+    "preparo": "Misture camarão com requeijão. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-camarao.jpg",
+    "legenda": "Rico e sofisticado."
+  },
+  {
+    "titulo": "Pastel de Calabresa",
+    "ingredientes": [
+      "Massa de pastel",
+      "Calabresa",
+      "Cebola"
+    ],
+    "preparo": "Refogue calabresa com cebola. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-calabresa.jpg",
+    "legenda": "Intenso e delicioso."
+  },
+  {
+    "titulo": "Pastel de Legumes",
+    "ingredientes": [
+      "Massa de pastel",
+      "Cenoura",
+      "Abobrinha",
+      "Ervilha"
+    ],
+    "preparo": "Refogue legumes. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-legumes.jpg",
+    "legenda": "Leve e nutritivo."
+  },
+  {
+    "titulo": "Pastel de Quatro Queijos",
+    "ingredientes": [
+      "Massa de pastel",
+      "Queijo mussarela",
+      "Queijo parmesão",
+      "Queijo provolone",
+      "Queijo gorgonzola"
+    ],
+    "preparo": "Misture os queijos. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-quatro-queijos.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Pastel de Carne Seca",
+    "ingredientes": [
+      "Massa de pastel",
+      "Carne seca desfiada",
+      "Cebola"
+    ],
+    "preparo": "Refogue carne seca com cebola. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-carne-seca.jpg",
+    "legenda": "Nordestino e delicioso."
+  },
+  {
+    "titulo": "Pastel de Alho-Poró",
+    "ingredientes": [
+      "Massa de pastel",
+      "Alho-poró",
+      "Requeijão"
+    ],
+    "preparo": "Refogue alho-poró. Misture com requeijão. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-alho-poro.jpg",
+    "legenda": "Sofisticado e leve."
+  },
+  {
+    "titulo": "Pastel de Azeitonas",
+    "ingredientes": [
+      "Massa de pastel",
+      "Azeitonas",
+      "Queijo"
+    ],
+    "preparo": "Misture azeitonas com queijo. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-azeitonas.jpg",
+    "legenda": "Mediterrâneo e saboroso."
+  },
+  {
+    "titulo": "Pastel de Abóbora com Carne",
+    "ingredientes": [
+      "Massa de pastel",
+      "Abóbora cozida",
+      "Carne moída"
+    ],
+    "preparo": "Misture abóbora com carne. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-abobora-carne.jpg",
+    "legenda": "Diferente e delicioso."
+  },
+  {
+    "titulo": "Pastel de Berinjela",
+    "ingredientes": [
+      "Massa de pastel",
+      "Berinjela refogada",
+      "Queijo"
+    ],
+    "preparo": "Refogue berinjela. Misture com queijo. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-berinjela.jpg",
+    "legenda": "Vegetariano e saboroso."
+  },
+  {
+    "titulo": "Pastel de Cogumelos",
+    "ingredientes": [
+      "Massa de pastel",
+      "Cogumelos",
+      "Requeijão"
+    ],
+    "preparo": "Refogue cogumelos. Misture com requeijão. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-cogumelos.jpg",
+    "legenda": "Aromático e sofisticado."
+  },
+  {
+    "titulo": "Pastel de Brócolis",
+    "ingredientes": [
+      "Massa de pastel",
+      "Brócolis",
+      "Queijo"
+    ],
+    "preparo": "Cozinhe brócolis. Misture com queijo. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-brocolis.jpg",
+    "legenda": "Leve e nutritivo."
+  },
+  {
+    "titulo": "Pastel de Milho",
+    "ingredientes": [
+      "Massa de pastel",
+      "Milho verde",
+      "Requeijão"
+    ],
+    "preparo": "Misture milho com requeijão. Recheie a massa e frite.",
+    "categoria": "7.1",
+    "imagem": "pastel-milho.jpg",
+    "legenda": "Cremoso e doce."
+  },
+  {
+    "titulo": "Pastel de Doce de Leite",
+    "ingredientes": [
+      "Massa de pastel",
+      "Doce de leite"
+    ],
+    "preparo": "Recheie a massa com doce de leite. Frite até dourar.",
+    "categoria": "7.1",
+    "imagem": "pastel-doce-leite.jpg",
+    "legenda": "Doce e irresistível."
+  },
+  {
+    "titulo": "Pastel de Chocolate",
+    "ingredientes": [
+      "Massa de pastel",
+      "Chocolate"
+    ],
+    "preparo": "Recheie a massa com chocolate. Frite até dourar.",
+    "categoria": "7.1",
+    "imagem": "pastel-chocolate.jpg",
+    "legenda": "Sobremesa deliciosa."
+  },
+  {
+    "titulo": "Massa de Pastel Tradicional",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes até formar massa homogênea. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-tradicional.jpg",
+    "legenda": "Clássica e versátil."
+  },
+  {
+    "titulo": "Massa de Pastel com Cachaça",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Óleo",
+      "Cachaça"
+    ],
+    "preparo": "Misture os ingredientes. A cachaça deixa a massa mais crocante. Abra e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-cachaca.jpg",
+    "legenda": "Crocante e saborosa."
+  },
+  {
+    "titulo": "Massa de Pastel com Ovo",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Óleo",
+      "Ovo"
+    ],
+    "preparo": "Misture os ingredientes. O ovo deixa a massa mais macia. Abra e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-ovo.jpg",
+    "legenda": "Macia e deliciosa."
+  },
+  {
+    "titulo": "Massa de Pastel Integral",
+    "ingredientes": [
+      "Farinha integral",
+      "Água",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-integral.jpg",
+    "legenda": "Saudável e nutritiva."
+  },
+  {
+    "titulo": "Massa de Pastel Rápida",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Óleo",
+      "Fermento químico"
+    ],
+    "preparo": "Misture os ingredientes. Abra e use imediatamente.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-rapida.jpg",
+    "legenda": "Prática e rápida."
+  },
+  {
+    "titulo": "Massa de Pastel com Leite",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Leite",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-leite.jpg",
+    "legenda": "Suave e macia."
+  },
+  {
+    "titulo": "Massa de Pastel com Batata",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Batata cozida",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture batata amassada à massa. Abra e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-batata.jpg",
+    "legenda": "Macia e saborosa."
+  },
+  {
+    "titulo": "Massa de Pastel com Manteiga",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Manteiga"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-manteiga.jpg",
+    "legenda": "Aromática e leve."
+  },
+  {
+    "titulo": "Massa de Pastel com Iogurte",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Iogurte natural",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-iogurte.jpg",
+    "legenda": "Diferente e macia."
+  },
+  {
+    "titulo": "Massa de Pastel com Creme de Leite",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Creme de leite",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-creme.jpg",
+    "legenda": "Cremosa e suave."
+  },
+  {
+    "titulo": "Massa de Pastel com Fermento Natural",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Fermento natural"
+    ],
+    "preparo": "Misture os ingredientes. Deixe descansar por 12 horas. Abra e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-fermento.jpg",
+    "legenda": "Artesanal e saborosa."
+  },
+  {
+    "titulo": "Massa de Pastel Sem Glúten",
+    "ingredientes": [
+      "Farinha sem glúten",
+      "Água",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-semgluten.jpg",
+    "legenda": "Inclusiva e leve."
+  },
+  {
+    "titulo": "Massa de Pastel Vegana",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Óleo vegetal"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-vegana.jpg",
+    "legenda": "Sem ingredientes de origem animal."
+  },
+  {
+    "titulo": "Massa de Pastel de Arroz",
+    "ingredientes": [
+      "Farinha de arroz",
+      "Água",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-arroz.jpg",
+    "legenda": "Sem glúten e leve."
+  },
+  {
+    "titulo": "Massa de Pastel de Grão-de-Bico",
+    "ingredientes": [
+      "Farinha de grão-de-bico",
+      "Água",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-grao.jpg",
+    "legenda": "Proteica e saudável."
+  },
+  {
+    "titulo": "Massa de Pastel de Aveia",
+    "ingredientes": [
+      "Farinha de aveia",
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-aveia.jpg",
+    "legenda": "Nutritiva e diferente."
+  },
+  {
+    "titulo": "Massa de Pastel de Quinoa",
+    "ingredientes": [
+      "Farinha de quinoa",
+      "Farinha de trigo",
+      "Água",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture os ingredientes. Abra com rolo e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-quinoa.jpg",
+    "legenda": "Rica em proteínas."
+  },
+  {
+    "titulo": "Massa de Pastel de Mandioquinha",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Mandioquinha cozida",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture mandioquinha amassada à massa. Abra e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-mandioquinha.jpg",
+    "legenda": "Macia e saborosa."
+  },
+  {
+    "titulo": "Massa de Pastel de Abóbora",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Abóbora cozida",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture abóbora amassada à massa. Abra e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-abobora.jpg",
+    "legenda": "Colorida e nutritiva."
+  },
+  {
+    "titulo": "Massa de Pastel de Espinafre",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Espinafre triturado",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Misture espinafre à massa. Abra e corte discos.",
+    "categoria": "5.4",
+    "imagem": "massa-pastel-espinafre.jpg",
+    "legenda": "Verde e saudável."
+  },
+  {
+    "titulo": "Empada de Frango",
+    "ingredientes": [
+      "Massa de empada",
+      "Frango desfiado",
+      "Requeijão"
+    ],
+    "preparo": "Misture frango com requeijão. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-frango.jpg",
+    "legenda": "Cremosa e deliciosa."
+  },
+  {
+    "titulo": "Empada de Palmito",
+    "ingredientes": [
+      "Massa de empada",
+      "Palmito",
+      "Requeijão"
+    ],
+    "preparo": "Misture palmito com requeijão. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-palmito.jpg",
+    "legenda": "Leve e saborosa."
+  },
+  {
+    "titulo": "Empada de Camarão",
+    "ingredientes": [
+      "Massa de empada",
+      "Camarão",
+      "Requeijão"
+    ],
+    "preparo": "Misture camarão com requeijão. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-camarao.jpg",
+    "legenda": "Sofisticada e tropical."
+  },
+  {
+    "titulo": "Empada de Bacalhau",
+    "ingredientes": [
+      "Massa de empada",
+      "Bacalhau desfiado",
+      "Cebola",
+      "Azeitonas"
+    ],
+    "preparo": "Refogue bacalhau com cebola e azeitonas. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-bacalhau.jpg",
+    "legenda": "Portuguesa e deliciosa."
+  },
+  {
+    "titulo": "Empada de Queijo",
+    "ingredientes": [
+      "Massa de empada",
+      "Queijo mussarela"
+    ],
+    "preparo": "Recheie a massa com queijo. Asse até dourar.",
+    "categoria": "7.2",
+    "imagem": "empada-queijo.jpg",
+    "legenda": "Simples e irresistível."
+  },
+  {
+    "titulo": "Empada de Calabresa",
+    "ingredientes": [
+      "Massa de empada",
+      "Calabresa",
+      "Cebola"
+    ],
+    "preparo": "Refogue calabresa com cebola. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-calabresa.jpg",
+    "legenda": "Intensa e saborosa."
+  },
+  {
+    "titulo": "Empada de Carne Moída",
+    "ingredientes": [
+      "Massa de empada",
+      "Carne moída",
+      "Cebola",
+      "Alho"
+    ],
+    "preparo": "Refogue carne com cebola e alho. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-carne.jpg",
+    "legenda": "Tradicional e deliciosa."
+  },
+  {
+    "titulo": "Empada de Legumes",
+    "ingredientes": [
+      "Massa de empada",
+      "Cenoura",
+      "Abobrinha",
+      "Ervilha"
+    ],
+    "preparo": "Refogue legumes. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-legumes.jpg",
+    "legenda": "Leve e nutritiva."
+  },
+  {
+    "titulo": "Empada de Quatro Queijos",
+    "ingredientes": [
+      "Massa de empada",
+      "Queijo mussarela",
+      "Queijo parmesão",
+      "Queijo provolone",
+      "Queijo gorgonzola"
+    ],
+    "preparo": "Misture os queijos. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-quatro-queijos.jpg",
+    "legenda": "Cremosa e irresistível."
+  },
+  {
+    "titulo": "Empada de Carne Seca",
+    "ingredientes": [
+      "Massa de empada",
+      "Carne seca desfiada",
+      "Cebola"
+    ],
+    "preparo": "Refogue carne seca com cebola. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-carne-seca.jpg",
+    "legenda": "Nordestina e deliciosa."
+  },
+  {
+    "titulo": "Empada de Alho-Poró",
+    "ingredientes": [
+      "Massa de empada",
+      "Alho-poró",
+      "Requeijão"
+    ],
+    "preparo": "Refogue alho-poró. Misture com requeijão. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-alho-poro.jpg",
+    "legenda": "Sofisticada e leve."
+  },
+  {
+    "titulo": "Empada de Azeitonas",
+    "ingredientes": [
+      "Massa de empada",
+      "Azeitonas",
+      "Queijo"
+    ],
+    "preparo": "Misture azeitonas com queijo. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-azeitonas.jpg",
+    "legenda": "Mediterrânea e saborosa."
+  },
+  {
+    "titulo": "Empada de Abóbora com Carne",
+    "ingredientes": [
+      "Massa de empada",
+      "Abóbora cozida",
+      "Carne moída"
+    ],
+    "preparo": "Misture abóbora com carne. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-abobora-carne.jpg",
+    "legenda": "Diferente e deliciosa."
+  },
+  {
+    "titulo": "Empada de Berinjela",
+    "ingredientes": [
+      "Massa de empada",
+      "Berinjela refogada",
+      "Queijo"
+    ],
+    "preparo": "Refogue berinjela. Misture com queijo. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-berinjela.jpg",
+    "legenda": "Vegetariana e saborosa."
+  },
+  {
+    "titulo": "Empada de Cogumelos",
+    "ingredientes": [
+      "Massa de empada",
+      "Cogumelos",
+      "Requeijão"
+    ],
+    "preparo": "Refogue cogumelos. Misture com requeijão. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-cogumelos.jpg",
+    "legenda": "Aromática e sofisticada."
+  },
+  {
+    "titulo": "Empada de Brócolis",
+    "ingredientes": [
+      "Massa de empada",
+      "Brócolis",
+      "Queijo"
+    ],
+    "preparo": "Cozinhe brócolis. Misture com queijo. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-brocolis.jpg",
+    "legenda": "Leve e nutritiva."
+  },
+  {
+    "titulo": "Empada de Milho",
+    "ingredientes": [
+      "Massa de empada",
+      "Milho verde",
+      "Requeijão"
+    ],
+    "preparo": "Misture milho com requeijão. Recheie a massa e asse.",
+    "categoria": "7.2",
+    "imagem": "empada-milho.jpg",
+    "legenda": "Cremosa e doce."
+  },
+  {
+    "titulo": "Empada de Doce de Leite",
+    "ingredientes": [
+      "Massa de empada",
+      "Doce de leite"
+    ],
+    "preparo": "Recheie a massa com doce de leite. Asse até dourar.",
+    "categoria": "7.2",
+    "imagem": "empada-doce-leite.jpg",
+    "legenda": "Doce e irresistível."
+  },
+  {
+    "titulo": "Empada de Chocolate",
+    "ingredientes": [
+      "Massa de empada",
+      "Chocolate"
+    ],
+    "preparo": "Recheie a massa com chocolate. Asse até dourar.",
+    "categoria": "7.2",
+    "imagem": "empada-chocolate.jpg",
+    "legenda": "Sobremesa deliciosa."
+  },
+  {
+    "titulo": "Torta de Frango",
+    "ingredientes": [
+      "Massa de torta",
+      "Frango desfiado",
+      "Requeijão",
+      "Milho"
+    ],
+    "preparo": "Misture frango com requeijão e milho. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-frango.jpg",
+    "legenda": "Cremosa e deliciosa."
+  },
+  {
+    "titulo": "Torta de Palmito",
+    "ingredientes": [
+      "Massa de torta",
+      "Palmito",
+      "Requeijão"
+    ],
+    "preparo": "Misture palmito com requeijão. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-palmito.jpg",
+    "legenda": "Leve e saborosa."
+  },
+  {
+    "titulo": "Torta de Legumes",
+    "ingredientes": [
+      "Massa de torta",
+      "Cenoura",
+      "Abobrinha",
+      "Ervilha"
+    ],
+    "preparo": "Refogue legumes. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-legumes.jpg",
+    "legenda": "Nutritiva e colorida."
+  },
+  {
+    "titulo": "Torta de Calabresa",
+    "ingredientes": [
+      "Massa de torta",
+      "Calabresa",
+      "Cebola"
+    ],
+    "preparo": "Refogue calabresa com cebola. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-calabresa.jpg",
+    "legenda": "Intensa e deliciosa."
+  },
+  {
+    "titulo": "Torta de Carne Moída",
+    "ingredientes": [
+      "Massa de torta",
+      "Carne moída",
+      "Cebola",
+      "Alho"
+    ],
+    "preparo": "Refogue carne com cebola e alho. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-carne.jpg",
+    "legenda": "Tradicional e saborosa."
+  },
+  {
+    "titulo": "Torta de Bacalhau",
+    "ingredientes": [
+      "Massa de torta",
+      "Bacalhau desfiado",
+      "Cebola",
+      "Azeitonas"
+    ],
+    "preparo": "Refogue bacalhau com cebola e azeitonas. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-bacalhau.jpg",
+    "legenda": "Portuguesa e deliciosa."
+  },
+  {
+    "titulo": "Torta de Camarão",
+    "ingredientes": [
+      "Massa de torta",
+      "Camarão",
+      "Requeijão"
+    ],
+    "preparo": "Misture camarão com requeijão. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-camarao.jpg",
+    "legenda": "Sofisticada e tropical."
+  },
+  {
+    "titulo": "Torta de Queijo",
+    "ingredientes": [
+      "Massa de torta",
+      "Queijo mussarela",
+      "Queijo parmesão"
+    ],
+    "preparo": "Misture os queijos. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-queijo.jpg",
+    "legenda": "Cremosa e irresistível."
+  },
+  {
+    "titulo": "Torta de Quatro Queijos",
+    "ingredientes": [
+      "Massa de torta",
+      "Queijo mussarela",
+      "Queijo parmesão",
+      "Queijo provolone",
+      "Queijo gorgonzola"
+    ],
+    "preparo": "Misture os queijos. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-quatro-queijos.jpg",
+    "legenda": "Rica e cremosa."
+  },
+  {
+    "titulo": "Torta de Carne Seca",
+    "ingredientes": [
+      "Massa de torta",
+      "Carne seca desfiada",
+      "Cebola"
+    ],
+    "preparo": "Refogue carne seca com cebola. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-carne-seca.jpg",
+    "legenda": "Nordestina e deliciosa."
+  },
+  {
+    "titulo": "Torta de Alho-Poró",
+    "ingredientes": [
+      "Massa de torta",
+      "Alho-poró",
+      "Requeijão"
+    ],
+    "preparo": "Refogue alho-poró. Misture com requeijão. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-alho-poro.jpg",
+    "legenda": "Sofisticada e leve."
+  },
+  {
+    "titulo": "Torta de Azeitonas",
+    "ingredientes": [
+      "Massa de torta",
+      "Azeitonas",
+      "Queijo"
+    ],
+    "preparo": "Misture azeitonas com queijo. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-azeitonas.jpg",
+    "legenda": "Mediterrânea e saborosa."
+  },
+  {
+    "titulo": "Torta de Abóbora com Carne",
+    "ingredientes": [
+      "Massa de torta",
+      "Abóbora cozida",
+      "Carne moída"
+    ],
+    "preparo": "Misture abóbora com carne. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-abobora-carne.jpg",
+    "legenda": "Diferente e deliciosa."
+  },
+  {
+    "titulo": "Torta de Berinjela",
+    "ingredientes": [
+      "Massa de torta",
+      "Berinjela refogada",
+      "Queijo"
+    ],
+    "preparo": "Refogue berinjela. Misture com queijo. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-berinjela.jpg",
+    "legenda": "Vegetariana e saborosa."
+  },
+  {
+    "titulo": "Torta de Cogumelos",
+    "ingredientes": [
+      "Massa de torta",
+      "Cogumelos",
+      "Requeijão"
+    ],
+    "preparo": "Refogue cogumelos. Misture com requeijão. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-cogumelos.jpg",
+    "legenda": "Aromática e sofisticada."
+  },
+  {
+    "titulo": "Torta de Brócolis",
+    "ingredientes": [
+      "Massa de torta",
+      "Brócolis",
+      "Queijo"
+    ],
+    "preparo": "Cozinhe brócolis. Misture com queijo. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-brocolis.jpg",
+    "legenda": "Leve e nutritiva."
+  },
+  {
+    "titulo": "Torta de Milho",
+    "ingredientes": [
+      "Massa de torta",
+      "Milho verde",
+      "Requeijão"
+    ],
+    "preparo": "Misture milho com requeijão. Recheie a massa e asse.",
+    "categoria": "7.3",
+    "imagem": "torta-milho.jpg",
+    "legenda": "Cremosa e doce."
+  },
+  {
+    "titulo": "Torta de Doce de Leite",
+    "ingredientes": [
+      "Massa de torta",
+      "Doce de leite"
+    ],
+    "preparo": "Recheie a massa com doce de leite. Asse até dourar.",
+    "categoria": "7.3",
+    "imagem": "torta-doce-leite.jpg",
+    "legenda": "Doce e irresistível."
+  },
+  {
+    "titulo": "Torta de Chocolate",
+    "ingredientes": [
+      "Massa de torta",
+      "Chocolate"
+    ],
+    "preparo": "Recheie a massa com chocolate. Asse até dourar.",
+    "categoria": "7.3",
+    "imagem": "torta-chocolate.jpg",
+    "legenda": "Sobremesa deliciosa."
+  },
+  {
+    "titulo": "Coxinha de Frango",
+    "ingredientes": [
+      "Massa de coxinha",
+      "Frango desfiado",
+      "Requeijão"
+    ],
+    "preparo": "Recheie a massa com frango e requeijão. Modele em formato de coxinha. Frite até dourar.",
+    "categoria": "7.4",
+    "imagem": "coxinha-frango.jpg",
+    "legenda": "Clássica e deliciosa."
+  },
+  {
+    "titulo": "Quibe Frito",
+    "ingredientes": [
+      "Trigo para quibe",
+      "Carne moída",
+      "Cebola",
+      "Hortelã"
+    ],
+    "preparo": "Misture trigo com carne e temperos. Modele em formato de quibe. Frite até dourar.",
+    "categoria": "7.4",
+    "imagem": "quibe.jpg",
+    "legenda": "Árabe e saboroso."
+  },
+  {
+    "titulo": "Bolinho de Arroz",
+    "ingredientes": [
+      "Arroz cozido",
+      "Queijo ralado",
+      "Ovos",
+      "Farinha de trigo"
+    ],
+    "preparo": "Misture arroz com ovos e queijo. Modele bolinhos e frite.",
+    "categoria": "7.4",
+    "imagem": "bolinho-arroz.jpg",
+    "legenda": "Aproveitamento delicioso."
+  },
+  {
+    "titulo": "Bolinho de Batata",
+    "ingredientes": [
+      "Batata cozida",
+      "Queijo",
+      "Farinha de trigo"
+    ],
+    "preparo": "Misture batata amassada com queijo. Modele bolinhos e frite.",
+    "categoria": "7.4",
+    "imagem": "bolinho-batata.jpg",
+    "legenda": "Macio e saboroso."
+  },
+  {
+    "titulo": "Bolinho de Bacalhau",
+    "ingredientes": [
+      "Bacalhau desfiado",
+      "Batata cozida",
+      "Salsa"
+    ],
+    "preparo": "Misture bacalhau com batata. Modele bolinhos e frite.",
+    "categoria": "7.4",
+    "imagem": "bolinho-bacalhau.jpg",
+    "legenda": "Português e irresistível."
+  },
+  {
+    "titulo": "Croquete de Carne",
+    "ingredientes": [
+      "Carne moída",
+      "Farinha de trigo",
+      "Leite"
+    ],
+    "preparo": "Prepare massa com carne e farinha. Modele croquetes e frite.",
+    "categoria": "7.4",
+    "imagem": "croquete-carne.jpg",
+    "legenda": "Crocante e saboroso."
+  },
+  {
+    "titulo": "Enroladinho de Salsicha",
+    "ingredientes": [
+      "Massa de pastel",
+      "Salsicha"
+    ],
+    "preparo": "Enrole salsicha na massa. Frite até dourar.",
+    "categoria": "7.4",
+    "imagem": "enroladinho-salsicha.jpg",
+    "legenda": "Festa garantida."
+  },
+  {
+    "titulo": "Risoles de Presunto e Queijo",
+    "ingredientes": [
+      "Massa de risoles",
+      "Presunto",
+      "Queijo"
+    ],
+    "preparo": "Recheie a massa com presunto e queijo. Frite até dourar.",
+    "categoria": "7.4",
+    "imagem": "risoles-presunto.jpg",
+    "legenda": "Cremoso e delicioso."
+  },
+  {
+    "titulo": "Esfiha de Carne",
+    "ingredientes": [
+      "Massa de esfiha",
+      "Carne moída",
+      "Cebola"
+    ],
+    "preparo": "Recheie a massa com carne temperada. Asse até dourar.",
+    "categoria": "7.4",
+    "imagem": "esfiha-carne.jpg",
+    "legenda": "Árabe e tradicional."
+  },
+  {
+    "titulo": "Esfiha de Queijo",
+    "ingredientes": [
+      "Massa de esfiha",
+      "Queijo"
+    ],
+    "preparo": "Recheie a massa com queijo. Asse até dourar.",
+    "categoria": "7.4",
+    "imagem": "esfiha-queijo.jpg",
+    "legenda": "Simples e irresistível."
+  },
+  {
+    "titulo": "Pastel Assado",
+    "ingredientes": [
+      "Massa de pastel",
+      "Carne moída",
+      "Cebola"
+    ],
+    "preparo": "Recheie a massa com carne. Asse até dourar.",
+    "categoria": "7.4",
+    "imagem": "pastel-assado.jpg",
+    "legenda": "Leve e saboroso."
+  },
+  {
+    "titulo": "Empanada Argentina",
+    "ingredientes": [
+      "Massa de empanada",
+      "Carne moída",
+      "Cebola",
+      "Azeitonas"
+    ],
+    "preparo": "Recheie a massa com carne e azeitonas. Asse até dourar.",
+    "categoria": "7.4",
+    "imagem": "empanada.jpg",
+    "legenda": "Tradicional e deliciosa."
+  },
+  {
+    "titulo": "Pão de Queijo",
+    "ingredientes": [
+      "Polvilho doce",
+      "Polvilho azedo",
+      "Queijo minas",
+      "Leite",
+      "Ovos"
+    ],
+    "preparo": "Misture os ingredientes. Modele bolinhas. Asse até dourar.",
+    "categoria": "7.4",
+    "imagem": "pao-queijo.jpg",
+    "legenda": "Mineiro e irresistível."
+  },
+  {
+    "titulo": "Bolinho de Chuva Salgado",
+    "ingredientes": [
+      "Farinha de trigo",
+      "Leite",
+      "Ovos",
+      "Queijo ralado"
+    ],
+    "preparo": "Misture os ingredientes. Modele bolinhos e frite.",
+    "categoria": "7.4",
+    "imagem": "bolinho-chuva-salgado.jpg",
+    "legenda": "Diferente e delicioso."
+  },
+  {
+    "titulo": "Mini Pizza",
+    "ingredientes": [
+      "Massa de pizza",
+      "Molho de tomate",
+      "Queijo",
+      "Presunto"
+    ],
+    "preparo": "Monte mini pizzas. Asse até dourar.",
+    "categoria": "7.4",
+    "imagem": "mini-pizza.jpg",
+    "legenda": "Festa garantida."
+  },
+  {
+    "titulo": "Trouxinha de Frango",
+    "ingredientes": [
+      "Massa de pastel",
+      "Frango desfiado",
+      "Requeijão"
+    ],
+    "preparo": "Recheie a massa com frango. Feche em formato de trouxinha. Frite ou asse.",
+    "categoria": "7.4",
+    "imagem": "trouxinha-frango.jpg",
+    "legenda": "Criativa e saborosa."
+  },
+  {
+    "titulo": "Bolinho de Mandioquinha",
+    "ingredientes": [
+      "Mandioquinha cozida",
+      "Queijo",
+      "Farinha de trigo"
+    ],
+    "preparo": "Misture mandioquinha com queijo. Modele bolinhos e frite.",
+    "categoria": "7.4",
+    "imagem": "bolinho-mandioquinha.jpg",
+    "legenda": "Macio e nutritivo."
+  },
+  {
+    "titulo": "Croquete de Frango",
+    "ingredientes": [
+      "Frango desfiado",
+      "Farinha de trigo",
+      "Leite"
+    ],
+    "preparo": "Prepare massa com frango e farinha. Modele croquetes e frite.",
+    "categoria": "7.4",
+    "imagem": "croquete-frango.jpg",
+    "legenda": "Crocante e delicioso."
+  },
+  {
+    "titulo": "Bolinho de Feijoada",
+    "ingredientes": [
+      "Feijão preto",
+      "Farinha de mandioca",
+      "Linguiça"
+    ],
+    "preparo": "Misture feijão com farinha e linguiça. Modele bolinhos e frite.",
+    "categoria": "7.4",
+    "imagem": "bolinho-feijoada.jpg",
+    "legenda": "Brasileiro e criativo."
+  },
+  {
+    "titulo": "Acarajé",
+    "ingredientes": [
+      "Feijão-fradinho",
+      "Cebola",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Bata feijão com cebola. Modele bolinhos e frite.",
+    "categoria": "7.4",
+    "imagem": "acaraje.jpg",
+    "legenda": "Baiano e tradicional."
+  },
+  {
+    "titulo": "Bruschetta de Tomate e Manjericão",
+    "ingredientes": [
+      "Pão italiano",
+      "Tomate",
+      "Manjericão",
+      "Azeite"
+    ],
+    "preparo": "Toste o pão. Cubra com tomate, manjericão e azeite.",
+    "categoria": "3.5",
+    "imagem": "bruschetta.jpg",
+    "legenda": "Italiana e refrescante."
+  },
+  {
+    "titulo": "Salada Caprese",
+    "ingredientes": [
+      "Tomate",
+      "Mussarela de búfala",
+      "Manjericão",
+      "Azeite"
+    ],
+    "preparo": "Monte camadas de tomate e mussarela. Finalize com manjericão e azeite.",
+    "categoria": "3.5",
+    "imagem": "salada-caprese.jpg",
+    "legenda": "Leve e clássica."
+  },
+  {
+    "titulo": "Patê de Frango",
+    "ingredientes": [
+      "Frango desfiado",
+      "Maionese",
+      "Cebola"
+    ],
+    "preparo": "Misture frango com maionese e cebola. Sirva com torradas.",
+    "categoria": "3.5",
+    "imagem": "pate-frango.jpg",
+    "legenda": "Cremoso e saboroso."
+  },
+  {
+    "titulo": "Patê de Atum",
+    "ingredientes": [
+      "Atum",
+      "Maionese",
+      "Cebola"
+    ],
+    "preparo": "Misture atum com maionese e cebola. Sirva com pães.",
+    "categoria": "3.5",
+    "imagem": "pate-atum.jpg",
+    "legenda": "Rápido e delicioso."
+  },
+  {
+    "titulo": "Guacamole",
+    "ingredientes": [
+      "Abacate",
+      "Tomate",
+      "Cebola",
+      "Limão"
+    ],
+    "preparo": "Amasse abacate. Misture com tomate, cebola e limão.",
+    "categoria": "3.5",
+    "imagem": "guacamole.jpg",
+    "legenda": "Mexicano e refrescante."
+  },
+  {
+    "titulo": "Carpaccio de Legumes",
+    "ingredientes": [
+      "Abobrinha",
+      "Cenoura",
+      "Azeite",
+      "Limão"
+    ],
+    "preparo": "Fatie legumes finamente. Tempere com azeite e limão.",
+    "categoria": "3.5",
+    "imagem": "carpaccio-legumes.jpg",
+    "legenda": "Leve e saudável."
+  },
+  {
+    "titulo": "Creme de Abóbora",
+    "ingredientes": [
+      "Abóbora",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe abóbora com caldo. Bata até formar creme.",
+    "categoria": "3.5",
+    "imagem": "creme-abobora.jpg",
+    "legenda": "Cremoso e nutritivo."
+  },
+  {
+    "titulo": "Creme de Ervilha",
+    "ingredientes": [
+      "Ervilha",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe ervilha com caldo. Bata até formar creme.",
+    "categoria": "3.5",
+    "imagem": "creme-ervilha.jpg",
+    "legenda": "Verde e saboroso."
+  },
+  {
+    "titulo": "Canapés de Queijo",
+    "ingredientes": [
+      "Pão de forma",
+      "Queijo",
+      "Tomate"
+    ],
+    "preparo": "Monte canapés com pão, queijo e tomate. Sirva frio.",
+    "categoria": "3.5",
+    "imagem": "canape-queijo.jpg",
+    "legenda": "Festa garantida."
+  },
+  {
+    "titulo": "Canapés de Presunto",
+    "ingredientes": [
+      "Pão de forma",
+      "Presunto",
+      "Maionese"
+    ],
+    "preparo": "Monte canapés com pão, presunto e maionese. Sirva frio.",
+    "categoria": "3.5",
+    "imagem": "canape-presunto.jpg",
+    "legenda": "Simples e delicioso."
+  },
+  {
+    "titulo": "Mini Quiches",
+    "ingredientes": [
+      "Massa de quiche",
+      "Ovos",
+      "Queijo"
+    ],
+    "preparo": "Misture ovos e queijo. Asse em forminhas pequenas.",
+    "categoria": "3.5",
+    "imagem": "mini-quiche.jpg",
+    "legenda": "Elegante e saborosa."
+  },
+  {
+    "titulo": "Bolinho de Bacalhau",
+    "ingredientes": [
+      "Bacalhau desfiado",
+      "Batata",
+      "Salsa"
+    ],
+    "preparo": "Misture bacalhau com batata. Modele bolinhos e frite.",
+    "categoria": "3.5",
+    "imagem": "bolinho-bacalhau.jpg",
+    "legenda": "Português e irresistível."
+  },
+  {
+    "titulo": "Bolinho de Grão-de-Bico",
+    "ingredientes": [
+      "Grão-de-bico",
+      "Cebola",
+      "Alho"
+    ],
+    "preparo": "Triture grão-de-bico com temperos. Modele bolinhos e asse.",
+    "categoria": "3.5",
+    "imagem": "bolinho-grao.jpg",
+    "legenda": "Vegano e nutritivo."
+  },
+  {
+    "titulo": "Espetinho Caprese",
+    "ingredientes": [
+      "Tomate cereja",
+      "Mussarela de búfala",
+      "Manjericão"
+    ],
+    "preparo": "Monte espetinhos com tomate, mussarela e manjericão.",
+    "categoria": "3.5",
+    "imagem": "espetinho-caprese.jpg",
+    "legenda": "Colorido e leve."
+  },
+  {
+    "titulo": "Espetinho de Frango",
+    "ingredientes": [
+      "Frango",
+      "Pimentão",
+      "Cebola"
+    ],
+    "preparo": "Monte espetinhos com frango e legumes. Grelhe até dourar.",
+    "categoria": "3.5",
+    "imagem": "espetinho-frango.jpg",
+    "legenda": "Prático e saboroso."
+  },
+  {
+    "titulo": "Tartar de Tomate",
+    "ingredientes": [
+      "Tomate",
+      "Cebola",
+      "Azeite",
+      "Limão"
+    ],
+    "preparo": "Pique tomate e cebola. Tempere com azeite e limão.",
+    "categoria": "3.5",
+    "imagem": "tartar-tomate.jpg",
+    "legenda": "Fresco e diferente."
+  },
+  {
+    "titulo": "Tartar de Abacate",
+    "ingredientes": [
+      "Abacate",
+      "Cebola",
+      "Limão"
+    ],
+    "preparo": "Pique abacate e cebola. Tempere com limão.",
+    "categoria": "3.5",
+    "imagem": "tartar-abacate.jpg",
+    "legenda": "Cremoso e leve."
+  },
+  {
+    "titulo": "Creme de Cogumelos",
+    "ingredientes": [
+      "Cogumelos",
+      "Cebola",
+      "Alho",
+      "Caldo de legumes"
+    ],
+    "preparo": "Cozinhe cogumelos com caldo. Bata até formar creme.",
+    "categoria": "3.5",
+    "imagem": "creme-cogumelos.jpg",
+    "legenda": "Aromático e sofisticado."
+  },
+  {
+    "titulo": "Salada de Grão-de-Bico",
+    "ingredientes": [
+      "Grão-de-bico",
+      "Tomate",
+      "Cebola",
+      "Azeite"
+    ],
+    "preparo": "Misture grão-de-bico com tomate e cebola. Tempere com azeite.",
+    "categoria": "3.5",
+    "imagem": "salada-grao.jpg",
+    "legenda": "Nutritiva e deliciosa."
+  },
+  {
+    "titulo": "Salada de Folhas com Molho de Iogurte",
+    "ingredientes": [
+      "Alface",
+      "Rúcula",
+      "Iogurte",
+      "Limão"
+    ],
+    "preparo": "Misture folhas verdes. Finalize com molho de iogurte e limão.",
+    "categoria": "3.5",
+    "imagem": "salada-iogurte.jpg",
+    "legenda": "Leve e refrescante."
+  },
+  {
+    "titulo": "Purê de Batata",
+    "ingredientes": [
+      "Batata",
+      "Leite",
+      "Manteiga",
+      "Sal"
+    ],
+    "preparo": "Cozinhe batatas. Amasse e misture com leite e manteiga.",
+    "categoria": "3.6",
+    "imagem": "pure-batata.jpg",
+    "legenda": "Clássico e cremoso."
+  },
+  {
+    "titulo": "Purê de Mandioquinha",
+    "ingredientes": [
+      "Mandioquinha",
+      "Leite",
+      "Manteiga",
+      "Sal"
+    ],
+    "preparo": "Cozinhe mandioquinha. Amasse e misture com leite e manteiga.",
+    "categoria": "3.6",
+    "imagem": "pure-mandioquinha.jpg",
+    "legenda": "Macio e saboroso."
+  },
+  {
+    "titulo": "Purê de Abóbora",
+    "ingredientes": [
+      "Abóbora",
+      "Leite",
+      "Manteiga",
+      "Sal"
+    ],
+    "preparo": "Cozinhe abóbora. Amasse e misture com leite e manteiga.",
+    "categoria": "3.6",
+    "imagem": "pure-abobora.jpg",
+    "legenda": "Colorido e nutritivo."
+  },
+  {
+    "titulo": "Purê de Batata-Doce",
+    "ingredientes": [
+      "Batata-doce",
+      "Leite",
+      "Manteiga",
+      "Sal"
+    ],
+    "preparo": "Cozinhe batata-doce. Amasse e misture com leite e manteiga.",
+    "categoria": "3.6",
+    "imagem": "pure-batata-doce.jpg",
+    "legenda": "Doce e saudável."
+  },
+  {
+    "titulo": "Arroz Branco",
+    "ingredientes": [
+      "Arroz",
+      "Água",
+      "Sal",
+      "Óleo"
+    ],
+    "preparo": "Refogue arroz com óleo. Cozinhe com água e sal.",
+    "categoria": "3.6",
+    "imagem": "arroz-branco.jpg",
+    "legenda": "Simples e tradicional."
+  },
+  {
+    "titulo": "Arroz à Grega",
+    "ingredientes": [
+      "Arroz",
+      "Cenoura",
+      "Ervilha",
+      "Uva-passa"
+    ],
+    "preparo": "Cozinhe arroz com legumes e uva-passa.",
+    "categoria": "3.6",
+    "imagem": "arroz-grego.jpg",
+    "legenda": "Colorido e festivo."
+  },
+  {
+    "titulo": "Arroz com Brócolis",
+    "ingredientes": [
+      "Arroz",
+      "Brócolis",
+      "Alho"
+    ],
+    "preparo": "Refogue brócolis com alho. Misture ao arroz cozido.",
+    "categoria": "3.6",
+    "imagem": "arroz-brocolis.jpg",
+    "legenda": "Leve e nutritivo."
+  },
+  {
+    "titulo": "Arroz com Cenoura",
+    "ingredientes": [
+      "Arroz",
+      "Cenoura ralada",
+      "Alho"
+    ],
+    "preparo": "Refogue cenoura com alho. Misture ao arroz cozido.",
+    "categoria": "3.6",
+    "imagem": "arroz-cenoura.jpg",
+    "legenda": "Simples e saudável."
+  },
+  {
+    "titulo": "Farofa de Manteiga",
+    "ingredientes": [
+      "Farinha de mandioca",
+      "Manteiga",
+      "Cebola"
+    ],
+    "preparo": "Refogue farinha com manteiga e cebola.",
+    "categoria": "3.6",
+    "imagem": "farofa-manteiga.jpg",
+    "legenda": "Crocante e deliciosa."
+  },
+  {
+    "titulo": "Farofa de Bacon",
+    "ingredientes": [
+      "Farinha de mandioca",
+      "Bacon",
+      "Cebola"
+    ],
+    "preparo": "Refogue bacon com cebola. Misture com farinha.",
+    "categoria": "3.6",
+    "imagem": "farofa-bacon.jpg",
+    "legenda": "Intensa e saborosa."
+  },
+  {
+    "titulo": "Farofa de Ovos",
+    "ingredientes": [
+      "Farinha de mandioca",
+      "Ovos",
+      "Cebola"
+    ],
+    "preparo": "Refogue ovos mexidos. Misture com farinha e cebola.",
+    "categoria": "3.6",
+    "imagem": "farofa-ovos.jpg",
+    "legenda": "Simples e nutritiva."
+  },
+  {
+    "titulo": "Legumes Assados",
+    "ingredientes": [
+      "Cenoura",
+      "Abobrinha",
+      "Batata",
+      "Azeite"
+    ],
+    "preparo": "Tempere legumes com azeite. Asse até dourar.",
+    "categoria": "3.6",
+    "imagem": "legumes-assados.jpg",
+    "legenda": "Coloridos e saudáveis."
+  },
+  {
+    "titulo": "Legumes Refogados",
+    "ingredientes": [
+      "Cenoura",
+      "Abobrinha",
+      "Brócolis",
+      "Alho"
+    ],
+    "preparo": "Refogue legumes com alho.",
+    "categoria": "3.6",
+    "imagem": "legumes-refogados.jpg",
+    "legenda": "Leve e nutritivo."
+  },
+  {
+    "titulo": "Batata Frita",
+    "ingredientes": [
+      "Batata",
+      "Óleo",
+      "Sal"
+    ],
+    "preparo": "Corte batatas em tiras. Frite até dourar.",
+    "categoria": "3.6",
+    "imagem": "batata-frita.jpg",
+    "legenda": "Crocante e irresistível."
+  },
+  {
+    "titulo": "Batata Rústica",
+    "ingredientes": [
+      "Batata",
+      "Azeite",
+      "Alecrim",
+      "Sal"
+    ],
+    "preparo": "Corte batatas em pedaços grandes. Tempere e asse.",
+    "categoria": "3.6",
+    "imagem": "batata-rustica.jpg",
+    "legenda": "Aromática e deliciosa."
+  },
+  {
+    "titulo": "Batata Assada Recheada",
+    "ingredientes": [
+      "Batata grande",
+      "Queijo",
+      "Bacon"
+    ],
+    "preparo": "Asse batata. Recheie com queijo e bacon.",
+    "categoria": "3.6",
+    "imagem": "batata-recheada.jpg",
+    "legenda": "Completa e saborosa."
+  },
+  {
+    "titulo": "Polenta Frita",
+    "ingredientes": [
+      "Polenta cozida",
+      "Óleo",
+      "Sal"
+    ],
+    "preparo": "Corte polenta em pedaços. Frite até dourar.",
+    "categoria": "3.6",
+    "imagem": "polenta-frita.jpg",
+    "legenda": "Crocante e deliciosa."
+  },
+  {
+    "titulo": "Purê de Couve-Flor",
+    "ingredientes": [
+      "Couve-flor",
+      "Leite",
+      "Manteiga",
+      "Sal"
+    ],
+    "preparo": "Cozinhe couve-flor. Amasse e misture com leite e manteiga.",
+    "categoria": "3.6",
+    "imagem": "pure-couveflor.jpg",
+    "legenda": "Leve e saudável."
+  },
+  {
+    "titulo": "Purê de Ervilha",
+    "ingredientes": [
+      "Ervilha",
+      "Leite",
+      "Manteiga",
+      "Sal"
+    ],
+    "preparo": "Cozinhe ervilha. Amasse e misture com leite e manteiga.",
+    "categoria": "3.6",
+    "imagem": "pure-ervilha.jpg",
+    "legenda": "Verde e nutritivo."
+  },
+  {
+    "titulo": "Purê de Cenoura",
+    "ingredientes": [
+      "Cenoura",
+      "Leite",
+      "Manteiga",
+      "Sal"
+    ],
+    "preparo": "Cozinhe cenoura. Amasse e misture com leite e manteiga.",
+    "categoria": "3.6",
+    "imagem": "pure-cenoura.jpg",
+    "legenda": "Colorido e leve."
+  },
+  {
+    "titulo": "Lasanha de Carne",
+    "ingredientes": [
+      "Massa de lasanha",
+      "Carne moída",
+      "Molho de tomate",
+      "Queijo"
+    ],
+    "preparo": "Monte camadas de massa, carne e molho. Cubra com queijo e asse.",
+    "categoria": "3.7",
+    "imagem": "lasanha-carne.jpg",
+    "legenda": "Clássica e deliciosa."
+  },
+  {
+    "titulo": "Lasanha de Frango",
+    "ingredientes": [
+      "Massa de lasanha",
+      "Frango desfiado",
+      "Molho branco",
+      "Queijo"
+    ],
+    "preparo": "Monte camadas de massa, frango e molho. Cubra com queijo e asse.",
+    "categoria": "3.7",
+    "imagem": "lasanha-frango.jpg",
+    "legenda": "Cremosa e irresistível."
+  },
+  {
+    "titulo": "Estrogonofe de Carne",
+    "ingredientes": [
+      "Carne em tiras",
+      "Creme de leite",
+      "Molho de tomate",
+      "Cebola"
+    ],
+    "preparo": "Refogue carne com cebola. Adicione molho e creme de leite.",
+    "categoria": "3.7",
+    "imagem": "estrogonofe-carne.jpg",
+    "legenda": "Cremoso e saboroso."
+  },
+  {
+    "titulo": "Estrogonofe de Frango",
+    "ingredientes": [
+      "Frango em tiras",
+      "Creme de leite",
+      "Molho de tomate",
+      "Cebola"
+    ],
+    "preparo": "Refogue frango com cebola. Adicione molho e creme de leite.",
+    "categoria": "3.7",
+    "imagem": "estrogonofe-frango.jpg",
+    "legenda": "Popular e delicioso."
+  },
+  {
+    "titulo": "Feijoada",
+    "ingredientes": [
+      "Feijão preto",
+      "Carne seca",
+      "Linguiça",
+      "Costelinha"
+    ],
+    "preparo": "Cozinhe feijão com carnes. Sirva com arroz e farofa.",
+    "categoria": "3.7",
+    "imagem": "feijoada.jpg",
+    "legenda": "Brasileiro e tradicional."
+  },
+  {
+    "titulo": "Moqueca de Peixe",
+    "ingredientes": [
+      "Peixe",
+      "Pimentão",
+      "Tomate",
+      "Leite de coco"
+    ],
+    "preparo": "Cozinhe peixe com legumes e leite de coco.",
+    "categoria": "3.7",
+    "imagem": "moqueca.jpg",
+    "legenda": "Capixaba e aromática."
+  },
+  {
+    "titulo": "Moqueca de Camarão",
+    "ingredientes": [
+      "Camarão",
+      "Pimentão",
+      "Tomate",
+      "Leite de coco"
+    ],
+    "preparo": "Cozinhe camarão com legumes e leite de coco.",
+    "categoria": "3.7",
+    "imagem": "moqueca-camarao.jpg",
+    "legenda": "Tropical e deliciosa."
+  },
+  {
+    "titulo": "Churrasco",
+    "ingredientes": [
+      "Carne bovina",
+      "Linguiça",
+      "Frango",
+      "Sal grosso"
+    ],
+    "preparo": "Tempere carnes com sal grosso. Grelhe até dourar.",
+    "categoria": "3.7",
+    "imagem": "churrasco.jpg",
+    "legenda": "Gaúcho e festivo."
+  },
+  {
+    "titulo": "Bife à Parmegiana",
+    "ingredientes": [
+      "Bife de carne",
+      "Molho de tomate",
+      "Queijo",
+      "Farinha de trigo"
+    ],
+    "preparo": "Empane bifes. Cubra com molho e queijo. Asse até gratinar.",
+    "categoria": "3.7",
+    "imagem": "parmegiana.jpg",
+    "legenda": "Italiano e irresistível."
+  },
+  {
+    "titulo": "Frango à Parmegiana",
+    "ingredientes": [
+      "Peito de frango",
+      "Molho de tomate",
+      "Queijo",
+      "Farinha de trigo"
+    ],
+    "preparo": "Empane frango. Cubra com molho e queijo. Asse até gratinar.",
+    "categoria": "3.7",
+    "imagem": "frango-parmegiana.jpg",
+    "legenda": "Cremoso e delicioso."
+  },
+  {
+    "titulo": "Risoto de Cogumelos",
+    "ingredientes": [
+      "Arroz arbóreo",
+      "Cogumelos",
+      "Caldo de legumes",
+      "Queijo parmesão"
+    ],
+    "preparo": "Cozinhe arroz com caldo. Adicione cogumelos e finalize com queijo.",
+    "categoria": "3.7",
+    "imagem": "risoto-cogumelos.jpg",
+    "legenda": "Aromático e sofisticado."
+  },
+  {
+    "titulo": "Risoto de Frango",
+    "ingredientes": [
+      "Arroz arbóreo",
+      "Frango desfiado",
+      "Caldo de frango",
+      "Queijo parmesão"
+    ],
+    "preparo": "Cozinhe arroz com caldo. Adicione frango e finalize com queijo.",
+    "categoria": "3.7",
+    "imagem": "risoto-frango.jpg",
+    "legenda": "Cremoso e saboroso."
+  },
+  {
+    "titulo": "Risoto de Camarão",
+    "ingredientes": [
+      "Arroz arbóreo",
+      "Camarão",
+      "Caldo de peixe",
+      "Queijo parmesão"
+    ],
+    "preparo": "Cozinhe arroz com caldo. Adicione camarão e finalize com queijo.",
+    "categoria": "3.7",
+    "imagem": "risoto-camarao.jpg",
+    "legenda": "Tropical e sofisticado."
+  },
+  {
+    "titulo": "Escondidinho de Carne Seca",
+    "ingredientes": [
+      "Carne seca desfiada",
+      "Purê de mandioca",
+      "Queijo"
+    ],
+    "preparo": "Monte camadas de carne e purê. Cubra com queijo e asse.",
+    "categoria": "3.7",
+    "imagem": "escondidinho-carne.jpg",
+    "legenda": "Nordestino e delicioso."
+  },
+  {
+    "titulo": "Escondidinho de Frango",
+    "ingredientes": [
+      "Frango desfiado",
+      "Purê de batata",
+      "Queijo"
+    ],
+    "preparo": "Monte camadas de frango e purê. Cubra com queijo e asse.",
+    "categoria": "3.7",
+    "imagem": "escondidinho-frango.jpg",
+    "legenda": "Cremoso e irresistível."
+  },
+  {
+    "titulo": "Escondidinho de Camarão",
+    "ingredientes": [
+      "Camarão",
+      "Purê de batata-doce",
+      "Queijo"
+    ],
+    "preparo": "Monte camadas de camarão e purê. Cubra com queijo e asse.",
+    "categoria": "3.7",
+    "imagem": "escondidinho-camarao.jpg",
+    "legenda": "Tropical e saboroso."
+  },
+  {
+    "titulo": "Frango Assado",
+    "ingredientes": [
+      "Frango inteiro",
+      "Alho",
+      "Limão",
+      "Sal"
+    ],
+    "preparo": "Tempere frango com alho e limão. Asse até dourar.",
+    "categoria": "3.7",
+    "imagem": "frango-assado.jpg",
+    "legenda": "Simples e tradicional."
+  },
+  {
+    "titulo": "Peixe Assado",
+    "ingredientes": [
+      "Peixe inteiro",
+      "Alho",
+      "Limão",
+      "Sal"
+    ],
+    "preparo": "Tempere peixe com alho e limão. Asse até dourar.",
+    "categoria": "3.7",
+    "imagem": "peixe-assado.jpg",
+    "legenda": "Leve e saudável."
+  },
+  {
+    "titulo": "Carne de Panela",
+    "ingredientes": [
+      "Carne bovina",
+      "Batata",
+      "Cenoura",
+      "Cebola"
+    ],
+    "preparo": "Cozinhe carne com legumes e temperos.",
+    "categoria": "3.7",
+    "imagem": "carne-panela.jpg",
+    "legenda": "Caseira e saborosa."
+  },
+  {
+    "titulo": "Torta de Maçã",
+    "ingredientes": [
+      "Massa de torta",
+      "Maçã",
+      "Açúcar",
+      "Canela"
+    ],
+    "preparo": "Monte recheio com maçã, açúcar e canela. Cubra com massa e asse.",
+    "categoria": "2.5",
+    "imagem": "torta-maca.jpg",
+    "legenda": "Clássica e aromática."
+  },
+  {
+    "titulo": "Torta de Limão",
+    "ingredientes": [
+      "Massa de torta",
+      "Suco de limão",
+      "Leite condensado",
+      "Merengue"
+    ],
+    "preparo": "Misture leite condensado com limão. Cubra com merengue e asse.",
+    "categoria": "2.5",
+    "imagem": "torta-limao.jpg",
+    "legenda": "Refrescante e deliciosa."
+  },
+  {
+    "titulo": "Torta de Morango",
+    "ingredientes": [
+      "Massa de torta",
+      "Morangos",
+      "Creme de confeiteiro"
+    ],
+    "preparo": "Recheie massa com creme. Cubra com morangos frescos.",
+    "categoria": "2.5",
+    "imagem": "torta-morango.jpg",
+    "legenda": "Colorida e irresistível."
+  },
+  {
+    "titulo": "Torta de Chocolate",
+    "ingredientes": [
+      "Massa de torta",
+      "Chocolate",
+      "Creme de leite"
+    ],
+    "preparo": "Prepare ganache de chocolate. Recheie a massa e leve à geladeira.",
+    "categoria": "2.5",
+    "imagem": "torta-chocolate.jpg",
+    "legenda": "Cremosa e intensa."
+  },
+  {
+    "titulo": "Torta Holandesa",
+    "ingredientes": [
+      "Massa de biscoito",
+      "Creme de baunilha",
+      "Cobertura de chocolate"
+    ],
+    "preparo": "Monte camadas de creme e biscoito. Finalize com cobertura de chocolate.",
+    "categoria": "2.5",
+    "imagem": "torta-holandesa.jpg",
+    "legenda": "Sofisticada e deliciosa."
+  },
+  {
+    "titulo": "Cheesecake de Frutas Vermelhas",
+    "ingredientes": [
+      "Massa de biscoito",
+      "Cream cheese",
+      "Açúcar",
+      "Geleia de frutas vermelhas"
+    ],
+    "preparo": "Prepare creme de cheesecake. Cubra com geleia e leve à geladeira.",
+    "categoria": "2.5",
+    "imagem": "cheesecake-frutas.jpg",
+    "legenda": "Cremoso e refrescante."
+  },
+  {
+    "titulo": "Torta Alemã",
+    "ingredientes": [
+      "Massa de biscoito",
+      "Creme de manteiga",
+      "Cobertura de chocolate"
+    ],
+    "preparo": "Monte camadas de creme e biscoito. Finalize com chocolate.",
+    "categoria": "2.5",
+    "imagem": "torta-alema.jpg",
+    "legenda": "Rica e deliciosa."
+  },
+  {
+    "titulo": "Torta de Banana",
+    "ingredientes": [
+      "Massa de torta",
+      "Banana",
+      "Açúcar",
+      "Canela"
+    ],
+    "preparo": "Monte recheio com banana e açúcar. Cubra com massa e asse.",
+    "categoria": "2.5",
+    "imagem": "torta-banana.jpg",
+    "legenda": "Caseira e aromática."
+  },
+  {
+    "titulo": "Torta de Coco",
+    "ingredientes": [
+      "Massa de torta",
+      "Coco ralado",
+      "Leite condensado"
+    ],
+    "preparo": "Misture coco com leite condensado. Recheie a massa e asse.",
+    "categoria": "2.5",
+    "imagem": "torta-coco.jpg",
+    "legenda": "Tropical e doce."
+  },
+  {
+    "titulo": "Torta de Abacaxi",
+    "ingredientes": [
+      "Massa de torta",
+      "Abacaxi",
+      "Creme de confeiteiro"
+    ],
+    "preparo": "Recheie massa com creme. Cubra com abacaxi caramelizado.",
+    "categoria": "2.5",
+    "imagem": "torta-abacaxi.jpg",
+    "legenda": "Refrescante e saborosa."
+  },
+  {
+    "titulo": "Torta de Maracujá",
+    "ingredientes": [
+      "Massa de torta",
+      "Suco de maracujá",
+      "Leite condensado"
+    ],
+    "preparo": "Misture leite condensado com maracujá. Recheie a massa e leve à geladeira.",
+    "categoria": "2.5",
+    "imagem": "torta-maracuja.jpg",
+    "legenda": "Azedinha e deliciosa."
+  },
+  {
+    "titulo": "Torta de Uva",
+    "ingredientes": [
+      "Massa de torta",
+      "Uvas",
+      "Creme de confeiteiro"
+    ],
+    "preparo": "Recheie massa com creme. Cubra com uvas frescas.",
+    "categoria": "2.5",
+    "imagem": "torta-uva.jpg",
+    "legenda": "Diferente e saborosa."
+  },
+  {
+    "titulo": "Torta de Pêssego",
+    "ingredientes": [
+      "Massa de torta",
+      "Pêssegos",
+      "Creme de confeiteiro"
+    ],
+    "preparo": "Recheie massa com creme. Cubra com pêssegos frescos.",
+    "categoria": "2.5",
+    "imagem": "torta-pessego.jpg",
+    "legenda": "Colorida e leve."
+  },
+  {
+    "titulo": "Torta de Ameixa",
+    "ingredientes": [
+      "Massa de torta",
+      "Ameixas",
+      "Açúcar"
+    ],
+    "preparo": "Monte recheio com ameixas e açúcar. Cubra com massa e asse.",
+    "categoria": "2.5",
+    "imagem": "torta-ameixa.jpg",
+    "legenda": "Tradicional e deliciosa."
+  },
+  {
+    "titulo": "Torta de Castanha",
+    "ingredientes": [
+      "Massa de torta",
+      "Castanhas",
+      "Leite condensado"
+    ],
+    "preparo": "Misture castanhas com leite condensado. Recheie a massa e asse.",
+    "categoria": "2.5",
+    "imagem": "torta-castanha.jpg",
+    "legenda": "Crocante e saborosa."
+  },
+  {
+    "titulo": "Torta de Nozes",
+    "ingredientes": [
+      "Massa de torta",
+      "Nozes",
+      "Creme de leite"
+    ],
+    "preparo": "Misture nozes com creme. Recheie a massa e asse.",
+    "categoria": "2.5",
+    "imagem": "torta-nozes.jpg",
+    "legenda": "Sofisticada e aromática."
+  },
+  {
+    "titulo": "Torta de Amendoim",
+    "ingredientes": [
+      "Massa de torta",
+      "Amendoim",
+      "Leite condensado"
+    ],
+    "preparo": "Misture amendoim com leite condensado. Recheie a massa e asse.",
+    "categoria": "2.5",
+    "imagem": "torta-amendoim.jpg",
+    "legenda": "Cremosa e deliciosa."
+  },
+  {
+    "titulo": "Torta Gelada de Chocolate",
+    "ingredientes": [
+      "Massa de biscoito",
+      "Chocolate",
+      "Creme de leite"
+    ],
+    "preparo": "Prepare creme de chocolate. Leve à geladeira antes de servir.",
+    "categoria": "2.5",
+    "imagem": "torta-gelada.jpg",
+    "legenda": "Refrescante e intensa."
+  },
+  {
+    "titulo": "Torta Gelada de Morango",
+    "ingredientes": [
+      "Massa de biscoito",
+      "Morangos",
+      "Creme de leite"
+    ],
+    "preparo": "Prepare creme de morango. Leve à geladeira antes de servir.",
+    "categoria": "2.5",
+    "imagem": "torta-gelada-morango.jpg",
+    "legenda": "Colorida e deliciosa."
+  },
+  {
+    "titulo": "Torta Gelada de Limão",
+    "ingredientes": [
+      "Massa de biscoito",
+      "Suco de limão",
+      "Leite condensado"
+    ],
+    "preparo": "Prepare creme de limão. Leve à geladeira antes de servir.",
+    "categoria": "2.5",
+    "imagem": "torta-gelada-limao.jpg",
+    "legenda": "Refrescante e irresistível."
+  },
+  {
+    "titulo": "Brigadeiro",
+    "ingredientes": [
+      "Leite condensado",
+      "Chocolate em pó",
+      "Manteiga"
+    ],
+    "preparo": "Cozinhe os ingredientes até engrossar. Enrole e passe no granulado.",
+    "categoria": "2.6",
+    "imagem": "brigadeiro.jpg",
+    "legenda": "Clássico brasileiro."
+  },
+  {
+    "titulo": "Beijinho",
+    "ingredientes": [
+      "Leite condensado",
+      "Coco ralado",
+      "Manteiga"
+    ],
+    "preparo": "Cozinhe os ingredientes até engrossar. Enrole e passe no coco ralado.",
+    "categoria": "2.6",
+    "imagem": "beijinho.jpg",
+    "legenda": "Doce e tropical."
+  },
+  {
+    "titulo": "Cajuzinho",
+    "ingredientes": [
+      "Leite condensado",
+      "Amendoim",
+      "Açúcar"
+    ],
+    "preparo": "Misture os ingredientes. Enrole e passe no açúcar.",
+    "categoria": "2.6",
+    "imagem": "cajuzinho.jpg",
+    "legenda": "Tradicional e saboroso."
+  },
+  {
+    "titulo": "Casadinho",
+    "ingredientes": [
+      "Brigadeiro",
+      "Beijinho"
+    ],
+    "preparo": "Enrole brigadeiro e beijinho juntos. Passe no açúcar.",
+    "categoria": "2.6",
+    "imagem": "casadinho.jpg",
+    "legenda": "Dupla irresistível."
+  },
+  {
+    "titulo": "Olho de Sogra",
+    "ingredientes": [
+      "Ameixa seca",
+      "Beijinho",
+      "Açúcar"
+    ],
+    "preparo": "Recheie ameixa com beijinho. Passe no açúcar.",
+    "categoria": "2.6",
+    "imagem": "olho-sogra.jpg",
+    "legenda": "Festa garantida."
+  },
+  {
+    "titulo": "Bicho de Pé",
+    "ingredientes": [
+      "Leite condensado",
+      "Gelatina de morango",
+      "Manteiga"
+    ],
+    "preparo": "Cozinhe os ingredientes até engrossar. Enrole e passe no açúcar.",
+    "categoria": "2.6",
+    "imagem": "bicho-pe.jpg",
+    "legenda": "Colorido e doce."
+  },
+  {
+    "titulo": "Trufa de Chocolate",
+    "ingredientes": [
+      "Chocolate",
+      "Creme de leite",
+      "Cacau em pó"
+    ],
+    "preparo": "Prepare ganache. Enrole e passe no cacau.",
+    "categoria": "2.6",
+    "imagem": "trufa.jpg",
+    "legenda": "Sofisticada e intensa."
+  },
+  {
+    "titulo": "Bombom de Uva",
+    "ingredientes": [
+      "Uva",
+      "Leite condensado",
+      "Chocolate"
+    ],
+    "preparo": "Envolva uva com leite condensado. Cubra com chocolate.",
+    "categoria": "2.6",
+    "imagem": "bombom-uva.jpg",
+    "legenda": "Refrescante e delicioso."
+  },
+  {
+    "titulo": "Bombom de Morango",
+    "ingredientes": [
+      "Morango",
+      "Leite condensado",
+      "Chocolate"
+    ],
+    "preparo": "Envolva morango com leite condensado. Cubra com chocolate.",
+    "categoria": "2.6",
+    "imagem": "bombom-morango.jpg",
+    "legenda": "Colorido e irresistível."
+  },
+  {
+    "titulo": "Bombom de Coco",
+    "ingredientes": [
+      "Coco ralado",
+      "Leite condensado",
+      "Chocolate"
+    ],
+    "preparo": "Misture coco com leite condensado. Cubra com chocolate.",
+    "categoria": "2.6",
+    "imagem": "bombom-coco.jpg",
+    "legenda": "Tropical e doce."
+  },
+  {
+    "titulo": "Pé de Moleque",
+    "ingredientes": [
+      "Amendoim",
+      "Açúcar"
+    ],
+    "preparo": "Caramelize açúcar. Misture com amendoim.",
+    "categoria": "2.6",
+    "imagem": "pe-moleque.jpg",
+    "legenda": "Crocante e tradicional."
+  },
+  {
+    "titulo": "Paçoca",
+    "ingredientes": [
+      "Amendoim",
+      "Açúcar",
+      "Farinha de mandioca"
+    ],
+    "preparo": "Triture amendoim com açúcar e farinha. Modele em quadradinhos.",
+    "categoria": "2.6",
+    "imagem": "pacoca.jpg",
+    "legenda": "Brasileiro e delicioso."
+  },
+  {
+    "titulo": "Doce de Leite em Pedaços",
+    "ingredientes": [
+      "Leite",
+      "Açúcar"
+    ],
+    "preparo": "Cozinhe leite com açúcar até engrossar. Corte em pedaços.",
+    "categoria": "2.6",
+    "imagem": "doce-leite.jpg",
+    "legenda": "Caseiro e irresistível."
+  },
+  {
+    "titulo": "Bala de Coco",
+    "ingredientes": [
+      "Coco ralado",
+      "Açúcar",
+      "Leite condensado"
+    ],
+    "preparo": "Misture os ingredientes. Modele balas e deixe secar.",
+    "categoria": "2.6",
+    "imagem": "bala-coco.jpg",
+    "legenda": "Festa tradicional."
+  },
+  {
+    "titulo": "Bala de Goma",
+    "ingredientes": [
+      "Gelatina",
+      "Açúcar",
+      "Água"
+    ],
+    "preparo": "Prepare gelatina firme. Corte em cubos e passe no açúcar.",
+    "categoria": "2.6",
+    "imagem": "bala-goma.jpg",
+    "legenda": "Colorida e divertida."
+  },
+  {
+    "titulo": "Bala de Leite",
+    "ingredientes": [
+      "Leite condensado",
+      "Açúcar",
+      "Manteiga"
+    ],
+    "preparo": "Cozinhe os ingredientes até engrossar. Modele balas e deixe esfriar.",
+    "categoria": "2.6",
+    "imagem": "bala-leite.jpg",
+    "legenda": "Cremosa e doce."
+  },
+  {
+    "titulo": "Cocada Branca",
+    "ingredientes": [
+      "Coco ralado",
+      "Açúcar",
+      "Leite condensado"
+    ],
+    "preparo": "Misture os ingredientes. Cozinhe até engrossar.",
+    "categoria": "2.6",
+    "imagem": "cocada-branca.jpg",
+    "legenda": "Tropical e deliciosa."
+  },
+  {
+    "titulo": "Cocada Queimada",
+    "ingredientes": [
+      "Coco ralado",
+      "Açúcar caramelizado"
+    ],
+    "preparo": "Misture coco com açúcar caramelizado. Deixe esfriar e corte.",
+    "categoria": "2.6",
+    "imagem": "cocada-queimada.jpg",
+    "legenda": "Intensa e saborosa."
+  },
+  {
+    "titulo": "Doce de Abóbora",
+    "ingredientes": [
+      "Abóbora",
+      "Açúcar",
+      "Canela"
+    ],
+    "preparo": "Cozinhe abóbora com açúcar e canela.",
+    "categoria": "2.6",
+    "imagem": "doce-abobora.jpg",
+    "legenda": "Caseiro e aromático."
+  },
+  {
+    "titulo": "Doce de Batata-Doce",
+    "ingredientes": [
+      "Batata-doce",
+      "Açúcar",
+      "Cravo"
+    ],
+    "preparo": "Cozinhe batata-doce com açúcar e cravo.",
+    "categoria": "2.6",
+    "imagem": "doce-batata.jpg",
+    "legenda": "Simples e tradicional."
+  },
+  {
+    "titulo": "Granola doce",
+    "ingredientes": [
+      "320g de flocos de aveia",
+      "80g de flocos de milho sem açúcar",
+      "100g de nozes picadas",
+      "100gde sementes de abóbora",
+      "100g de pepita de girassol",
+      "1 colher (sopa) de óleo de coco ou azeite de oliva",
+      "2 a 3 colheres (sopa) de mel ou melado de cana",
+      "50g secas ameixa-preta,",
+      "90g uva passa",
+      "100g amêndoas",
+      "50g castanhas do Pará",
+      "50g de amendoim para o Mozão"
+    ],
+    "preparo": "Pré aqueça o forno a 180ºC. Em uma tigela grande, misture todos os ingredientes. Em uma panela pequena ou no micro-ondas, derreta levemente o óleo de coco e misture com o mel (ou melado) e a canela. Despeje essa calda sobre a mistura de secos e mexa bem até que todos os ingredientes estejam levemente úmidos. Espalhe a granola em uma forma grande forrada com papel-manteiga ou untada. Leve ao forno por cerca de 25 a 30 minutos. A cada 10 minutos, abra o forno e mexa a granola para assar por igual e não queimar. Retire do forno quando estiver dourada. Deixe esfriar completamente na forma (isso garante a crocância) e depois armazene em um pote de vidro hermético.",
+    "categoria": "4.1",
+    "imagem": "granola.jpg",
+    "legenda": "Receita do meu amor."
+  }
+];
+
+/**
+ * Carrega receitas adicionadas/editadas anteriormente pelo formulário
+ * "Nova Receita" (localStorage "receitasExtras"), e remove as que foram
+ * excluídas pelo usuário (localStorage "receitasExcluidas").
+ *
+ * O que faz: junta as receitas salvas ao array "receitas" acima, e tira
+ * as que foram marcadas como excluídas.
+ * Como: as receitas salvas entram ANTES das originais na lista — assim,
+ * quando main.js remove duplicatas por título (mantendo a primeira
+ * ocorrência), uma receita original que foi EDITADA continua com a
+ * versão editada, não a antiga. As excluídas são filtradas pelo título,
+ * não importa se eram uma receita original ou uma adicionada por aqui.
+ * Quando: uma única vez, ao carregar a página — antes de qualquer outro
+ * script rodar, já que este é o primeiro <script> do index.html.
+ */
+try {
+  const receitasSalvas = JSON.parse(localStorage.getItem("receitasExtras")) || [];
+  const receitasExcluidas = JSON.parse(localStorage.getItem("receitasExcluidas")) || [];
+  receitas = receitasSalvas.concat(receitas)
+    .filter(r => !receitasExcluidas.includes(r.titulo));
+} catch (erro) {
+  console.error("Erro ao carregar receitas salvas do localStorage:", erro);
+}

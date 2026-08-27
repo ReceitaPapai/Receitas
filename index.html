@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Estrutura principal: sidebar + conteúdo -->
+  <div id="layout">
+    
+    <!-- Sidebar (menu lateral de categorias) -->
+    <aside class="sidebar">
+      <h2>Categorias</h2>
+      <ul id="menuCategorias"></ul>
+    </aside>
+
+    <!-- Área principal -->
+    <div class="container">
+      
+      <!-- Cabeçalho com título -->
+      <header>
+        <h1>Receitas do Papai!!</h1>
+      </header>
+
+      <!-- Botões de ação (tema + ações principais, todos na mesma linha) -->
+      <section id="acoes" class="actions">
+        <button id="toggleTheme">Tema Escuro</button>
+        <button id="toggleRustic">Tema Madeira</button>
+        <button id="toggleRusticAlt">Tema Rústico Alternativo</button>
+        <button id="exportBtn">Exportar Lista</button>
+        <button id="sortByRating">Ordenar por Nota</button>
+        <button id="toggleAll">Expandir/Fechar Todas</button>
+        <button id="backupBtn">💾 Baixar Backup</button>
+        <label for="restaurarBackupInput" class="share-link" style="cursor:pointer;">📂 Importar Backup</label>
+        <input id="restaurarBackupInput" type="file" accept="application/json" style="display:none;">
+      </section>
+
+      <div class="actions-separator"></div>
+
+      <!-- Barra de busca por ingrediente -->
+      <div class="search-bar">
+        <input id="busca" type="text" placeholder="Buscar por ingrediente...">
+      </div>
+
+      <!-- Área onde as receitas serão renderizadas -->
+      <main>
+        <div id="listaReceitas" class="grid"></div>
+      </main>
+
+      <!-- Botão para abrir o formulário -->
+      <section id="novaReceitaBtn" class="actions">
+        <button onclick="abrirFormularioReceita()">➕ Nova Receita</button>
+      </section>
+
+      <!-- Lightbox container -->
+      <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+          <img id="lightboxImg" src="" alt="Imagem ampliada">
+        </div>
+        <button onclick="fecharLightbox()">Fechar</button>
+      </div>
+
+      <!-- Formulário para adicionar/editar receita -->
+      <section id="formularioReceita" class="add-recipe" style="display: none;">
+        <input id="novoTitulo" placeholder="Título da Receita">
+        <input id="novoIngredientes" placeholder="Ingredientes (separados por vírgula)">
+        <textarea id="novoPreparo" placeholder="Modo de Preparo"></textarea>
+        <select id="novoCategoria"></select>
+        <label for="novoImagem">Foto (opcional):</label>
+        <input id="novoImagem" type="file" accept="image/*">
+        <input id="novoLegenda" placeholder="Legenda da Imagem">
+        <button onclick="salvarReceitaFormulario()">Salvar Receita</button>
+        <button onclick="fecharFormularioReceita()">Cancelar</button>
+      </section>
+
+    </div> <!-- fim container -->
+  </div> <!-- fim layout -->
+
+  <!-- Scripts do projeto -->
+  <script src="js/receitas.js" defer></script>
+  <script src="js/categorias.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/filtros.js" defer></script>
+  <script src="js/acordeao.js" defer></script>
+  <script src="js/notas.js" defer></script>
+  <script src="js/backup.js" defer></script>
+  <script src="js/compartilhamento.js" defer></script>
+  <script src="js/favoritos.js" defer></script>
+  <script src="js/main.js" defer></script>
+
+  <!-- Inicialização -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      montarMenuCategorias();
+      montarSelectCategorias();
+      mostrarReceitas();
+
+      // Botões de tema (mutuamente exclusivos: só um tema ativo por vez)
+      function aplicarTema(temaClasse) {
+        const temas = ["dark-theme", "rustic-theme", "rustic-alt-theme"];
+        const jaEstavaAtivo = document.body.classList.contains(temaClasse);
+        temas.forEach(t => document.body.classList.remove(t));
+        if (!jaEstavaAtivo) {
+          document.body.classList.add(temaClasse);
+        }
+      }
+      document.getElementById("toggleTheme").addEventListener("click", () => {
+        aplicarTema("dark-theme");
+      });
+      document.getElementById("toggleRustic").addEventListener("click", () => {
+        aplicarTema("rustic-theme");
+      });
+      document.getElementById("toggleRusticAlt").addEventListener("click", () => {
+        aplicarTema("rustic-alt-theme");
+      });
+
+      // Botão expandir/fechar todas
+      document.getElementById("toggleAll").addEventListener("click", () => {
+        toggleAllReceitas();
+      });
+
+      // Botão exportar lista
+      document.getElementById("exportBtn").addEventListener("click", () => {
+        exportarLista();
+      });
+
+      // Botão ordenar por nota
+      document.getElementById("sortByRating").addEventListener("click", () => {
+        ordenarPorNota();
+      });
+
+      // Barra de busca por ingrediente
+      document.getElementById("busca").addEventListener("input", (e) => {
+        mostrarReceitas(e.target.value);
+      });
+
+      // Backup: baixar e restaurar
+      document.getElementById("backupBtn").addEventListener("click", () => {
+        baixarBackup();
+      });
+      document.getElementById("restaurarBackupInput").addEventListener("change", (e) => {
+        restaurarBackup(e.target.files[0]);
+      });
+    });
+  </script>
+</body>
+</html>
+
