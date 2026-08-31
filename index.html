@@ -88,6 +88,19 @@
 
   <!-- Scripts do projeto -->
   <script src="js/receitas.js" defer></script>
+
+  <!-- Sincronização entre dispositivos (Firebase/Firestore) — veja sync.js.
+       Precisa vir cedo (mas depois de receitas.js) pra conexão com a nuvem
+       já começar a abrir enquanto o resto da página carrega. As funções
+       daqui só são chamadas depois, em resposta a cliques ou a mudanças na
+       nuvem — nunca durante o carregamento em si — então não importa que
+       os arquivos abaixo (filtros.js, favoritos.js etc.) ainda não tenham
+       rodado neste ponto. -->
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js" defer></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/sync.js" defer></script>
+
   <script src="js/categorias.js" defer></script>
   <script src="js/lightbox.js" defer></script>
   <script src="js/filtros.js" defer></script>
